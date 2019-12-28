@@ -50,7 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
     protected void configure(HttpSecurity http) throws Exception {
 //        http.addFilterBefore(validateCodeFilter, LogoutFilter.class);
 //        validateCodeFilter.setLoginUrl("/login");
-
+        http.headers().contentTypeOptions().disable();
         Constants.ModuleName=jwtClientProperties.getModuleName();
 
         http.authorizeRequests()

@@ -7,260 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0de4d60f-c4d3-42cb-b216-9b950553a46f" name="Default Changelist" comment="test">
-      <change beforePath="$PROJECT_DIR$/jwt-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/handler/MyAuthenticationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/handler/MyAuthenticationFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/handler/MyAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/handler/MyAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/authority.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/authority.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/chartjs2.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/chartjs2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/e_commerce.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/e_commerce.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/echarts.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/echarts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/fixed_footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/fixed_footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/fixed_sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/fixed_sidebar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_advanced.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_advanced.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_upload.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_validation.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_validation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_wizards.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/form_wizards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/general_elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/general_elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/glyphicons.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/glyphicons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/inbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/inbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/invoice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/level2.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/level2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/media_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/media_gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/menuResource.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/menuResource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module1.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/morisjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/morisjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/other_charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/other_charts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_403.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_404.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_500.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_noauthority.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/page_noauthority.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/plain_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/plain_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/pricing_tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/pricing_tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/project_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/project_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/role.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/role.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/tables_dynamic.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/tables_dynamic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/urlResource.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/urlResource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/widgets.html" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/widgets.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/dist/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/dist/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/dist/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/dist/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.linear.tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.linear.tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.logarithmic.tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.logarithmic.tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.radialLinear.tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.radialLinear.tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.time.tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Chart.js/test/scale.time.tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/GruntFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/GruntFile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-af-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-af-ZA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-AE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-AE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-BH.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-BH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-DZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-DZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-EG.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-EG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-IQ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-IQ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-JO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-JO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-KW.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-KW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-LB.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-LB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-LY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-LY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-MA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-MA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-OM.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-OM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-QA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-QA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-SA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-SA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-SY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-SY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-TN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-TN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-YE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ar-YE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-az-Cyrl-AZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-az-Cyrl-AZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-az-Latn-AZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-az-Latn-AZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-be-BY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-be-BY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-bg-BG.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-bg-BG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-bs-Latn-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-bs-Latn-BA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ca-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ca-ES.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-cs-CZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-cs-CZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-cy-GB.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-cy-GB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-da-DK.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-da-DK.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-AT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-AT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-CH.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-CH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-DE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-DE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-LI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-LI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-LU.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-de-LU.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-dv-MV.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-dv-MV.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-el-GR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-el-GR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-029.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-029.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-AU.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-AU.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-BZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-BZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-CA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-CA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-GB.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-GB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-IE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-IE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-JM.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-JM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-NZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-NZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-PH.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-PH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-TT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-TT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-US.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-ZA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-ZW.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-en-ZW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-AR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-AR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-BO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-BO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-CL.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-CL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-CO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-CO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-CR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-CR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-DO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-DO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-EC.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-EC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-ES.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-GT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-GT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-HN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-HN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-MX.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-MX.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-NI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-NI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-PY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-SV.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-SV.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-UY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-UY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-VE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-es-VE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-et-EE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-et-EE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-eu-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-eu-ES.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fa-IR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fa-IR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fi-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fi-FI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fo-FO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fo-FO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-BE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-BE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-CA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-CA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-CH.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-CH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-FR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-FR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-LU.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-LU.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-MC.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-fr-MC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-gl-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-gl-ES.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-gu-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-gu-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-he-IL.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-he-IL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hi-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hi-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hr-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hr-BA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hr-HR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hr-HR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hu-HU.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hu-HU.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hy-AM.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-hy-AM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-id-ID.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-id-ID.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-is-IS.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-is-IS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-it-CH.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-it-CH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-it-IT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-it-IT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ja-JP.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ja-JP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ka-GE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ka-GE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-kk-KZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-kk-KZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-kn-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-kn-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ko-KR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ko-KR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-kok-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-kok-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ky-KG.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ky-KG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-lt-LT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-lt-LT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-lv-LV.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-lv-LV.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mi-NZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mi-NZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mk-MK.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mk-MK.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mn-MN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mn-MN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mr-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mr-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ms-BN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ms-BN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ms-MY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ms-MY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mt-MT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-mt-MT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nb-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nb-NO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nl-BE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nl-BE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nl-NL.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nl-NL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nn-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-nn-NO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ns-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ns-ZA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pa-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pa-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pl-PL.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pl-PL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pt-BR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pt-PT.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-pt-PT.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-quz-BO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-quz-BO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-quz-EC.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-quz-EC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-quz-PE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-quz-PE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ro-RO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ro-RO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ru-RU.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ru-RU.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sa-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sa-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-se-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-se-FI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-se-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-se-NO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-se-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-se-SE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sk-SK.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sk-SK.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sl-SI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sl-SI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sma-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sma-NO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sma-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sma-SE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-smj-NO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-smj-NO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-smj-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-smj-SE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-smn-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-smn-FI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sms-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sms-FI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sq-AL.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sq-AL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Cyrl-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Cyrl-BA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Cyrl-CS.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Cyrl-CS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Latn-BA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Latn-BA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Latn-CS.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sr-Latn-CS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sv-FI.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sv-FI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sv-SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sv-SE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sw-KE.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-sw-KE.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-syr-SY.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-syr-SY.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ta-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ta-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-te-IN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-te-IN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-th-TH.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-th-TH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-tn-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-tn-ZA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-tr-TR.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-tr-TR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-tt-RU.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-tt-RU.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-uk-UA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-uk-UA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ur-PK.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-ur-PK.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-uz-Cyrl-UZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-uz-Cyrl-UZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-uz-Latn-UZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-uz-Latn-UZ.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-vi-VN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-vi-VN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-xh-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-xh-ZA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-CN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-HK.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-HK.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-MO.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-MO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-SG.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-SG.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zh-TW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zu-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date-zu-ZA.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/build/date.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/src/core/parsing_operators.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/src/core/parsing_operators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/src/core/sugarpak.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/DateJS/src/core/sugarpak.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Flot/jquery.flot.canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Flot/jquery.flot.canvas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Flot/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/Flot/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/bootstrap/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/bootstrap/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/bootstrap/grunt/bs-glyphicons-data-generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/bootstrap/grunt/bs-glyphicons-data-generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/cropper/dist/cropper.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/cropper/dist/cropper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/cropper/src/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/cropper/src/js/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/datatables.net-buttons/js/buttons.flash.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/datatables.net-buttons/js/buttons.flash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/datatables.net-buttons/js/buttons.html5.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/datatables.net-buttons/js/buttons.html5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/datatables.net/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/datatables.net/js/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/dist/echarts.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/dist/echarts.common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/dist/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/dist/echarts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/dist/echarts.simple.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/dist/echarts.simple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/src/chart/helper/LargeSymbolDraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/src/chart/helper/LargeSymbolDraw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/src/util/KDTree.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/src/util/KDTree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/src/util/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/echarts/src/util/component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/fullcalendar/dist/fullcalendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/fullcalendar/dist/fullcalendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/google-code-prettify/src/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/google-code-prettify/src/prettify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/google-code-prettify/src/run_prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/google-code-prettify/src/run_prettify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/jquery/src/ajax/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/jquery/src/ajax/load.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/jszip/dist/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/jszip/dist/jszip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/morris.js/Gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/morris.js/Gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/expect.js/support/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/expect.js/support/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/jquery/dist/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/jquery/src/ajax/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/jquery/src/ajax/load.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/gulpfile.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/pdfmake/build/pdfmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/pdfmake/build/pdfmake.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/pnotify/libtests/browserify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/pnotify/libtests/browserify/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/requirejs/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/requirejs/require.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.full.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/dist/js/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/tests/vendor/jquery-1.7.2.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/tests/vendor/jquery-1.7.2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/vendor/jquery-2.1.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/select2/vendor/jquery-2.1.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/switchery/dist/switchery.js" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/switchery/dist/switchery.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -332,16 +80,16 @@
         <entry file="file://$PROJECT_DIR$/sso-server/sso-core/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
-              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -363,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="69" column="51" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
+            <state relative-caret-position="224">
+              <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -372,24 +120,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="95" lean-forward="true" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
-              <folding>
-                <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="375">
+              <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jwt-client/pom.xml">
+        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+            <state relative-caret-position="502">
+              <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -422,7 +170,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dataTableInit</find>
       <find>listModules</find>
       <find>module.js</find>
       <find>/list</find>
@@ -452,6 +199,7 @@
       <find>import</find>
       <find>&lt;link</find>
       <find>nprogress</find>
+      <find>build</find>
     </findStrings>
     <replaceStrings>
       <replace>static</replace>
@@ -472,6 +220,7 @@
       <replace>authModule</replace>
       <replace />
       <replace>&lt;link type=&quot;text/css&quot;</replace>
+      <replace>test</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page</dir>
@@ -483,7 +232,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/ModuleService.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/JwtUserService.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/LoginService.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ViewController.java" />
@@ -529,11 +277,12 @@
         <option value="$PROJECT_DIR$/jwt-server/pom.xml" />
         <option value="$PROJECT_DIR$/jwt-client/pom.xml" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/pom.xml" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/user.html" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -559,42 +308,6 @@
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwt-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwt-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwtclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwtclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sso-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sso-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sso-core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="sso-core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="sso-parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
@@ -631,7 +344,111 @@
             <path>
               <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
               <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
@@ -711,7 +528,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577515081236" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577517255185" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tansport/springtest1/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1066,7 +883,7 @@
       <workItem from="1577427375055" duration="6569000" />
       <workItem from="1577434244485" duration="6363000" />
       <workItem from="1577447843305" duration="2625000" />
-      <workItem from="1577450717222" duration="22255000" />
+      <workItem from="1577450717222" duration="23826000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1577191364465</created>
@@ -1251,7 +1068,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="493018000" />
+    <option name="totallyTimeSpent" value="494589000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1264,7 +1081,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.3381565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1277,7 +1093,7 @@
       <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32951945" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32837528" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.6132479" weight="0.3272311" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.6132479" visible="true" weight="0.3272311" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.395881" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1387,13 +1203,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/new4net/util/0.0.1-SNAPSHOT/util-0.0.1-SNAPSHOT.jar!/com/new4net/util/BaseDao.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/new4net/util/0.0.1-SNAPSHOT/util-0.0.1-SNAPSHOT.jar!/com/new4net/util/BaseServiceImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1712,19 +1521,6 @@
     <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="69" column="51" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
@@ -1742,18 +1538,7 @@
     <entry file="file://$PROJECT_DIR$/sso-server/sso-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="95" lean-forward="true" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1767,7 +1552,38 @@
     <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
         </state>
       </provider>
     </entry>

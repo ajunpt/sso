@@ -54,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
     private JwtClientProperties jwtClientProperties;
 
     protected void configure(HttpSecurity http) throws Exception {
-
+        http.headers().contentTypeOptions().disable();
         Constants.ModuleName=jwtClientProperties.getModuleName();
 
         http.authorizeRequests()
