@@ -11,4 +11,8 @@ public class ViewController {
     public String login(HttpServletRequest req) {
         return "login";
     }
+    @GetMapping(value = "/")
+    public String login1(HttpServletRequest req) {
+        return "login";
+    }
 }
