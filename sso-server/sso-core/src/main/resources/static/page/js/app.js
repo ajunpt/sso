@@ -186,12 +186,11 @@ function selectInit(selector, url, callback) {
     });
     return $(selector);
 }
-function logout(){
+
+function logout() {
     $.ajax({
         url: "/logout",//这个就是请求地址对应sAjaxSource
-        data: JSON.stringify({
-
-        }),//这个是把datatable的一些基本数据传给后台,比如起始位置,每页显示的行数
+        data: JSON.stringify({}),//这个是把datatable的一些基本数据传给后台,比如起始位置,每页显示的行数
         type: 'post',
         dataType: 'json',
         contentType: "application/json",
@@ -204,6 +203,7 @@ function logout(){
         }
     });
 }
+
 /**
  * form表单序列化方法
  */
@@ -462,7 +462,7 @@ $.ajaxSetup({
     },
     complete: function (XMLHttpRequest, textStatus) {
         var Authorization = XMLHttpRequest.getResponseHeader("Authorization")
-        if (Authorization&&(!localStorage.getItem("Authorization")||localStorage.getItem("Authorization")&&Authorization!=localStorage.getItem("Authorization"))) {
+        if (Authorization && (!localStorage.getItem("Authorization") || localStorage.getItem("Authorization") && Authorization != localStorage.getItem("Authorization"))) {
             localStorage.setItem("Authorization", Authorization);
 
         }
@@ -476,7 +476,7 @@ $.ajaxSetup({
             }
             win.location.href = XMLHttpRequest.getResponseHeader("CONTEXTPATH");
         }
-        failHandler(XMLHttpRequest.status,textStatus);
+        failHandler(XMLHttpRequest.status, textStatus);
         $("#div_brg0001").hide();
     },
     error: function (jqXHR, textStatus, errorThrown) {
@@ -484,7 +484,8 @@ $.ajaxSetup({
 
     }
 });
-function failHandler(status,error){
+
+function failHandler(status, error) {
     switch (status) {
         case(500):
             new MsgModal("提示", "服务器系统内部错误");
@@ -499,10 +500,11 @@ function failHandler(status,error){
             new MsgModal("提示", "请求超时");
             break;
         default:
-            if(error=="error")
-            new MsgModal("提示", "未知错误");
+            if (error == "error")
+                new MsgModal("提示", "未知错误");
     }
 }
+
 $("<div id='div_brg0001'></div>").css({
     position: 'absolute',
     top: 0,
@@ -531,39 +533,44 @@ $(document).ready(
     });
 
 function MsgModal(title, text, callback) {
-    $(".msgModal").remove();
+    if ($(".msgModal").length > 0) {
+        $("#myModalLabel").text((title || ""));
+        $(".modal-body").text((text || ""));
 
-    $("body").append('<div class="modal fade msgModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">\n' +
-        '                                    <div class="modal-dialog">\n' +
-        '                                        <div class="modal-content">\n' +
-        '                                            <div class="modal-header">\n' +
-        '                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">\n' +
-        '                                                    &times;\n' +
-        '                                                </button>\n' +
-        '                                                <h4 class="modal-title" id="myModalLabel">\n' + (title || "") +
-        '                                                </h4>\n' +
-        '                                            </div>\n' +
-        '                                            <div class="modal-body">\n' + (text || "") +
-        '                                            </div>\n' +
-        '                                            <div class="modal-footer">\n' +
-        '                                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭\n' +
-        '                                                </button>\n' +
-        '                                                <button type="button" class="btn btn-success msgConfirm" >\n' +
-        '                                                    确定\n' +
-        '                                                </button>\n' +
-        '                                            </div>\n' +
-        '                                        </div>\n' +
-        '                                    </div>\n' +
-        '                                </div>');
-    $('.msgConfirm').on("click", function () {
+    } else {
+
+        $("body").append('<div class="modal fade msgModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">\n' +
+            '                                    <div class="modal-dialog">\n' +
+            '                                        <div class="modal-content">\n' +
+            '                                            <div class="modal-header">\n' +
+            '                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">\n' +
+            '                                                    &times;\n' +
+            '                                                </button>\n' +
+            '                                                <h4 class="modal-title" id="myModalLabel">\n' + (title || "") +
+            '                                                </h4>\n' +
+            '                                            </div>\n' +
+            '                                            <div class="modal-body">\n' + (text || "") +
+            '                                            </div>\n' +
+            '                                            <div class="modal-footer">\n' +
+            '                                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭\n' +
+            '                                                </button>\n' +
+            '                                                <button type="button" class="btn btn-success msgConfirm" >\n' +
+            '                                                    确定\n' +
+            '                                                </button>\n' +
+            '                                            </div>\n' +
+            '                                        </div>\n' +
+            '                                    </div>\n' +
+            '                                </div>');
+
+    }
+    $('.msgConfirm').unbind('click').on("click", function () {
         if (callback) {
             callback();
         }
-        $('.myModal').on('hide.bs.modal', function () {
-            $(".msgModal").remove();
-        })
         $(".msgModal").modal('hide');
+
     });
+
     $(".msgModal").modal('show');
     return $(".msgModal");
 }

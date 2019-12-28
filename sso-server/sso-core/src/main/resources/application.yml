@@ -3,7 +3,7 @@ server:
 
 logging:
   level:
-   root: WARN
+   root: DEBUG
 
 spring:
   redis:
@@ -20,8 +20,6 @@ spring:
         max-idle: 8
         min-idle: 0
       shutdown-timeout: 100
-#  mvc:
-#   static-path-pattern: /static/**
   application:
     name: sso-server
   datasource:
@@ -68,6 +66,7 @@ spring:
     #配置模板路径，默认是templates，可以不用配置
    servlet:
      content-type: text/html
+
 
 tokenValidTime: 600000
 eureka:

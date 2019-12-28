@@ -142,7 +142,19 @@ public class AuthController implements AuthService {
         if("ROLE_SYSTEMADMIN".equals(authorityCode)){
             return new AjaxMsg("0", "不能删除系统管理员");
         }
+        List<Authority> authorities = authorityService.findByHQL("select a From Authority as a join a.authorityRelations r  where r.subAuthCode=?0",authorityCode);
 
+        if(authorities!=null){
+            authorities.stream().forEach(authority1-> {
+                if(authority1!=null&&authority1.getAuthorityRelations()!=null){
+                    authority1.setAuthorityRelations(authority1.getAuthorityRelations().stream().filter(relation->{
+                        return relation.getSubAuthCode()==null||!relation.getSubAuthCode().equals(authorityCode);
+                    }).collect(Collectors.toSet()));
+                }
+
+                authorityReposity.save(authority1);
+            });
+        }
         Authority authority = authorityReposity.findById(authorityCode).get();
         List<AuthorityRelation> authorityRelations = authorityRelationReposity.findBySubAuthCode(authorityCode);
         if(authorityRelations!=null){
@@ -157,7 +169,7 @@ public class AuthController implements AuthService {
             users.stream().forEach((User user) -> {
                 if(user!=null&&user.getAuthorities()!=null){
                     user.setAuthorities(user.getAuthorities().stream().filter(authority1->{
-                        return authorityCode.equals(authority1.getAuthority());
+                        return !authorityCode.equals(authority1.getAuthority());
                     }).collect(Collectors.toSet()));
                 }
 

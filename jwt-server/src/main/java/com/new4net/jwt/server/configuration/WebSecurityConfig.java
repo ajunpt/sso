@@ -48,17 +48,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
 
     public void configure(WebSecurity web) throws Exception {
         //解决静态资源被拦截的问题
-        web.ignoring().antMatchers("/**", "/kaptcha.jpg");
+        //web.ignoring().antMatchers("/**", "/kaptcha.jpg");
     }
     @Autowired
     private JwtClientProperties jwtClientProperties;
 
     protected void configure(HttpSecurity http) throws Exception {
-        http.headers().contentTypeOptions().disable();
+//        http.headers().contentTypeOptions().disable();
         Constants.ModuleName=jwtClientProperties.getModuleName();
 
         http.authorizeRequests()
-                .antMatchers("/test/**","/page/**","/src/**","/vendors/**","/loginByAdmin", "/login", "/actuator/info", "/eureka", "/checkVCode", "/user/regByAccount").permitAll()
+                .antMatchers("/test/**","/page/**","/src/**","/vendors/**","/jquery-treetable/**","/kaptcha.jpg","/loginByAdmin", "/login", "/actuator/info", "/eureka", "/checkVCode", "/user/regByAccount").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()
