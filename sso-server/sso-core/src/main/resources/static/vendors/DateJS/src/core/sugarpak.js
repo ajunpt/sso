@@ -268,7 +268,7 @@
 		return ((!date) ? new Date() : date.clone()).add(c);
 	};
 
-	// Do NOT modify the following string tokens. These tokens are used to build dynamic functions.
+	// Do NOT modify the following string tokens. These tokens are used to test dynamic functions.
 	// All culture-specific strings can be found in the CultureInfo files.
 	var dx = ("sunday monday tuesday wednesday thursday friday saturday").split(/\s/),
 		mx = ("january february march april may june july august september october november december").split(/\s/),

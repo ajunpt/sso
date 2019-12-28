@@ -63,7 +63,7 @@ define(function(require) {
          * @public
          * @param {Array.<string>} targetNameList Target Component type list.
          *                                           Can be ['aa', 'bb', 'aa.xx']
-         * @param {Array.<string>} fullNameList By which we can build dependency graph.
+         * @param {Array.<string>} fullNameList By which we can test dependency graph.
          * @param {Function} callback Params: componentType, dependencies.
          * @param {Object} context Scope of callback.
          */

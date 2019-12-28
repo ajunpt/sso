@@ -4618,7 +4618,7 @@ sortOrder = docElem.compareDocumentPosition ?
 		}
 
 		// Otherwise they're somewhere else in the tree so we need
-		// to build up a full list of the parentNodes for comparison
+		// to test up a full list of the parentNodes for comparison
 		while ( cur ) {
 			ap.unshift( cur );
 			cur = cur.parentNode;
@@ -7447,7 +7447,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		callback = params;
 		params = undefined;
 
-	// Otherwise, build a param string
+	// Otherwise, test a param string
 	} else if ( params && typeof params === "object" ) {
 		type = "POST";
 	}

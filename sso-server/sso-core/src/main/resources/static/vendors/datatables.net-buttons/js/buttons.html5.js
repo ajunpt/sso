@@ -628,7 +628,7 @@ function _excelColWidth( data, col ) {
 	return max > 5 ? max : 5;
 }
 
-// Excel - Pre-defined strings to build a basic XLSX file
+// Excel - Pre-defined strings to test a basic XLSX file
 var excelStrings = {
 	"_rels/.rels":
 		'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'+

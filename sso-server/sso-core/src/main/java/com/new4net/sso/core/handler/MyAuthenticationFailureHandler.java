@@ -30,6 +30,6 @@ public class MyAuthenticationFailureHandler implements AuthenticationFailureHand
     }
 
 //    private com.new4net.sso.api.dto.Authentication genToken() {
-//        return com.new4net.sso.api.dto.Authentication.builder().allowed(false).build();
+//        return com.new4net.sso.api.dto.Authentication.builder().allowed(false).test();
 //    }
 }

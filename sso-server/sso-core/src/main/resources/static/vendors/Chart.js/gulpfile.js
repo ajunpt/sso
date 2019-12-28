@@ -122,7 +122,7 @@ function bumpTask(complete) {
     package.version = newVersion;
     bower.version = newVersion;
 
-    // Write these to their own files, then build the output
+    // Write these to their own files, then test the output
     fs.writeFileSync('package.json', JSON.stringify(package, null, 2));
     fs.writeFileSync('bower.json', JSON.stringify(bower, null, 2));
     

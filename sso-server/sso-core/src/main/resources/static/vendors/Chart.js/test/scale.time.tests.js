@@ -100,7 +100,7 @@ describe('Time scale tests', function() {
 		expect(defaultConfig.ticks.callback).toEqual(jasmine.any(Function));
 	});
 
-	it('should build ticks using days', function() {
+	it('should test ticks using days', function() {
 		var scaleID = 'myScale';
 
 		var mockData = {
@@ -125,8 +125,8 @@ describe('Time scale tests', function() {
 		expect(scale.ticks).toEqual([ 'Dec 28, 2014', 'Jan 4, 2015', 'Jan 11, 2015' ]);
 	});
 
-	it('should build ticks using date objects', function() {
-		// Helper to build date objects
+	it('should test ticks using date objects', function() {
+		// Helper to test date objects
 		function newDateFromRef(days) {
 			return moment('01/01/2015 12:00', 'DD/MM/YYYY HH:mm').add(days, 'd').toDate();
 		}
@@ -153,8 +153,8 @@ describe('Time scale tests', function() {
 		expect(scale.ticks).toEqual([ 'Dec 28, 2014', 'Jan 4, 2015', 'Jan 11, 2015' ]);
 	});
 
-	it('should build ticks when the data is xy points', function() {
-		// Helper to build date objects
+	it('should test ticks when the data is xy points', function() {
+		// Helper to test date objects
 		function newDateFromRef(days) {
 			return moment('01/01/2015 12:00', 'DD/MM/YYYY HH:mm').add(days, 'd').toDate();
 		}
@@ -252,7 +252,7 @@ describe('Time scale tests', function() {
 		expect(xScale.ticks[1]).toEqualOneOf(['Nov 19, 1981', 'Nov 20, 1981', 'Nov 21, 1981']); // handle time zone changes
 	});
 
-	it('should build ticks using the config unit', function() {
+	it('should test ticks using the config unit', function() {
 		var scaleID = 'myScale';
 
 		var mockData = {
@@ -277,7 +277,7 @@ describe('Time scale tests', function() {
 		expect(scale.ticks).toEqual(['Jan 1, 8PM', 'Jan 1, 9PM', 'Jan 1, 10PM', 'Jan 1, 11PM', 'Jan 2, 12AM', 'Jan 2, 1AM', 'Jan 2, 2AM', 'Jan 2, 3AM', 'Jan 2, 4AM', 'Jan 2, 5AM', 'Jan 2, 6AM', 'Jan 2, 7AM', 'Jan 2, 8AM', 'Jan 2, 9AM', 'Jan 2, 10AM', 'Jan 2, 11AM', 'Jan 2, 12PM', 'Jan 2, 1PM', 'Jan 2, 2PM', 'Jan 2, 3PM', 'Jan 2, 4PM', 'Jan 2, 5PM', 'Jan 2, 6PM', 'Jan 2, 7PM', 'Jan 2, 8PM', 'Jan 2, 9PM']);
 	});
 
-	it('should build ticks using the config diff', function() {
+	it('should test ticks using the config diff', function() {
 		var scaleID = 'myScale';
 
 		var mockData = {

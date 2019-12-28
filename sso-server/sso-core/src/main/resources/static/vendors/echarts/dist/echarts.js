@@ -5132,7 +5132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	         * @public
 	         * @param {Array.<string>} targetNameList Target Component type list.
 	         *                                           Can be ['aa', 'bb', 'aa.xx']
-	         * @param {Array.<string>} fullNameList By which we can build dependency graph.
+	         * @param {Array.<string>} fullNameList By which we can test dependency graph.
 	         * @param {Function} callback Params: componentType, dependencies.
 	         * @param {Object} context Scope of callback.
 	         */
@@ -10689,7 +10689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            )) {
 	                path = this.path.beginPath(ctx);
 
-	                // Setting line dash before build path
+	                // Setting line dash before test path
 	                if (lineDash && !ctxLineDash) {
 	                    path.setLineDash(lineDash);
 	                    path.setLineDashOffset(lineDashOffset);
@@ -27026,7 +27026,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            )
 	        });
 
-	        // Create symbolProxy to build path for each data
+	        // Create symbolProxy to test path for each data
 	        symbolEl.symbolProxy = symbolUtil.createSymbol(
 	            data.getVisual('symbol'), 0, 0, 0, 0
 	        );

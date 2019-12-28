@@ -443,7 +443,7 @@ describe('Logarithmic Scale tests', function() {
 		}));
 	});
 
-	it('should build labels using the default template', function() {
+	it('should test labels using the default template', function() {
 		var chart = window.acquireChart({
 			type: 'line',
 			data: {
@@ -465,7 +465,7 @@ describe('Logarithmic Scale tests', function() {
 		expect(chart.scales.yScale.ticks).toEqual(['8e+1', '', '', '5e+1', '', '', '2e+1', '1e+1', '', '', '', '', '5e+0', '', '', '2e+0', '1e+0']);
 	});
 
-	it('should build labels using the user supplied callback', function() {
+	it('should test labels using the user supplied callback', function() {
 		var chart = window.acquireChart({
 			type: 'bar',
 			data: {

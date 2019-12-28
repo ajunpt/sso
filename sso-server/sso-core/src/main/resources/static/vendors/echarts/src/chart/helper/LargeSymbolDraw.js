@@ -74,7 +74,7 @@ define(function (require) {
             )
         });
 
-        // Create symbolProxy to build path for each data
+        // Create symbolProxy to test path for each data
         symbolEl.symbolProxy = symbolUtil.createSymbol(
             data.getVisual('symbol'), 0, 0, 0, 0
         );

@@ -58,7 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
         Constants.ModuleName=jwtClientProperties.getModuleName();
 
         http.authorizeRequests()
-                .antMatchers("/build/**","/page/**","/src/**","/vendors/**","/loginByAdmin", "/login", "/actuator/info", "/eureka", "/checkVCode", "/user/regByAccount").permitAll()
+                .antMatchers("/test/**","/page/**","/src/**","/vendors/**","/loginByAdmin", "/login", "/actuator/info", "/eureka", "/checkVCode", "/user/regByAccount").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()

@@ -45,7 +45,7 @@ define(function (require) {
     };
 
     /**
-     * Resursively build the tree
+     * Resursively test the tree
      */
     KDTree.prototype._buildTree = function (points, left, right, axis) {
         if (right < left) {

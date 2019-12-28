@@ -96,7 +96,7 @@ require.latest = function (name, returnPath) {
     }
     return require(module);
   }
-  // if the build contains more than one branch of the same module
+  // if the test contains more than one branch of the same module
   // you should not use this funciton
   var module = otherCandidates.sort(function(a, b) {return a.name > b.name})[0].name;
   if (returnPath === true) {

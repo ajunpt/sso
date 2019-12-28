@@ -40,7 +40,7 @@ function cleanTmp() {
 }
 
 // Send a notification when JSCS fails,
-// so that you know your changes didn't build
+// so that you know your changes didn't test
 function _jscsNotify(file) {
   if (!file.jscs) { return; }
   return file.jscs.success ? false : 'JSCS failed';
@@ -138,7 +138,7 @@ function _runBrowserifyBundle(bundler, dest) {
       this.emit('end');
     })
     .pipe($.plumber())
-    .pipe(source(dest || './tmp/__spec-build.js'))
+    .pipe(source(dest || './tmp/__spec-test.js'))
     .pipe(buffer())
     .pipe(gulp.dest(''))
     .pipe($.livereload());
@@ -175,7 +175,7 @@ function _browserifyBundle() {
 }
 
 function buildDocTest() {
-  return _runBrowserifyBundle(browserifyBundler(), './doc/assets/spec-build.js');
+  return _runBrowserifyBundle(browserifyBundler(), './doc/assets/spec-test.js');
 }
 
 function _mocha() {
@@ -218,7 +218,7 @@ function watch() {
 
 function testBrowser() {
   // Ensure that linting occurs before browserify runs. This prevents
-  // the build from breaking due to poorly formatted code.
+  // the test from breaking due to poorly formatted code.
   runSequence(['lint-src', 'lint-test'], () => {
     _browserifyBundle();
     $.livereload.listen({port: 35729, host: 'localhost', start: true});
@@ -271,16 +271,16 @@ gulp.task('lint-src', lintSrc);
 gulp.task('lint-test', lintTest);
 
 // Build two versions of the library
-gulp.task('build-src', ['lint-src', 'clean', 'build-i18n'], build);
+gulp.task('test-src', ['lint-src', 'clean', 'build-i18n'], build);
 
 // Build the i18n translations
-gulp.task('build-i18n', ['clean'], copyI18n);
+gulp.task('test-i18n', ['clean'], copyI18n);
 
 // Build the annotated documentation
-gulp.task('build-doc', buildDoc);
+gulp.task('test-doc', buildDoc);
 
 // Build the annotated documentation
-gulp.task('build-doc-test', buildDocTest);
+gulp.task('test-doc-test', buildDocTest);
 
 gulp.task('write-version', writeVersion);
 

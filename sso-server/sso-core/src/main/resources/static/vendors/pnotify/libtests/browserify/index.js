@@ -1,5 +1,5 @@
 
-// Not working? Did you `npm install` `npm run build` first?
+// Not working? Did you `npm install` `npm run test` first?
 
 var $ = require("jquery");
 var PNotify = require("pnotify");

@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 					"<%= dirs.core %>/time_span.js",
 					"<%= dirs.core %>/time_period.js"
 				],
-				dest: "<%= dirs.build %>/date-core.js"
+				dest: "<%= dirs.test %>/date-core.js"
 			},
 			basic: {
 				src: [
@@ -93,14 +93,14 @@ module.exports = function(grunt) {
 					"<%= dirs.core %>/time_span.js",
 					"<%= dirs.core %>/time_period.js"
 				],
-				dest: "<%= dirs.build %>/date.js"
+				dest: "<%= dirs.test %>/date.js"
 			}
 		},
 		i18n: {
 			core: {
-				core: "<%= dirs.build %>/date-core.js",
+				core: "<%= dirs.test %>/date-core.js",
 				src: ["<%= dirs.i18n %>/*.js"],
-				dest: "<%= dirs.build %>/"   // destination *directory*, probably better than specifying same file names twice
+				dest: "<%= dirs.test %>/"   // destination *directory*, probably better than specifying same file names twice
 			}
 		},
 		shell: {

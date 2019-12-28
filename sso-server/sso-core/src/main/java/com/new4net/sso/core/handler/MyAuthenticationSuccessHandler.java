@@ -52,7 +52,7 @@ public class MyAuthenticationSuccessHandler implements AuthenticationSuccessHand
 //    private com.new4net.sso.api.dto.Authentication genToken() {
 //        Date date = new Date();
 //        com.new4net.sso.api.dto.Authentication token = com.new4net.sso.api.dto.Authentication.builder()
-//                .token(UUID.randomUUID().toString()).allowed(true).validTime(date).invalidTime(new Date(date.getTime()+tokenValidTime)).build();
+//                .token(UUID.randomUUID().toString()).allowed(true).validTime(date).invalidTime(new Date(date.getTime()+tokenValidTime)).test();
 //        return token;
 //    }
 }

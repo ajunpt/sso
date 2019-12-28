@@ -44,7 +44,7 @@
         return;
       }
 
-      // Trigger build event first
+      // Trigger test event first
       $this.one(EVENT_BUILD, options.build);
 
       if (this.trigger(EVENT_BUILD).isDefaultPrevented()) {

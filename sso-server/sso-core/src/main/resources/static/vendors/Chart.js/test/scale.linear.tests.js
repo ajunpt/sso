@@ -583,7 +583,7 @@ describe('Linear Scale', function() {
 		expect(chartInstance.scales.yScale0.ticks).toEqual(['0.06', '0.05', '0.04', '0.03', '0.02', '0.01', '0']);
 	});
 
-	it('Should build labels using the user supplied callback', function() {
+	it('Should test labels using the user supplied callback', function() {
 		chartInstance = window.acquireChart({
 			type: 'bar',
 			data: {
