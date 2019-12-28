@@ -1,0 +1,83 @@
+server:
+  port: 8080
+
+logging:
+  level:
+   root: WARN
+
+spring:
+  redis:
+    cluster:
+      nodes: 192.168.1.5:17000,192.168.1.5:17001,192.168.1.5:17002,192.168.1.5:18000,192.168.1.5:18001,192.168.1.5:18002
+    database: 0
+    #host: 192.168.1.5
+    #port: 17000
+    password: TjTaA124#
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: 10000
+        max-idle: 8
+        min-idle: 0
+      shutdown-timeout: 100
+#  mvc:
+#   static-path-pattern: /static/**
+  application:
+    name: sso-server
+  datasource:
+   url: jdbc:mysql://192.168.1.5:3306/sso?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8
+   username: root
+   password: TjTaA124#
+   driver-class-name: com.mysql.jdbc.Driver
+   max-active: 20
+   max-idle: 8
+   min-idle: 8
+   initial-size: 10
+  jpa:
+#    open-in-view: true
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: com.new4net.util.MysqlUpperCaseStrategy
+    properties:
+     hibernate:
+      dialect: com.new4net.util.MySQL5DialectUTF8
+      current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+#      enable_lazy_load_no_trans: true
+  #      cache:
+#       region:
+#        factory_class: org.hibernate.cache.redis.hibernate5.RedisRegionFactory
+#       use_second_level_cache: true
+#       use_query_cache: true
+#       region_prefix: sso_cache
+#       use_structured_entries: true
+#      generate_statistics: false
+#      javax:
+#       cache:
+#        missing_cache_strategy: create
+  ###ThymeLeaf配置 spring:
+  #模板的模式，支持 HTML, XML TEXT JAVASCRIPT
+  thymeleaf:
+   mode: HTML5
+    #编码 可不用配置
+   encoding: UTF-8
+    #内容类别,可不用配置
+   cache: false
+    #配置模板路径，默认是templates，可以不用配置
+   servlet:
+     content-type: text/html
+
+tokenValidTime: 600000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://sysadmin:Tj20jq7T@192.168.1.5:8501/eureka/
+#        http://sysadmin:Tj20jq7T@192.168.1.33:8500/eureka/
+#      ,
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+#    prefer-ip-address: true
+jwt:
+  moduleName: SSO

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="distributed-trans-core" />
+        <module name="jwt-client" />
+        <module name="jwt-server" />
+        <module name="sso-api" />
+        <module name="sso-client" />
+        <module name="sso-core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="distributed-trans-core" target="1.8" />
+      <module name="distributed-transaction" target="1.8" />
+      <module name="distributed-transaction-core" target="1.8" />
+      <module name="distributedtransaction" target="1.8" />
+      <module name="distributedtransactionapi" target="1.8" />
+      <module name="distributedtransapi" target="1.8" />
+      <module name="eureka-server-cluster" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="distributed-transaction" options="-parameters" />
+      <module name="distributed-transaction-core" options="-parameters" />
+      <module name="distributedtransaction" options="-parameters" />
+      <module name="distributedtransactionapi" options="-parameters" />
+      <module name="distributedtransapi" options="-parameters" />
+      <module name="eureka-server-cluster" options="-parameters" />
+      <module name="jwt-client" options="-parameters" />
+      <module name="jwt-server" options="-parameters" />
+      <module name="sso-api" options="-parameters" />
+      <module name="sso-client" options="-parameters" />
+      <module name="sso-core" options="-parameters" />
+      <module name="sso-server" options="-parameters" />
+      <module name="ssoparent" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/distributed-transaction/distributed-transaction-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server-cluster" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jwt-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jwt-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso-server/sso-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso-server/sso-core" charset="UTF-8" />
+  </component>
+</project>
