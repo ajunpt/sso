@@ -44,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
     private JwtClientProperties jwtClientProperties;
     public void configure(WebSecurity web) throws Exception {
         //解决静态资源被拦截的问题
-        web.ignoring().antMatchers("/static/**", "/kaptcha.jpg","/actuator/**","/eureka");
+        web.ignoring().antMatchers("/**", "/kaptcha.jpg","/actuator/**","/eureka");
     }
 
     protected void configure(HttpSecurity http) throws Exception {
@@ -54,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
         Constants.ModuleName=jwtClientProperties.getModuleName();
 
         http.authorizeRequests()
-                .antMatchers("/static/**","/actuator/info","/eureka", "/login", "/checkVCode", "/user/regByAccount").permitAll()
+                .antMatchers("/**","/actuator/info","/eureka", "/login", "/checkVCode", "/user/regByAccount").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().requireCsrfProtectionMatcher(new CsrfSecurityRequestMatcher()).disable()
@@ -68,7 +68,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
                 new Header("Access-Control-Expose-Headers", "Authorization"))))
                 .and()
                 .addFilterAfter(new OptionsRequestFilter(), CorsFilter.class)
-                .apply(new JwtLoginConfigurer<>()).tokenValidSuccessHandler(jwtRefreshSuccessHandler()).permissiveRequestUrls("/logout","/static/**","/actuator/info","/eureka", "/login", "/checkVCode", "/user/regByAccount")
+                .apply(new JwtLoginConfigurer<>()).tokenValidSuccessHandler(jwtRefreshSuccessHandler()).permissiveRequestUrls("/logout","/**","/actuator/info","/eureka", "/login", "/checkVCode", "/user/regByAccount")
                 .and()
                 .logout();
 //		        .logoutUrl("/logout")   //默认就是"/logout"

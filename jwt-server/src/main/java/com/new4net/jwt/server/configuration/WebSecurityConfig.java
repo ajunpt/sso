@@ -48,7 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
 
     public void configure(WebSecurity web) throws Exception {
         //解决静态资源被拦截的问题
-        web.ignoring().antMatchers("/static/**", "/kaptcha.jpg");
+        web.ignoring().antMatchers("/**", "/kaptcha.jpg");
     }
     @Autowired
     private JwtClientProperties jwtClientProperties;
@@ -75,7 +75,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
                 .and()
 //                .apply(new AdminLoginConfigurer<>()).loginSuccessHandler(jsonLoginSuccessHandler())
 //                .and()
-                .apply(new JwtLoginConfigurer<>()).tokenValidSuccessHandler(jwtRefreshSuccessHandler()).permissiveRequestUrls("/logout", "/static/**", "/actuator/info", "/eureka", "/login", "/checkVCode", "/user/regByAccount")
+                .apply(new JwtLoginConfigurer<>()).tokenValidSuccessHandler(jwtRefreshSuccessHandler()).permissiveRequestUrls("/logout", "/**", "/actuator/info", "/eureka", "/login", "/checkVCode", "/user/regByAccount")
                 .and()
                 .logout()
 //		        .logoutUrl("/logout")   //默认就是"/logout"

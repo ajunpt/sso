@@ -264,7 +264,7 @@ if ($('#sidebar-menu').length > 0) {
             "resourceName": "模块管理",
             "superMenuId": null,
             "menuName": "模块管理",
-            "menuURI": "/static/page/module.html",
+            "menuURI": "/page/module.html",
             "order": 1,
             "superMenu": null,
             "childrenMenu": null
@@ -274,7 +274,7 @@ if ($('#sidebar-menu').length > 0) {
             "resourceName": "用户管理",
             "superMenuId": null,
             "menuName": "用户管理",
-            "menuURI": "/static/page/user.html",
+            "menuURI": "/page/user.html",
             "order": 2,
             "superMenu": null,
             "childrenMenu": null
