@@ -38,7 +38,7 @@
                     <h1>登 陆</h1>
                     <h6 id="msg" style="color:red;display:none;"></h6>
                     <div>
-                        <input type="text" class="form-control" placeholder="用户名"  name="username" required="true"/>
+                        <input type="text" class="form-control" placeholder="用户名" name="username" required="true"/>
                     </div>
                     <div>
                         <input type="password" class="form-control" placeholder="密码" name="passwd" required="true"/>
@@ -131,7 +131,7 @@
                 </form>
             </section>
         </div>
-        </div>
+    </div>
     <div style="position:absolute; bottom:0px; left:50%;width:300px;
     height:50px;margin:-25px 0 0 -150px;text-align:center;">
         <p>© 2018-2020 New4net.com 版权所有 网站备案号：
@@ -139,105 +139,105 @@
         </p>
         <p>ICP主体备案号:蜀ICP备18010514号</p>
     </div>
-    </div>
 </div>
 <script>
     $(".login_form form").validate({
-        errorPlacement : function(error, element) {
+        errorPlacement: function (error, element) {
             error.appendTo(element.parent());
         },
-        rules : {
-            username : {
-                required : true,
-                rangelength : [ 6, 18 ]
+        rules: {
+            username: {
+                required: true,
+                rangelength: [6, 18]
             },
-            password : {
-                required : true,
-                rangelength : [ 6, 18 ]
+            password: {
+                required: true,
+                rangelength: [6, 18]
             },
-            vCode : {
-                required : true,
-                remote : {
-                    url : "/checkVCode", //后台处理程序
-                    type : "post", //数据发送方式
-                    dataType : "json"
+            vCode: {
+                required: true,
+                remote: {
+                    url: "/checkVCode", //后台处理程序
+                    type: "post", //数据发送方式
+                    dataType: "json"
 
                 }
             }
         },
-        messages : {
-            username : {
-                required : "必填",
-                rangelength : $.validator.format("账号最小长度:{0}, 最大长度:{1}。")
+        messages: {
+            username: {
+                required: "必填",
+                rangelength: $.validator.format("账号最小长度:{0}, 最大长度:{1}。")
             },
-            password : {
-                required : "必填",
-                rangelength : $.validator.format("密码最小长度:{0}, 最大长度:{1}。")
+            password: {
+                required: "必填",
+                rangelength: $.validator.format("密码最小长度:{0}, 最大长度:{1}。")
             },
-            vCode : {
-                required : "不能为空",
-                remote : "验证码错误"
+            vCode: {
+                required: "不能为空",
+                remote: "验证码错误"
             }
         }
     })
     $(".registration_form form").validate({
-        errorPlacement : function(error, element) {
+        errorPlacement: function (error, element) {
             error.appendTo(element.parent());
         },
-        rules : {
-            username : {
-                required : true,
-                rangelength : [ 6, 18 ]
+        rules: {
+            username: {
+                required: true,
+                rangelength: [6, 18]
             },
-            password : {
-                required : true,
-                rangelength : [ 6, 18 ]
+            password: {
+                required: true,
+                rangelength: [6, 18]
             },
-            email : {
-                required : true,
-                email:true
+            email: {
+                required: true,
+                email: true
             },
-            vCode : {
-                required : true,
-                remote : {
-                    url : "/checkVCode", //后台处理程序
-                    type : "post", //数据发送方式
-                    dataType : "json"
+            vCode: {
+                required: true,
+                remote: {
+                    url: "/checkVCode", //后台处理程序
+                    type: "post", //数据发送方式
+                    dataType: "json"
 
                 }
             }
         },
-        messages : {
-            username : {
-                required : "必填",
-                rangelength : $.validator.format("账号最小长度:{0}, 最大长度:{1}。")
+        messages: {
+            username: {
+                required: "必填",
+                rangelength: $.validator.format("账号最小长度:{0}, 最大长度:{1}。")
             },
-            password : {
-                required : "必填",
-                rangelength : $.validator.format("密码最小长度:{0}, 最大长度:{1}。")
+            password: {
+                required: "必填",
+                rangelength: $.validator.format("密码最小长度:{0}, 最大长度:{1}。")
             },
-            eamil : {
-                required : "必填",
-                email:"Email格式错误"
+            eamil: {
+                required: "必填",
+                email: "Email格式错误"
             },
-            vCode : {
-                required : "不能为空",
-                remote : "验证码错误"
+            vCode: {
+                required: "不能为空",
+                remote: "验证码错误"
             }
         }
     })
     $(document).keydown(function (event) {
         if (event.keyCode == 13) {
-            if(!location.hash||location.hash=='#signin'){
+            if (!location.hash || location.hash == '#signin') {
                 login();
-            }else if(location.hash=='#signup'){
+            } else if (location.hash == '#signup') {
                 reg();
             }
         }
     });
-    function  login() {
+
+    function login() {
         var valid = $(".login_form form").valid();
-        if(valid){
+        if (valid) {
             $.ajax({
                 url: "/login",
                 data: JSON.stringify({
@@ -245,11 +245,11 @@
                     password: $(".login_form [name=passwd]").val(),
                     vCode: $(".login_form [name=vCode]").val()
                 }),
-                dataType:'json',//服务器返回json格式数据
-                type:'post',//HTTP请求类型
+                dataType: 'json',//服务器返回json格式数据
+                type: 'post',//HTTP请求类型
                 success: function (data, textStatus, request) {
                     var Authorization = request.getResponseHeader("Authorization")
-                    if (Authorization&&(!localStorage.getItem("Authorization")||localStorage.getItem("Authorization")&&Authorization!=localStorage.getItem("Authorization"))) {
+                    if (Authorization && (!localStorage.getItem("Authorization") || localStorage.getItem("Authorization") && Authorization != localStorage.getItem("Authorization"))) {
                         localStorage.setItem("Authorization", Authorization);
 
                     }
@@ -259,16 +259,17 @@
                         $("#msg").text("用户名或密码错误").show();
                     }
                 },
-                error:function (err) {
+                error: function (err) {
                     console.log(JSON.stringify(err))
                 }
 
             });
         }
     }
-    function reg () {
+
+    function reg() {
         var valid = $(".registration_form form").valid();
-        if(valid){
+        if (valid) {
             $.ajax({
                 url: "/user/regByAccount",
                 data: {
@@ -277,8 +278,8 @@
                     email: $(".registration_form [name=email]").val(),
                     vCode: $(".registration_form [name=vCode]").val()
                 },
-                dataType:'json',//服务器返回json格式数据
-                type:'post',//HTTP请求类型
+                dataType: 'json',//服务器返回json格式数据
+                type: 'post',//HTTP请求类型
                 success: function (data) {
                     if (data && data.code == '1') {
                         $("#msg1").text("注册成功").show();
@@ -287,7 +288,7 @@
                         $("#msg1").text("注册失败").show();
                     }
                 },
-                error:function (err) {
+                error: function (err) {
                     console.log(JSON.stringify(err))
                 }
 
