@@ -20,7 +20,7 @@ import java.util.Objects;
 @EqualsAndHashCode(of = {"superAuthCode","subAuthCode"})
 @NoArgsConstructor
 @AllArgsConstructor
-@Cache(region = "AuthorityRelation", usage = CacheConcurrencyStrategy.READ_WRITE)
+@org.hibernate.annotations.Cache(region = "AuthorityRelation", usage = CacheConcurrencyStrategy.READ_WRITE)
 @Cacheable(true)
 public class AuthorityRelation implements Serializable {
 

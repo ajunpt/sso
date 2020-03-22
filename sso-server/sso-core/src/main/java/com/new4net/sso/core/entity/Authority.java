@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Cache(region = "Authority", usage = CacheConcurrencyStrategy.READ_WRITE)
+@org.hibernate.annotations.Cache(region = "Authority", usage = CacheConcurrencyStrategy.READ_WRITE)
 @Cacheable(true)
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
