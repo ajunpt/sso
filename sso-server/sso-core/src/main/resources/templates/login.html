@@ -246,6 +246,7 @@
                     vCode: $(".login_form [name=vCode]").val()
                 }),
                 dataType: 'json',//服务器返回json格式数据
+                contentType:'application/json',
                 type: 'post',//HTTP请求类型
                 success: function (data, textStatus, request) {
                     var Authorization = request.getResponseHeader("Authorization")

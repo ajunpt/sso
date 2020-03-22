@@ -6,19 +6,15 @@ import com.new4net.jwt.client.configuration.JwtClientProperties;
 import com.new4net.jwt.server.configuration.DaoUserDetailsService;
 import com.new4net.sso.api.LoginService;
 import com.new4net.sso.api.dto.UserInfo;
-import com.new4net.sso.core.entity.User;
 import com.new4net.util.AjaxMsg;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @RestController
@@ -49,7 +45,7 @@ public class LoginController implements LoginService {
     @Autowired
     private DaoUserDetailsService daoUserDetailsService;
     @Override
-    public AjaxMsg loginByAdmin(Map<String, String> params) {
+    public AjaxMsg loginByAdmin(@RequestBody Map<String, String> params) {
         String username =  params.get("username");
 
         String salt = (String) redisTemplate.opsForValue().get("token:" +username);
@@ -68,7 +64,7 @@ public class LoginController implements LoginService {
     }
 
     @Override
-    public AjaxMsg logoutByToken(String token) {
+    public AjaxMsg logoutByToken(@RequestParam("token") String token) {
         if(token == null)
             return new AjaxMsg("0","注销失败");
         JwtAuthenticationToken authToken = new JwtAuthenticationToken(JWT.decode(token));

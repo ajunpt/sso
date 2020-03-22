@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
@@ -32,10 +33,11 @@ public class ModuleController implements ModuleService {
     @Autowired
     private AuthorityRelationReposity authorityRelationReposity;
 
+
     @Override
     @Transactional
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-    public AjaxMsg regModule(ModuleInfo module) {
+    public AjaxMsg regModule(@RequestBody ModuleInfo module) {
         return moduleService.regModule(module);
     }
     @Autowired
@@ -43,7 +45,7 @@ public class ModuleController implements ModuleService {
     @Override
     @Transactional
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-    public AjaxMsg removeModule(String moduleName) {
+    public AjaxMsg removeModule(@RequestParam("moduleName")String moduleName) {
         if(jwtClientProperties.getModuleName().equals(moduleName)){
             return new AjaxMsg(ModuleOperateResult.DEL_FAIL_OTHER,"删除失败，不能删除核心模块!");
         }
@@ -54,9 +56,7 @@ public class ModuleController implements ModuleService {
                 authorityRelationReposity.deleteBySubAuthCode(authority.getAuthorityCode());
 
             authorityReposity.deleteByModule(m);
-
             moduleReposity.delete(m);
-
             return new AjaxMsg(ModuleOperateResult.DEL_SUCCESS,"删除成功!");
         }
         return new AjaxMsg(ModuleOperateResult.DEL_FAIL_NOT_EXISITS,"模块不存在");
@@ -67,8 +67,8 @@ public class ModuleController implements ModuleService {
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
     @Transactional
     public Page<ModuleInfo> listModules(@RequestBody Map<String, Object> params){
-        int pageNo = (int) params.get("pageNo");
-        int pageSize = (int) params.get("pageSize");
+        int pageNo = Integer.parseInt(String.valueOf(params.get("pageNo")));
+        int pageSize = Integer.parseInt(String.valueOf(params.get("pageSize")));
         String moduleName = (String) params.get("moduleName");
         Boolean enable = (Boolean) params.get("enable");
         String moduleId = (String) params.get("moduleId");
@@ -107,7 +107,7 @@ public class ModuleController implements ModuleService {
        return moduleService.listAllModules();
     }
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-    public AjaxMsg modifyModuleInfo(ModuleInfo m){
+    public AjaxMsg modifyModuleInfo(@RequestBody  ModuleInfo m){
         return moduleService.modifyModuleInfo(m);
     }
 }

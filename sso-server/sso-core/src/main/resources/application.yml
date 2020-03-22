@@ -4,14 +4,18 @@ server:
 logging:
   level:
    root: DEBUG
-
 spring:
+  rabbitmq:
+    host: 192.168.1.6
+    port: 45672
+    username: admin
+    password: TjTaA124#
   redis:
     cluster:
       nodes: 192.168.1.5:17000,192.168.1.5:17001,192.168.1.5:17002,192.168.1.5:18000,192.168.1.5:18001,192.168.1.5:18002
     database: 0
-    #host: 192.168.1.5
-    #port: 17000
+#    host: localhost
+#    port: 6379
     password: TjTaA124#
     lettuce:
       pool:
@@ -24,6 +28,7 @@ spring:
     name: sso-server
   datasource:
    url: jdbc:mysql://192.168.1.5:3306/sso?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8
+#   url: jdbc:mysql://localhost:3306/sso?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=GMT%2B8
    username: root
    password: TjTaA124#
    driver-class-name: com.mysql.jdbc.Driver
@@ -32,7 +37,7 @@ spring:
    min-idle: 8
    initial-size: 10
   jpa:
-#    open-in-view: true
+    open-in-view: true
     database: MYSQL
     show-sql: true
     hibernate:
@@ -43,6 +48,20 @@ spring:
      hibernate:
       dialect: com.new4net.util.MySQL5DialectUTF8
       current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+      generate_statistics: true
+      redisson-config: classpath:conf/redisson.yaml
+      expiryInSeconds:
+        default: 120
+        hibernate:
+          account: 1200
+          common: 0
+      cache:
+        use_second_level_cache: true
+        use_query_cache: true
+        region_prefix: hibernate
+        use_structured_entries: true
+        region:
+          factory_class: org.hibernate.cache.redis.hibernate52.SingletonRedisRegionFactory
 #      enable_lazy_load_no_trans: true
   #      cache:
 #       region:
@@ -66,15 +85,11 @@ spring:
     #配置模板路径，默认是templates，可以不用配置
    servlet:
      content-type: text/html
-
-
 tokenValidTime: 600000
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://sysadmin:Tj20jq7T@192.168.1.5:8501/eureka/
-#        http://sysadmin:Tj20jq7T@192.168.1.33:8500/eureka/
-#      ,
+      defaultZone: http://sysadmin:Tj20jq7T@192.168.1.35:8502/eureka/,http://sysadmin:Tj20jq7T@192.168.1.34:8503/eureka/
   instance:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 #    prefer-ip-address: true

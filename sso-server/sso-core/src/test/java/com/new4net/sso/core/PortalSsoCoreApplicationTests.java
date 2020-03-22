@@ -1,26 +1,24 @@
 package com.new4net.sso.core;
 
-import com.new4net.sso.api.dto.ModuleInfo;
-import com.new4net.sso.core.entity.Authority;
-
 import com.new4net.sso.core.repo.UserReposity;
-import com.new4net.sso.core.service.impl.AuthorityServiceImpl;
-import com.new4net.sso.core.service.impl.ModuleServiceImpl;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
-
-@SpringBootTest(classes = {PortalSsoCoreApplicationTests.class})
+@SpringBootTest
 public class PortalSsoCoreApplicationTests {
-//    @Autowired
-//    private UserReposity userReposity;
-	@Test
-    void contextLoads() {
+    @Autowired
+    private UserReposity userReposity;
 
-	}
-//    @Autowired
+    @Test
+    public void contextLoads() {
+
+    }
+
+    //    @Autowired
 //    AuthorityServiceImpl authorityService;
 //	@Test
 //    public void test1(){
@@ -37,4 +35,8 @@ public class PortalSsoCoreApplicationTests {
 //        List<ModuleInfo> moduleInfos = moduleService.listAllModules();
 //        System.out.println(System.currentTimeMillis()-l);
 //    }
+    @Test
+    public void test() {
+
+    }
 }

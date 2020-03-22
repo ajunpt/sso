@@ -10,6 +10,7 @@ import com.new4net.util.AjaxMsg;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Component
@@ -31,7 +33,7 @@ public class ClientInit implements InitializingBean {
     @Autowired
     private LoginService loginService;
     @Autowired
-    private RestTemplate restTemplate;
+    private RedisTemplate redisTemplate;
     @Autowired
     private AuthService authService;
 
@@ -48,8 +50,10 @@ public class ClientInit implements InitializingBean {
             if (AjaxResult.SUCCESS.equals(ajaxMsg.getCode())) {
                 Constants.Authorization.set((String) ajaxMsg.getObj());
 
+                redisTemplate.opsForValue().set("token:"+jwtClientProperties.getModuleName() , Constants.Authorization.get(), 3600, TimeUnit.SECONDS);
             } else if ("-1".equals(ajaxMsg.getCode())) {
-                loginService.logoutByToken(Constants.Authorization.get());
+                Constants.Authorization.set((String) redisTemplate.opsForValue().get("token:" + jwtClientProperties.getModuleName()));
+                //loginService.logoutByToken(Constants.Authorization.get());
             } else {
                 throw new Exception(ajaxMsg.getMsg());
 

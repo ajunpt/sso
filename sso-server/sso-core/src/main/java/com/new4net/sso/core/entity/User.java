@@ -4,10 +4,12 @@ import com.new4net.sso.api.dto.UserInfo;
 import lombok.*;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.GenericGenerator;
+import org.redisson.config.Config;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Set;
@@ -22,8 +24,10 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @Builder
 @Entity
+@Cacheable(true)
+@org.hibernate.annotations.Cache(region = "User", usage = CacheConcurrencyStrategy.READ_WRITE)
 
-public class User  implements UserDetails{
+public class User  implements UserDetails, Serializable {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid")
@@ -43,6 +47,7 @@ public class User  implements UserDetails{
     private Date validTime;
     private Date invalidTime;
     public UserInfo getUserInfo(){
+
         return UserInfo.builder().username(username).password(password).accountNonExpired(accountNonExpired)
                 .accountNonLocked(accountNonLocked).credentialsNonExpired(credentialsNonExpired).enable(enable)
                 .authorities(authorities==null?null:authorities.stream().map(authority -> {return authority.getAuth();}).collect(Collectors.toSet())).build();

@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
@@ -17,7 +19,7 @@ public class JwtUserController implements JwtUserService {
     @Autowired
     private DaoUserDetailsService daoUserDetailsService;
 
-    public String saveUserLoginInfo(UserInfo user) {
+    public String saveUserLoginInfo(@RequestBody UserInfo user) {
         return daoUserDetailsService.saveUserLoginInfo(user);
 
     }
@@ -29,7 +31,7 @@ public class JwtUserController implements JwtUserService {
 
     //必须使用缓存进行改进
     @Override
-    public UserInfo loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserInfo loadUserByUsername(@PathVariable("username") String username) throws UsernameNotFoundException {
 
         String[] ss = username.split(";");
 
@@ -49,7 +51,7 @@ public class JwtUserController implements JwtUserService {
     }
 
     @Override
-    public void deleteUserLoginInfo(String username) {
+    public void deleteUserLoginInfo(@PathVariable("username") String username) {
         daoUserDetailsService.deleteUserLoginInfo(username);
 
     }

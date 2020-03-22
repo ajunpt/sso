@@ -16,6 +16,7 @@ public final class CacheManagerFactory implements DisposableBean {
 
     @Override
     public void destroy() throws Exception {
+
         CACH_EMANAGER = null;
     }
 }

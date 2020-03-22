@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -17,7 +18,9 @@ import java.util.TreeSet;
 @AllArgsConstructor
 @DiscriminatorValue("role")
 @EqualsAndHashCode(of = {"roleCode"})
-public class Role extends Authority {
+@org.hibernate.annotations.Cache(region = "Role", usage = CacheConcurrencyStrategy.READ_WRITE)
+@Cacheable(true)
+public class Role extends Authority implements Serializable {
     @Column(unique = true)
     private String roleCode;
     private String roleName;

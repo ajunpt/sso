@@ -14,14 +14,16 @@ import com.new4net.util.AjaxMsg;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 @Slf4j
-@Component
+@Component("SSOInit")
 public class SSOInit implements InitializingBean {
 
     @Autowired
@@ -33,6 +35,9 @@ public class SSOInit implements InitializingBean {
     private UserReposity userReposity;
     @Autowired
     private AuthorityReposity authorityReposity;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
     @Override
     public void afterPropertiesSet() throws Exception {
         Set<AuthorityRelationInfo> authorityRelationInfos = new HashSet<>();
@@ -79,6 +84,7 @@ public class SSOInit implements InitializingBean {
         }else{
             log.info("核心模块注册失败，其他错误");
         }
+
         if(userReposity.findByUsername("sysadmin")==null){
             HashSet<Authority> set = new HashSet<>();
             set.add(authorityReposity.findById("ROLE_SYSTEMADMIN").get());

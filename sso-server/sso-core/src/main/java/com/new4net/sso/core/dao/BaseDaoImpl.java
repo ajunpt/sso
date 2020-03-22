@@ -4,6 +4,7 @@ import com.new4net.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.hibernate.jpa.QueryHints;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
@@ -91,6 +92,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
         EntityManager entityManager = entityManager();
         try {
             Query query = entityManager.createQuery(hql);
+            query.setHint(QueryHints.HINT_CACHEABLE,true);
             for (int i = 0; params != null && i < params.length; i++) {
                 query.setParameter(i, params[i]);
             }
@@ -110,6 +112,8 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
         try {
             Query query = entityManager.createQuery(hql);
             TypedQuery<Long> query1 = entityManager.createQuery("select Count(*) " + hql, Long.class);
+            query.setHint(QueryHints.HINT_CACHEABLE,true);
+            query1.setHint(QueryHints.HINT_CACHEABLE,true);
             for (Iterator<Map.Entry<String, Object>> it = params.entrySet().iterator(); it.hasNext(); ) {
                 Map.Entry<String, Object> entry = it.next();
                 query.setParameter(entry.getKey(), entry.getValue());
@@ -131,9 +135,11 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
         EntityManager entityManager = entityManager();
         try {
             Query query = entityManager.createQuery(hql);
+            query.setHint(QueryHints.HINT_CACHEABLE,true);
             for (Iterator<Map.Entry<String, Object>> it = params.entrySet().iterator(); it.hasNext(); ) {
                 Map.Entry<String, Object> entry = it.next();
                 query.setParameter(entry.getKey(), entry.getValue());
+
             }
             List<T> list = query.getResultList();
             return list;
@@ -203,6 +209,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
 
 
             Query query1 = entityManager.createQuery(hql1);
+            query1.setHint(QueryHints.HINT_CACHEABLE,true);
             for (Iterator<Map.Entry<String, Object>> it = params.entrySet().iterator(); it.hasNext(); ) {
                 Map.Entry<String, Object> entry = it.next();
                 String key = entry.getKey();
@@ -321,7 +328,9 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T> {
             }
 
             Query query1 = entityManager.createQuery(hql1);
+            query1.setHint(QueryHints.HINT_CACHEABLE,true);
             TypedQuery<Long> query2 = entityManager.createQuery(hql2, Long.class);
+            query2.setHint(QueryHints.HINT_CACHEABLE,true);
             for (Iterator<Map.Entry<String, Object>> it = params.entrySet().iterator(); it.hasNext(); ) {
                 Map.Entry<String, Object> entry = it.next();
                 String key = entry.getKey();

@@ -986,6 +986,7 @@
                 } else {
                     new MsgModal("提示", "执行失败!", function () {
                         $('#modifyModule').modal('hide');
+                        window.location.reload();
                     });
                 }
 

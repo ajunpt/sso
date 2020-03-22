@@ -1,11 +1,9 @@
 package com.new4net.sso.api.dto;
 
 import lombok.*;
-import lombok.experimental.SuperBuilder;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Set;
-import java.util.concurrent.locks.ReentrantLock;
 
 @Setter
 @Getter

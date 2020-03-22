@@ -17,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @ComponentScan(basePackages = "com.new4net")
 public class SsoclientApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(SsoclientApplication.class, args);
 	}

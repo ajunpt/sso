@@ -5,9 +5,11 @@ import com.new4net.sso.core.repo.AuthorityReposity;
 import com.new4net.sso.core.repo.RoleReposity;
 import com.new4net.sso.core.ApplicationContextUtils;
 import lombok.*;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
 @Setter
@@ -17,7 +19,9 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder
 @Entity
-public class Module {
+@Cacheable(true)
+@org.hibernate.annotations.Cache(region = "Module", usage = CacheConcurrencyStrategy.READ_WRITE)
+public class Module implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid")
@@ -34,6 +38,7 @@ public class Module {
     }
     public Set<Role> getRoles(){
         RoleReposity roleReposity = ApplicationContextUtils.getBean(RoleReposity.class);
+
         return roleReposity.findByModule(this);
     }
     public Set<Authority> getAuthorities(){

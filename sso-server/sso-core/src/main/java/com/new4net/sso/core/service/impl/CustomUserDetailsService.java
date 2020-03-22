@@ -73,8 +73,12 @@ public class CustomUserDetailsService implements DaoUserDetailsService {
                 return authority.getAuth();
             }).collect(Collectors.toSet()));
         }
+        if(userInfo.isEnable()){
+            return userInfo;
+        }else {
+            throw new UsernameNotFoundException("用户不可用");
+        }
 
-        return userInfo;
     }
 
     @Override

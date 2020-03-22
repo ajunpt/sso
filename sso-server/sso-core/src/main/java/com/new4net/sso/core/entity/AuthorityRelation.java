@@ -2,9 +2,15 @@ package com.new4net.sso.core.entity;
 
 import com.new4net.sso.api.dto.AuthorityRelationInfo;
 import lombok.*;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Cacheable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Builder
@@ -14,7 +20,9 @@ import java.util.Objects;
 @EqualsAndHashCode(of = {"superAuthCode","subAuthCode"})
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthorityRelation {
+@Cache(region = "AuthorityRelation", usage = CacheConcurrencyStrategy.READ_WRITE)
+@Cacheable(true)
+public class AuthorityRelation implements Serializable {
 
     @Id
 

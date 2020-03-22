@@ -1,10 +1,8 @@
 package com.new4net.sso.core.controller;
 
-import com.new4net.sso.api.dto.ModuleInfo;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.new4net.sso.api.dto.UserInfo;
 import com.new4net.sso.core.entity.Authority;
-import com.new4net.sso.core.entity.AuthorityRelation;
-import com.new4net.sso.core.entity.Module;
 import com.new4net.sso.core.entity.User;
 import com.new4net.sso.core.repo.AuthorityReposity;
 import com.new4net.sso.core.repo.UserReposity;
@@ -18,13 +16,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
@@ -44,8 +38,10 @@ public class UserController {
     private AuthorityService authorityService;
 
 
+
     @RequestMapping("/regByAccount")
     @ResponseBody
+    @HystrixCommand(fallbackMethod = "asynRegByAccount")
     public AjaxMsg regByAccount(HttpServletRequest req, @RequestParam("username") String username
             , @RequestParam("password") String password,
                                 @RequestParam("email") String email, @RequestParam("vCode") String vCode) {
@@ -69,7 +65,7 @@ public class UserController {
             user.setAccountNonLocked(true);
             user.setCredentialsNonExpired(true);
             user.setEnable(true);
-            Authority authority = authorityService.findById("ROLE_USER");
+            Authority authority = authorityReposity.getOne("ROLE_USER") ;
             Set<Authority> set = new HashSet<>();
             set.add(authority);
             user.setAuthorities(set);
@@ -81,16 +77,53 @@ public class UserController {
         }
         return new AjaxMsg("-3", "其他错误!");
     }
+    public   AjaxMsg asynRegByAccount(HttpServletRequest req, @RequestParam("username") String username
+            , @RequestParam("password") String password,
+                                      @RequestParam("email") String email, @RequestParam("vCode") String vCode){
+        try {
+            if (StringUtils.isEmpty(email)) {
+                return new AjaxMsg("0", "Email为空");
+            }
+            if (StringUtils.isEmpty(username)) {
+                return new AjaxMsg("-1", "账户为空");
+            }
+            String kaptchaExpected = (String) req.getSession()
+                    .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
+            if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
+                return new AjaxMsg("-2", "验证码错误!");
+            }
+            User user = new User();
+            user.setUsername(username);
+            user.setEmail(email);
+            user.setPassword(passwordEncoder.encode(password));
+            user.setAccountNonExpired(true);
+            user.setAccountNonLocked(true);
+            user.setCredentialsNonExpired(true);
+            user.setEnable(true);
+            Authority authority = authorityReposity.getOne("ROLE_USER") ;
+            Set<Authority> set = new HashSet<>();
+            set.add(authority);
+            user.setAuthorities(set);
 
+
+            userReposity.save(user);
+
+            return new AjaxMsg("2", "注册申请已提交,正在处理中.....");
+        } catch (Exception e) {
+            logger.error("账号注册失败", e);
+        }
+        return new AjaxMsg("-3", "其他错误!");
+    }
     @Autowired
     private UserService userService;
 
     @RequestMapping("/listUsers")
     @PreAuthorize("hasRole('ROLE_SYSTEMADMIN')")
     @ResponseBody
+
     public Page<UserInfo> listUsers(@RequestBody Map<String, Object> params) {
-        int pageNo = (int) params.get("pageNo");
-        int pageSize = (int) params.get("pageSize");
+        int pageNo = Integer.parseInt(String.valueOf(params.get("pageNo"))) ;
+        int pageSize = Integer.parseInt(String.valueOf(params.get("pageSize")));
         String username = (String) params.get("username");
         Object en = params.get("enable");
         Boolean enable = null;

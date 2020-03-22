@@ -16,6 +16,9 @@ import com.new4net.util.AjaxMsg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -32,7 +35,7 @@ public class AuthController implements AuthService {
     private ModuleReposity moduleReposity;
 
     @Override
-    public Auth findByAuthorityCode(String authority) {
+    public Auth findByAuthorityCode(@PathVariable("authorityCode") String authority) {
         Authority authority1 = authorityService.findById(authority);
 
         return authority1 == null ? null : authority1.getAuth();
@@ -40,8 +43,8 @@ public class AuthController implements AuthService {
 
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-
-    public AjaxMsg saveAuthorityRelations(Auth auth) {
+    @Transactional
+    public AjaxMsg saveAuthorityRelations(@RequestBody Auth auth) {
 
         Authority authority = authorityService.findById(auth.getAuthority());
 
@@ -58,11 +61,11 @@ public class AuthController implements AuthService {
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
 
-    public AjaxMsg saveAuth(Auth auth) {
+    public AjaxMsg saveAuth(@RequestBody Auth auth) {
         Authority authority = null;
         Module module = moduleReposity.findByModuleName(auth.getModuleName());
 
-        if((authority=authorityService.findById(auth.getAuthority()))==null){
+        if((authority=authorityReposity.getOne(auth.getAuthority()))==null){
             authority = new Authority();
             authority.setAuthorityCode(auth.getAuthority());
         }
@@ -85,9 +88,6 @@ public class AuthController implements AuthService {
 
         authorityReposity.save(authority);
         saveRelation(authority);
-
-
-
         return new AjaxMsg("1", "保存成功");
     }
 
@@ -138,7 +138,7 @@ public class AuthController implements AuthService {
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
 
-    public AjaxMsg removeAuth(String authorityCode) {
+    public AjaxMsg removeAuth(@RequestParam("authorityCode") String authorityCode) {
         if("ROLE_SYSTEMADMIN".equals(authorityCode)){
             return new AjaxMsg("0", "不能删除系统管理员");
         }
@@ -155,7 +155,7 @@ public class AuthController implements AuthService {
                 authorityReposity.save(authority1);
             });
         }
-        Authority authority = authorityReposity.findById(authorityCode).get();
+        Authority authority = authorityReposity.getOne(authorityCode);
         List<AuthorityRelation> authorityRelations = authorityRelationReposity.findBySubAuthCode(authorityCode);
         if(authorityRelations!=null){
             authorityRelations.stream().forEach(authorityRelation -> {
