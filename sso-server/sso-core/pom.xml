@@ -159,6 +159,13 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <version>4.2.3.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
         <!--<dependency>-->
             <!--<groupId>com.github.debop</groupId>-->
             <!--<artifactId>hibernate-redis</artifactId>-->

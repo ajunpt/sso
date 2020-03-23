@@ -46,8 +46,6 @@ public class UserController {
     public AjaxMsg regByAccount(HttpServletRequest req, @RequestParam("username") String username
             , @RequestParam("password") String password,
                                 @RequestParam("email") String email, @RequestParam("vCode") String vCode) {
-
-        int i = 1 / 0;
         if (StringUtils.isEmpty(email)) {
             return new AjaxMsg("0", "Email为空");
         }
@@ -122,7 +120,6 @@ public class UserController {
     @RequestMapping("/listUsers")
     @PreAuthorize("hasRole('ROLE_SYSTEMADMIN')")
     @ResponseBody
-
     public Page<UserInfo> listUsers(@RequestBody Map<String, Object> params) {
         int pageNo = Integer.parseInt(String.valueOf(params.get("pageNo")));
         int pageSize = Integer.parseInt(String.valueOf(params.get("pageSize")));
