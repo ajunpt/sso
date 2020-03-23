@@ -46,6 +46,7 @@ spring:
         physical-strategy: com.new4net.util.MysqlUpperCaseStrategy
     properties:
      hibernate:
+      enable_lazy_load_no_trans: true
       dialect: com.new4net.util.MySQL5DialectUTF8
       current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
       generate_statistics: true

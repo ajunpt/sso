@@ -14,6 +14,7 @@ import com.new4net.sso.core.repo.ModuleReposity;
 import com.new4net.sso.core.repo.RoleReposity;
 import com.new4net.util.AjaxMsg;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -80,17 +81,17 @@ public class ModuleServiceImpl extends BaseServiceImpl<Module> {
 
     @RequestMapping("listAllModules")
     public List<ModuleInfo> listAllModules(){
-        List<Module> modules = moduleReposity.findAll();
+        List<Module> modules = moduleReposity.findAll(new Sort(Sort.Direction.ASC,"createTime"));
         List<Authority> authorities = authorityReposity.findAll();
         List<ModuleInfo> moduleInfos = new ArrayList<>();
         if(modules!=null){
             for(Module module:modules){
-                ModuleInfo moduleInfo = module.getModuleInfo();
+                ModuleInfo moduleInfo = module.buildModuleInfo();
                 if(authorities!=null){
                     moduleInfo.setAuths(authorities.stream().filter(authority -> {
                         return authority.getModule() != null && module.getModuleName() != null && module.getModuleName().equals(authority.getModule().getModuleName());
                     }).map(authority -> {
-                        Auth auth = authority.getAuth();
+                        Auth auth = authority.buildAuth();
                         auth.setModuleName(moduleInfo.getModuleName());
                         return auth ;
                     }).collect(Collectors.toSet()));

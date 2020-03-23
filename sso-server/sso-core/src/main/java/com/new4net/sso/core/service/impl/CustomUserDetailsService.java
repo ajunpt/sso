@@ -16,6 +16,7 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -56,9 +57,9 @@ public class CustomUserDetailsService implements DaoUserDetailsService {
         User user = userReposity.findByUsername(username);
 
 
-        UserInfo userInfo = user.getUserInfo();
+        UserInfo userInfo = user.buildUserInfo();
 
-        Set<Authority> an = user.getAuthorities();
+        Collection<Authority> an = user.getAuthorities();
         String moduleName = null;
         if (ss.length == 2) {
             moduleName = ss[1];
@@ -70,7 +71,7 @@ public class CustomUserDetailsService implements DaoUserDetailsService {
         if (an != null && !an.isEmpty()) {
             List<Authority> ans = authorityService.getSubAuthorities(moduleName, an.toArray(new Authority[0]));
             userInfo.setAuthorities(ans.stream().map((authority) -> {
-                return authority.getAuth();
+                return authority.buildAuth();
             }).collect(Collectors.toSet()));
         }
         if(userInfo.isEnable()){
@@ -90,23 +91,30 @@ public class CustomUserDetailsService implements DaoUserDetailsService {
          *
          */
         redisTemplate.opsForValue().set("token:" + user.getUsername(), salt, 3600, TimeUnit.SECONDS);
+
         Algorithm algorithm = Algorithm.HMAC256(salt);
         Date date = new Date(System.currentTimeMillis() + 3600 * 1000);  //设置1小时后过期
-        return JWT.create()
+
+        String token = JWT.create()
                 .withSubject(user.getUsername())
                 .withExpiresAt(date)
                 .withIssuedAt(new Date())
                 .sign(algorithm);
+        redisTemplate.opsForValue().set(salt , token, 3600, TimeUnit.SECONDS);
+        return token;
     }
 
     @Override
     //@CacheRemove
     public void deleteUserLoginInfo(String username) {
+       String salt = (String) redisTemplate.opsForValue().get("token:" + username);
         /**
          *
          * @todo 清除数据库或者缓存中登录salt
          *
          */
         redisTemplate.delete("token:" + username);
+        redisTemplate.delete(salt);
+
     }
 }

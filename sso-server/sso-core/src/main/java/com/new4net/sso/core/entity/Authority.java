@@ -2,7 +2,6 @@ package com.new4net.sso.core.entity;
 
 import com.new4net.sso.api.dto.Auth;
 import lombok.*;
-import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -40,10 +39,10 @@ public class Authority implements GrantedAuthority, Serializable {
     private Set<AuthorityRelation> authorityRelations;
 
 
-    public Auth getAuth() {
+    public Auth buildAuth() {
         if (module.isEnable())
             return Auth.builder().authority(authorityCode).remark(remark).authorityName(authorityName).authorityRelationInfos(authorityRelations == null ? null : authorityRelations.stream().map(authorityRelation -> {
-                return authorityRelation.getAuthorityRelationInfo();
+                return authorityRelation.buildAuthorityRelationInfo();
             }).collect(Collectors.toSet())).build();
         else
             return null;

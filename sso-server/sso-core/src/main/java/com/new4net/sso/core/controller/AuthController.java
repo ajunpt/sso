@@ -38,7 +38,7 @@ public class AuthController implements AuthService {
     public Auth findByAuthorityCode(@PathVariable("authorityCode") String authority) {
         Authority authority1 = authorityService.findById(authority);
 
-        return authority1 == null ? null : authority1.getAuth();
+        return authority1 == null ? null : authority1.buildAuth();
     }
 
     @Override

@@ -34,7 +34,7 @@ public class AuthorityRelation implements Serializable {
     private  String subAuthCode;
     private  String subAuthName;
 
-    public AuthorityRelationInfo getAuthorityRelationInfo(){
+    public AuthorityRelationInfo buildAuthorityRelationInfo(){
         return AuthorityRelationInfo.builder().subAuthCode(subAuthCode).subAuthName(subAuthName).superAuthCode(superAuthCode).superAuthName(superAuthName).build();
     }
 }

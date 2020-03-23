@@ -285,7 +285,10 @@
                     if (data && data.code == '1') {
                         $("#msg1").text("注册成功").show();
 
-                    } else if (data) {
+                    }else if(data && data.code == '2'){
+                        $("#msg1").text(data.msg).show();
+                    }
+                        else if (data) {
                         $("#msg1").text("注册失败").show();
                     }
                 },

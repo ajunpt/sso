@@ -10,6 +10,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Set;
 
 @Setter
@@ -30,18 +31,20 @@ public class Module implements Serializable {
     private String moduleName;
 
     private String superModuleName;
+    @Column(name="createTime" ,insertable = false,nullable=false,columnDefinition="timestamp  DEFAULT CURRENT_TIMESTAMP")
+    private Date createTime;
 
     private boolean enable=true;
     private String remark;
-    public ModuleInfo getModuleInfo(){
+    public ModuleInfo buildModuleInfo(){
         return ModuleInfo.builder().moduleName(moduleName).enable(enable).remark(remark).superModuleName(superModuleName).build();
     }
-    public Set<Role> getRoles(){
+    public Set<Role> findRoles(){
         RoleReposity roleReposity = ApplicationContextUtils.getBean(RoleReposity.class);
 
         return roleReposity.findByModule(this);
     }
-    public Set<Authority> getAuthorities(){
+    public Set<Authority> findAuthorities(){
         AuthorityReposity authorityReposity = ApplicationContextUtils.getBean(AuthorityReposity.class);
         return authorityReposity.findByModule(this);
     }

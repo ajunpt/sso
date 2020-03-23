@@ -1,12 +1,13 @@
 package com.new4net.sso.core.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.new4net.sso.api.dto.UserInfo;
+import com.new4net.sso.core.RabbitConfig;
 import com.new4net.sso.core.entity.Authority;
 import com.new4net.sso.core.entity.User;
 import com.new4net.sso.core.repo.AuthorityReposity;
 import com.new4net.sso.core.repo.UserReposity;
-import com.new4net.sso.core.service.AuthorityService;
 import com.new4net.sso.core.service.impl.UserService;
 import com.new4net.util.AjaxMsg;
 import com.new4net.util.Page;
@@ -14,6 +15,7 @@ import com.new4net.util.PageConverter;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -35,8 +37,7 @@ public class UserController {
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
-    private AuthorityService authorityService;
-
+    private RabbitTemplate rabbitTemplate;
 
 
     @RequestMapping("/regByAccount")
@@ -45,41 +46,41 @@ public class UserController {
     public AjaxMsg regByAccount(HttpServletRequest req, @RequestParam("username") String username
             , @RequestParam("password") String password,
                                 @RequestParam("email") String email, @RequestParam("vCode") String vCode) {
-        try {
-            if (StringUtils.isEmpty(email)) {
-                return new AjaxMsg("0", "Email为空");
-            }
-            if (StringUtils.isEmpty(username)) {
-                return new AjaxMsg("-1", "账户为空");
-            }
-            String kaptchaExpected = (String) req.getSession()
-                    .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-            if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
-                return new AjaxMsg("-2", "验证码错误!");
-            }
-            User user = new User();
-            user.setUsername(username);
-            user.setEmail(email);
-            user.setPassword(passwordEncoder.encode(password));
-            user.setAccountNonExpired(true);
-            user.setAccountNonLocked(true);
-            user.setCredentialsNonExpired(true);
-            user.setEnable(true);
-            Authority authority = authorityReposity.getOne("ROLE_USER") ;
-            Set<Authority> set = new HashSet<>();
-            set.add(authority);
-            user.setAuthorities(set);
-            userReposity.save(user);
 
-            return new AjaxMsg("1", "注册成功");
-        } catch (Exception e) {
-            logger.error("账号注册失败", e);
+        int i = 1 / 0;
+        if (StringUtils.isEmpty(email)) {
+            return new AjaxMsg("0", "Email为空");
         }
-        return new AjaxMsg("-3", "其他错误!");
+        if (StringUtils.isEmpty(username)) {
+            return new AjaxMsg("-1", "账户为空");
+        }
+        String kaptchaExpected = (String) req.getSession()
+                .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
+        if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
+            return new AjaxMsg("-2", "验证码错误!");
+        }
+        User user = new User();
+        user.setUsername(username);
+        user.setEmail(email);
+        user.setPassword(passwordEncoder.encode(password));
+        user.setAccountNonExpired(true);
+        user.setAccountNonLocked(true);
+        user.setCredentialsNonExpired(true);
+        user.setEnable(true);
+        Authority authority = authorityReposity.getOne("ROLE_USER");
+        Set<Authority> set = new HashSet<>();
+        set.add(authority);
+        user.setAuthorities(set);
+        userReposity.save(user);
+
+        return new AjaxMsg("1", "注册成功");
+
+
     }
-    public   AjaxMsg asynRegByAccount(HttpServletRequest req, @RequestParam("username") String username
+
+    public AjaxMsg asynRegByAccount(HttpServletRequest req, @RequestParam("username") String username
             , @RequestParam("password") String password,
-                                      @RequestParam("email") String email, @RequestParam("vCode") String vCode){
+                                    @RequestParam("email") String email, @RequestParam("vCode") String vCode) {
         try {
             if (StringUtils.isEmpty(email)) {
                 return new AjaxMsg("0", "Email为空");
@@ -100,13 +101,13 @@ public class UserController {
             user.setAccountNonLocked(true);
             user.setCredentialsNonExpired(true);
             user.setEnable(true);
-            Authority authority = authorityReposity.getOne("ROLE_USER") ;
+            Authority authority = authorityReposity.findById("ROLE_USER").get();
             Set<Authority> set = new HashSet<>();
             set.add(authority);
             user.setAuthorities(set);
+            String message = JSONObject.toJSONString(user);
 
-
-            userReposity.save(user);
+            rabbitTemplate.convertAndSend(RabbitConfig.USER_EXCHANGE, RabbitConfig.ROUTINGKEY, message);
 
             return new AjaxMsg("2", "注册申请已提交,正在处理中.....");
         } catch (Exception e) {
@@ -114,6 +115,7 @@ public class UserController {
         }
         return new AjaxMsg("-3", "其他错误!");
     }
+
     @Autowired
     private UserService userService;
 
@@ -122,7 +124,7 @@ public class UserController {
     @ResponseBody
 
     public Page<UserInfo> listUsers(@RequestBody Map<String, Object> params) {
-        int pageNo = Integer.parseInt(String.valueOf(params.get("pageNo"))) ;
+        int pageNo = Integer.parseInt(String.valueOf(params.get("pageNo")));
         int pageSize = Integer.parseInt(String.valueOf(params.get("pageSize")));
         String username = (String) params.get("username");
         Object en = params.get("enable");
@@ -163,7 +165,7 @@ public class UserController {
                     .mobile(user.getMobile())
                     .email(user.getEmail())
                     .authorities(user.getAuthorities() == null ? null : user.getAuthorities().stream().map(authority -> {
-                        return authority.getAuth();
+                        return authority.buildAuth();
                     }).collect(Collectors.toSet()))
                     .credentialsNonExpired(user.isCredentialsNonExpired())
                     .accountNonLocked(user.isAccountNonLocked())
@@ -181,7 +183,7 @@ public class UserController {
     @PreAuthorize("hasRole('ROLE_SYSTEMADMIN')")
     public AjaxMsg modifyUser(@RequestBody UserInfo user) {
         User user1 = userReposity.findByUsername(user.getUsername());
-        if(user.getAuthorities()!=null){
+        if (user.getAuthorities() != null) {
 
             List<Authority> authorityList = authorityReposity.findAllById(user.getAuthorities().stream().map(auth -> {
                 return auth.getAuthority();

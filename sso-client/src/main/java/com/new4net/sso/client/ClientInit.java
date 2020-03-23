@@ -50,10 +50,8 @@ public class ClientInit implements InitializingBean {
             if (AjaxResult.SUCCESS.equals(ajaxMsg.getCode())) {
                 Constants.Authorization.set((String) ajaxMsg.getObj());
 
-                redisTemplate.opsForValue().set("token:"+jwtClientProperties.getModuleName() , Constants.Authorization.get(), 3600, TimeUnit.SECONDS);
             } else if ("-1".equals(ajaxMsg.getCode())) {
-                Constants.Authorization.set((String) redisTemplate.opsForValue().get("token:" + jwtClientProperties.getModuleName()));
-                //loginService.logoutByToken(Constants.Authorization.get());
+                Constants.Authorization.set((String) redisTemplate.opsForValue().get((String) redisTemplate.opsForValue().get("token:sysadmin" )));
             } else {
                 throw new Exception(ajaxMsg.getMsg());
 
