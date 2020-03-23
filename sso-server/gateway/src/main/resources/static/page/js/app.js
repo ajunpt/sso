@@ -504,7 +504,6 @@ function failHandler(status, error) {
         default:
             if (error == "error")
                 new MsgModal("提示", "未知错误");
-            window.location.href = "/login"
     }
 }
 
@@ -537,12 +536,12 @@ $(document).ready(
 
 function MsgModal(title, text, callback) {
     if ($(".msgModal").length > 0) {
-        $("#myModalLabel").text((title || ""));
-        $(".modal-body").text((text || ""));
+        $("#myMsgModalLabel").text((title || ""));
+        $("#msgText").text((text || ""));
 
     } else {
 
-        $("body").append('<div class="modal fade msgModal"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">\n' +
+        $("body").append('<div class="modal fade msgModal"  tabindex="-1" role="dialog" aria-labelledby="myMsgModalLabel" aria-hidden="true">\n' +
             '                                    <div class="modal-dialog">\n' +
             '                                        <div class="modal-content">\n' +
             '                                            <div class="modal-header">\n' +
@@ -552,7 +551,7 @@ function MsgModal(title, text, callback) {
             '                                                <h4 class="modal-title" id="myModalLabel">\n' + (title || "") +
             '                                                </h4>\n' +
             '                                            </div>\n' +
-            '                                            <div class="modal-body">\n' + (text || "") +
+            '                                            <div id="msgText" class="modal-body">\n' + (text || "") +
             '                                            </div>\n' +
             '                                            <div class="modal-footer">\n' +
             '                                                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭\n' +
