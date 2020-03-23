@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>new4net.com</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet" type="text/css">
+    <!-- Animate.css -->
+    <link href="vendors/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Theme Style -->
+    <link href="test/css/custom.min.css" rel="stylesheet" type="text/css">
+    <script src="page/js/jquery.min.js" type="text/javascript"></script>
+    <script src="page/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="page/js/messages_zh.min.js" type="text/javascript"></script>
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+    <a class="hiddenanchor" id="forgetpasswd"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form>
+                    <h1>登 陆</h1>
+                    <h6 id="msg" style="color:red;display:none;"></h6>
+                    <div>
+                        <input type="text" class="form-control" placeholder="用户名" name="username" required="true"/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="密码" name="passwd" required="true"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="text" class="form-control" placeholder="验证码" name="vCode" required="true"/>
+
+                        </div>
+                        <div>
+                            <img id="kaptchaImage" src="/kaptcha.jpg"/>
+                            <script>
+                                $('#kaptchaImage').click(
+                                    function () {
+                                        $(this).hide().attr('src',
+                                            '/kaptcha.jpg?' + Math.floor(Math.random() * 100))
+                                            .fadeIn();
+                                    });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a class="btn btn-default submit" id="login" href="javascript:void(0);" onclick="login()">登陆</a>
+
+                        <a class="reset_pass" href="#">忘记密码</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">新 成 员?
+                            <a href="#signup" class="to_register"> 注册 </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br/>
+
+
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <div id="register" class="animate form registration_form">
+            <section class="login_content">
+                <form>
+                    <h1>注 册</h1>
+                    <h6 id="msg1" style="color:red;display:none;"></h6>
+                    <div>
+                        <input type="text" class="form-control" placeholder="用户名" name="username" required="true"/>
+                    </div>
+                    <div>
+                        <input type="text" class="form-control" placeholder="Email" name="email" required="true"/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="密码" name="password" required="true"/>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="text" class="form-control" placeholder="验证码" name="vCode" required="true"/>
+
+                        </div>
+                        <div>
+                            <img id="kaptchaImage1" src="kaptcha.jpg"/>
+                            <script>
+
+                                $('#kaptchaImage1').click(
+                                    function () {
+                                        $(this).hide().attr('src',
+                                            '/kaptcha.jpg?' + Math.floor(Math.random() * 100))
+                                            .fadeIn();
+                                    });
+                            </script>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="btn btn-default submit" href="javascript:void(0);" onclick="reg()">提交</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">已经注册 ?
+                            <a href="#signin" class="to_register"> 登 陆 </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br/>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+    <div style="position:absolute; bottom:0px; left:50%;width:300px;
+    height:50px;margin:-25px 0 0 -150px;text-align:center;">
+        <p>© 2018-2020 New4net.com 版权所有 网站备案号：
+            <a href="http://www.beian.miit.gov.cn" target="_blank">蜀ICP备18010514号-1</a>
+        </p>
+        <p>ICP主体备案号:蜀ICP备18010514号</p>
+    </div>
+</div>
+<script>
+    var preffix="/api";
+    $(".login_form form").validate({
+        errorPlacement: function (error, element) {
+            error.appendTo(element.parent());
+        },
+        rules: {
+            username: {
+                required: true,
+                rangelength: [6, 18]
+            },
+            password: {
+                required: true,
+                rangelength: [6, 18]
+            },
+            vCode: {
+                required: true,
+                remote: {
+                    url: "/checkVCode", //后台处理程序
+                    type: "post", //数据发送方式
+                    dataType: "json"
+
+                }
+            }
+        },
+        messages: {
+            username: {
+                required: "必填",
+                rangelength: $.validator.format("账号最小长度:{0}, 最大长度:{1}。")
+            },
+            password: {
+                required: "必填",
+                rangelength: $.validator.format("密码最小长度:{0}, 最大长度:{1}。")
+            },
+            vCode: {
+                required: "不能为空",
+                remote: "验证码错误"
+            }
+        }
+    })
+    $(".registration_form form").validate({
+        errorPlacement: function (error, element) {
+            error.appendTo(element.parent());
+        },
+        rules: {
+            username: {
+                required: true,
+                rangelength: [6, 18]
+            },
+            password: {
+                required: true,
+                rangelength: [6, 18]
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            vCode: {
+                required: true,
+                remote: {
+                    url: "/checkVCode", //后台处理程序
+                    type: "post", //数据发送方式
+                    dataType: "json"
+
+                }
+            }
+        },
+        messages: {
+            username: {
+                required: "必填",
+                rangelength: $.validator.format("账号最小长度:{0}, 最大长度:{1}。")
+            },
+            password: {
+                required: "必填",
+                rangelength: $.validator.format("密码最小长度:{0}, 最大长度:{1}。")
+            },
+            eamil: {
+                required: "必填",
+                email: "Email格式错误"
+            },
+            vCode: {
+                required: "不能为空",
+                remote: "验证码错误"
+            }
+        }
+    })
+    $(document).keydown(function (event) {
+        if (event.keyCode == 13) {
+            if (!location.hash || location.hash == '#signin') {
+                login();
+            } else if (location.hash == '#signup') {
+                reg();
+            }
+        }
+    });
+
+    function login() {
+        var valid = $(".login_form form").valid();
+        if (valid) {
+            $.ajax({
+                url: preffix+"/login",
+                data: JSON.stringify({
+                    username: $(".login_form [name=username]").val(),
+                    password: $(".login_form [name=passwd]").val(),
+                    vCode: $(".login_form [name=vCode]").val()
+                }),
+                dataType: 'json',//服务器返回json格式数据
+                contentType:'application/json',
+                type: 'post',//HTTP请求类型
+                success: function (data, textStatus, request) {
+                    var Authorization = request.getResponseHeader("Authorization")
+                    if (Authorization && (!localStorage.getItem("Authorization") || localStorage.getItem("Authorization") && Authorization != localStorage.getItem("Authorization"))) {
+                        localStorage.setItem("Authorization", Authorization);
+
+                    }
+                    if (data && data.code == '1') {
+                        window.location.href = "page/module.html";
+                    } else if (data) {
+                        $("#msg").text("用户名或密码错误").show();
+                    }
+                },
+                error: function (err) {
+                    console.log(JSON.stringify(err))
+                }
+
+            });
+        }
+    }
+
+    function reg() {
+        var valid = $(".registration_form form").valid();
+        if (valid) {
+            $.ajax({
+                url: preffix+"/user/regByAccount",
+                data: {
+                    username: $(".registration_form [name=username]").val(),
+                    password: $(".registration_form [name=password]").val(),
+                    email: $(".registration_form [name=email]").val(),
+                    vCode: $(".registration_form [name=vCode]").val()
+                },
+                dataType: 'json',//服务器返回json格式数据
+                type: 'post',//HTTP请求类型
+                success: function (data) {
+                    if (data && data.code == '1') {
+                        $("#msg1").text("注册成功").show();
+
+                    }else if(data && data.code == '2'){
+                        $("#msg1").text(data.msg).show();
+                    }
+                        else if (data) {
+                        $("#msg1").text("注册失败").show();
+                    }
+                },
+                error: function (err) {
+                    console.log(JSON.stringify(err))
+                }
+
+            });
+        }
+    }
+
+</script>
+</body>
+</html>

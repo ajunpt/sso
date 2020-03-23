@@ -20,7 +20,6 @@ import java.util.Map;
 @RestController
 
 public class LoginController implements LoginService {
-
     @RequestMapping("/checkVCode")
     @ResponseBody
     public boolean checkVCode(HttpServletRequest req, @RequestParam("vCode") String vCode) {
@@ -31,6 +30,7 @@ public class LoginController implements LoginService {
         }
         return true;
     }
+
     @Autowired
     private JwtClientProperties jwtClientProperties;
     @Autowired

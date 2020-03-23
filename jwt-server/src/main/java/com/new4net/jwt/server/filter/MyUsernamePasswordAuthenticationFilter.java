@@ -44,10 +44,12 @@ public class MyUsernamePasswordAuthenticationFilter extends AbstractAuthenticati
 		    JSONObject jsonObj = JSON.parseObject(body);
 		    username = jsonObj.getString("username");
 		    password = jsonObj.getString("password");
-            vCode = jsonObj.getString("vCode");
+
+           //  vCode = jsonObj.getString("vCode");
 		}
+
         // 1. 进行验证码的校验
-        validate(request,vCode);
+       // validate(request,vCode);
 
 		if (username == null) 
 			username = "";
@@ -60,12 +62,12 @@ public class MyUsernamePasswordAuthenticationFilter extends AbstractAuthenticati
 
 		return this.getAuthenticationManager().authenticate(authRequest);
 	}
-    private void validate(HttpServletRequest request,String vCode) {
-        String kaptchaExpected = (String) request.getSession()
-                .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-        if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
-            throw new ValidateCodeException("验证码错误");
-        }
-
-    }
+//    private void validate(HttpServletRequest request,String vCode) {
+//        String kaptchaExpected = (String) request.getSession()
+//                .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
+//        if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
+//            throw new ValidateCodeException("验证码错误");
+//        }
+//
+//    }
 }
