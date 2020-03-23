@@ -492,6 +492,7 @@ function failHandler(status, error) {
             window.location.href = "/login"
             break;
         case(401):
+            new MsgModal("提示", "无权限执行此操作");
             window.location.href = "/login"
             break;
         case(403):
