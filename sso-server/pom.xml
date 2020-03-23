@@ -17,6 +17,7 @@
     <modules>
         <module>sso-core</module>
         <module>sso-api</module>
+        <module>gateway</module>
     </modules>
     <name>sso-server</name>
 </project>
