@@ -153,6 +153,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 
+
+
     private BeanFactory beanFactory;
 
     @Override
@@ -181,6 +183,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
     public static void main(String[] args){
         String str = PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sysadmin");
         System.out.println(str);
+        String str1 = PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sysadmin");
+        System.out.println(str1);
     }
 
 }

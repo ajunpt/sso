@@ -9,6 +9,7 @@ import com.new4net.sso.core.entity.Authority;
 import com.new4net.sso.core.entity.User;
 import com.new4net.sso.core.repo.UserReposity;
 import com.new4net.sso.core.service.AuthorityService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -85,6 +86,14 @@ public class CustomUserDetailsService implements DaoUserDetailsService {
     @Override
     //@CachePut
     public String saveUserLoginInfo(UserInfo user) {
+        String oldSalt = (String) redisTemplate.opsForValue().get("token:" + user.getUsername());
+        if(!StringUtils.isEmpty(oldSalt)){
+            String token = (String) redisTemplate.opsForValue().get(oldSalt);
+            if(!StringUtils.isEmpty(token)){
+                return token;
+            }
+
+        }
         String salt = BCrypt.gensalt();  //正式开发时可以调用该方法实时生成加密的salt
         /**
          * @todo 将salt保存到数据库或者缓存中
@@ -102,6 +111,7 @@ public class CustomUserDetailsService implements DaoUserDetailsService {
                 .sign(algorithm);
         redisTemplate.opsForValue().set(salt , token, 3600, TimeUnit.SECONDS);
         return token;
+
     }
 
     @Override
