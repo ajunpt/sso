@@ -38,11 +38,10 @@ zuul:
   retryable: true
 
 ribbon:
-  MaxAutoRetries: 3
+  MaxAutoRetries: 0
   MaxAutoRetriesNextServer: 0
   ReadTimeout: 5000
-  ConnectTimeout: 2000
-
+  ConnectTimeout: 5000
 
 hystrix:
   command:
@@ -50,7 +49,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 10000
+            timeoutInMilliseconds: 40000
 
 
 
