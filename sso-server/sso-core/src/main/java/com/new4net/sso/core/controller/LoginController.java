@@ -14,29 +14,23 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 @RestController
 
 public class LoginController implements LoginService {
-    @RequestMapping("/checkVCode")
-    @ResponseBody
-    public boolean checkVCode(HttpServletRequest req, @RequestParam("vCode") String vCode) {
-        String kaptchaExpected = (String) req.getSession()
-                .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-        if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
-            return false;
-        }
-        return true;
-    }
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+
 
     @Autowired
     private JwtClientProperties jwtClientProperties;
     @Autowired
     private PasswordEncoder passwordEncoder;
-    @Autowired
-    private RedisTemplate redisTemplate;
+
     @RequestMapping("/test")
     @ResponseBody
     public String test() {
