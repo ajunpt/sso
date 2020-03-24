@@ -489,7 +489,6 @@ function failHandler(status, error) {
     switch (status) {
         case(500):
             new MsgModal("提示", "服务器系统内部错误");
-            window.location.href = "/login"
             break;
         case(401):
             new MsgModal("提示", "无权限执行此操作");
@@ -497,7 +496,6 @@ function failHandler(status, error) {
             break;
         case(403):
             new MsgModal("提示", "无权限执行此操作");
-            window.location.href = "/login"
             break;
         case(408):
             new MsgModal("提示", "请求超时");

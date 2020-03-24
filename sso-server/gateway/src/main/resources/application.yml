@@ -29,7 +29,7 @@ eureka:
       instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 zuul:
-  sensitive-headers: Authorization
+  sensitive-headers:
   add-proxy-headers: true
   routes:
     sso-server:
