@@ -66,11 +66,12 @@ public class MyKaptchaServlet extends KaptchaServlet {
         }
 
         if(StringUtils.isEmpty(vCodeId)){
+
             Cookie cookie = new Cookie("vCodeId", UUID.randomUUID().toString());
             vCodeId=cookie.getValue();
             resp.addCookie(cookie);
         }
-
+        System.out.println(capText);
 
         redisTemplate.opsForValue().set(vCodeId,capText,60, TimeUnit.SECONDS);
 
