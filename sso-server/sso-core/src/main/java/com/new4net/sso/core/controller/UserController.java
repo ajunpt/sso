@@ -45,17 +45,12 @@ public class UserController {
     @HystrixCommand(fallbackMethod = "asynRegByAccount")
     public AjaxMsg regByAccount(HttpServletRequest req, @RequestParam("username") String username
             , @RequestParam("password") String password,
-                                @RequestParam("email") String email, @RequestParam("vCode") String vCode) {
+                                @RequestParam("email") String email) {
         if (StringUtils.isEmpty(email)) {
             return new AjaxMsg("0", "Email为空");
         }
         if (StringUtils.isEmpty(username)) {
             return new AjaxMsg("-1", "账户为空");
-        }
-        String kaptchaExpected = (String) req.getSession()
-                .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-        if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
-            return new AjaxMsg("-2", "验证码错误!");
         }
         User user = new User();
         user.setUsername(username);
@@ -78,18 +73,13 @@ public class UserController {
 
     public AjaxMsg asynRegByAccount(HttpServletRequest req, @RequestParam("username") String username
             , @RequestParam("password") String password,
-                                    @RequestParam("email") String email, @RequestParam("vCode") String vCode) {
+                                    @RequestParam("email") String email) {
         try {
             if (StringUtils.isEmpty(email)) {
                 return new AjaxMsg("0", "Email为空");
             }
             if (StringUtils.isEmpty(username)) {
                 return new AjaxMsg("-1", "账户为空");
-            }
-            String kaptchaExpected = (String) req.getSession()
-                    .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-            if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
-                return new AjaxMsg("-2", "验证码错误!");
             }
             User user = new User();
             user.setUsername(username);

@@ -549,7 +549,7 @@ function MsgModal(title, text, callback) {
             '                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">\n' +
             '                                                    &times;\n' +
             '                                                </button>\n' +
-            '                                                <h4 class="modal-title" id="myModalLabel">\n' + (title || "") +
+            '                                                <h4 class="modal-title" id="myMsgModalLabel">\n' + (title || "") +
             '                                                </h4>\n' +
             '                                            </div>\n' +
             '                                            <div id="msgText" class="modal-body">\n' + (text || "") +

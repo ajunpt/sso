@@ -103,7 +103,7 @@
 
                         </div>
                         <div>
-                            <img id="kaptchaImage1" src="kaptcha.jpg"/>
+                            <img id="kaptchaImage1" src="/kaptcha.jpg"/>
                             <script>
 
                                 $('#kaptchaImage1').click(
@@ -248,7 +248,7 @@
                     vCode: $(".login_form [name=vCode]").val()
                 }),
                 dataType: 'json',//服务器返回json格式数据
-                contentType:'application/json',
+                contentType:'application/json;charset=utf8',
                 type: 'post',//HTTP请求类型
                 success: function (data, textStatus, request) {
                     var Authorization = request.getResponseHeader("Authorization")
@@ -282,6 +282,7 @@
                     vCode: $(".registration_form [name=vCode]").val()
                 },
                 dataType: 'json',//服务器返回json格式数据
+                contentType:'application/json',
                 type: 'post',//HTTP请求类型
                 success: function (data) {
                     if (data && data.code == '1') {

@@ -1,8 +1,10 @@
 package com.new4net.sso.server.gateway;
 
 import com.google.code.kaptcha.servlet.KaptchaServlet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -10,6 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,9 +27,11 @@ public class GatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
     }
+    @Autowired
+    private RedisTemplate redisTemplate;
     @Bean
     public ServletRegistrationBean myServlet() {
-        KaptchaServlet servlet = new KaptchaServlet();
+        MyKaptchaServlet servlet = new MyKaptchaServlet(redisTemplate);
         ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/kaptcha.jpg");
         Map<String, String> initParameters = new HashMap<>();
         initParameters.put("kaptcha.border", "no");
@@ -37,8 +42,14 @@ public class GatewayApplication {
         bean.setInitParameters(initParameters);
         return bean;
     }
+
     @Bean
-    public VCodeFilter vCodeFilter(){
-        return new VCodeFilter();
+    public FilterRegistrationBean testFilterRegistration() {
+        FilterRegistrationBean registration = new FilterRegistrationBean(new VCodeFilter(redisTemplate));
+        registration.addUrlPatterns("/api/login","/api/user/regByAccount");
+        registration.setName("vCodeFilter");
+        registration.setOrder(Integer.MIN_VALUE);
+        return registration;
     }
+
 }

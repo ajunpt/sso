@@ -2,62 +2,59 @@ package com.new4net.sso.server.gateway;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.netflix.zuul.ZuulFilter;
-import com.netflix.zuul.context.RequestContext;
-import com.netflix.zuul.exception.ZuulException;
+import com.new4net.util.AjaxMsg;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpMethod;
 import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.filter.OncePerRequestFilter;
 
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.nio.charset.Charset;
-public class VCodeFilter extends ZuulFilter {
-    @Override
-    public String filterType() {
-        return "pre";
+
+public class VCodeFilter extends OncePerRequestFilter {
+
+    private final RedisTemplate redisTemplate;
+
+    public VCodeFilter(RedisTemplate redisTemplate) {
+        this.redisTemplate = redisTemplate;
     }
 
-    @Override
-    public int filterOrder() {
-        return 0;
-    }
+
 
     @Override
-    public boolean shouldFilter() {
-        return true;
-    }
-
-    @Override
-    public Object run() throws ZuulException {
-        try {
-            RequestContext context = RequestContext.getCurrentContext();
-            HttpServletRequest request = context.getRequest();
-            if("/api/login".equals(request.getRequestURI())){
-                String body = StreamUtils.copyToString(request.getInputStream(), Charset.forName("UTF-8"));
-                String username = null, password = null,vCode=null;
-                if(StringUtils.hasText(body)) {
-                    JSONObject jsonObj = JSON.parseObject(body);
-                    username = jsonObj.getString("username");
-                    password = jsonObj.getString("password");
-                    vCode = jsonObj.getString("vCode");
-                }
-                // 1. 进行验证码的校验
-                validate(request,vCode);
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        if(HttpMethod.POST.equals(request.getMethod())){
+            String body = StreamUtils.copyToString(request.getInputStream(), Charset.forName("UTF-8"));
+            String username = null, password = null,vCode=null;
+            if(StringUtils.hasText(body)) {
+                JSONObject jsonObj = JSON.parseObject(body);
+                vCode = jsonObj.getString("vCode");
             }
 
-        }catch (Exception e){
-            throw  new ZuulException(e,500,e.getMessage());
-        }
+            String vCodeId = "";
+            for(Cookie cookie:((HttpServletRequest)request).getCookies()){
+                if("vCodeId".equals(cookie.getName())){
+                    vCodeId = cookie.getValue();
+                    break;
+                }
+            }
 
-        return null;
+            String kaptchaExpected = (String) redisTemplate.opsForValue().get(vCodeId);
+            if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
+                response.getWriter().write(JSONObject.toJSONString(new AjaxMsg("-10","验证码错误")));
+            }
+        }
+        filterChain.doFilter(request,response);
     }
 
-    private void validate(HttpServletRequest request,String vCode) throws ValidateCodeException {
-        String kaptchaExpected = (String) request.getSession()
-                .getAttribute(com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
-        if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
-            throw new ValidateCodeException("验证码错误");
-        }
+    @Override
+    public void destroy() {
 
     }
 }
