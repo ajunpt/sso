@@ -71,6 +71,7 @@ public class MyKaptchaServlet extends KaptchaServlet {
             vCodeId=cookie.getValue();
             resp.addCookie(cookie);
         }
+        System.out.println(vCodeId);
         System.out.println(capText);
 
         redisTemplate.opsForValue().set(vCodeId,capText,60, TimeUnit.SECONDS);
