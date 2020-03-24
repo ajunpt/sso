@@ -35,10 +35,22 @@ zuul:
     sso-server:
      path: /api/**
      serviceId: sso-server
+  retryable: true
+
+ribbon:
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 0
+  ReadTimeout: 5000
+  ConnectTimeout: 2000
 
 
-
-
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
 
 
 
