@@ -42,6 +42,8 @@ ribbon:
   MaxAutoRetriesNextServer: 0
   ReadTimeout: 5000
   ConnectTimeout: 5000
+cros:
+  allowDomain: http://www.new4net.com
 
 hystrix:
   command:

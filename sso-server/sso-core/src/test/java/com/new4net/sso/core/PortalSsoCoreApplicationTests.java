@@ -25,7 +25,6 @@ public class PortalSsoCoreApplicationTests {
 //	    long l = System.currentTimeMillis();
 //        Authority authority = authorityService.findById("ROLE_SYSTEMADMIN");
 //        List<Authority> authorityList = authorityService.getSubAuthorities("SSO_CORE",authority);
-//        System.out.println(System.currentTimeMillis()-l);
 //    }
 //    @Autowired
 //    private ModuleServiceImpl moduleService;

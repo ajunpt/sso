@@ -35,10 +35,8 @@ public class ViewController {
                 }
             }
         }
-        System.out.println(vCodeId);
         String kaptchaExpected = (String) redisTemplate.opsForValue().get(vCodeId);
 
-        System.out.println(kaptchaExpected);
         if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
             return false;
         }

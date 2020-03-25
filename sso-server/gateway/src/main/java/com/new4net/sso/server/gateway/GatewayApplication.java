@@ -2,6 +2,7 @@ package com.new4net.sso.server.gateway;
 
 import com.google.code.kaptcha.servlet.KaptchaServlet;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -23,6 +24,9 @@ import java.util.Map;
 @EnableEurekaClient
 @EnableZuulProxy
 public class GatewayApplication {
+    @Value("${cros.allowDomain}")
+
+    private String allowDomain;
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
@@ -51,5 +55,12 @@ public class GatewayApplication {
         registration.setOrder(Integer.MIN_VALUE);
         return registration;
     }
-
+    @Bean
+    public FilterRegistrationBean test1FilterRegistration() {
+        FilterRegistrationBean registration = new FilterRegistrationBean(new CrosFilter(allowDomain));
+        registration.addUrlPatterns("/*");
+        registration.setName("crosFilter");
+        registration.setOrder(Integer.MIN_VALUE);
+        return registration;
+    }
 }
