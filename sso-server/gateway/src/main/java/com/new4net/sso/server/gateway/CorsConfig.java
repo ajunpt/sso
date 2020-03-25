@@ -1,4 +1,4 @@
-package com.new4net.sso.core;
+package com.new4net.sso.server.gateway;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -7,6 +7,8 @@ import org.springframework.core.annotation.Order;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+
+import java.util.Arrays;
 
 /**
  * springboot解决跨域问题
@@ -19,16 +21,14 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CorsConfig {
 	private CorsConfiguration buildConfig() {
-		CorsConfiguration corsConfiguration = new CorsConfiguration();
-		// * 表示对所有的地址都可以访问
-		// corsConfiguration.addAllowedOrigin("http://localhost:3030");
-
-		corsConfiguration.setAllowCredentials(true);   
-	    //corsConfiguration.addAllowedOrigin("http://localhost:9000");
-		corsConfiguration.addAllowedOrigin("*");
-		corsConfiguration.addAllowedHeader("*");
-		corsConfiguration.addAllowedMethod("*");
-		return corsConfiguration;
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "HEAD", "OPTION"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.addExposedHeader("Authorization");
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return configuration;
 	}
 
 	@Bean
