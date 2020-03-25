@@ -16,7 +16,7 @@ import org.springframework.web.filter.CorsFilter;
  * @author: jimengkeji
  * @date: 2020年1月2日 下午5:04:29
  */
-@Configuration
+//@Configuration
 public class CorsConfig {
 	private CorsConfiguration buildConfig() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
