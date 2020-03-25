@@ -46,6 +46,9 @@ public class VCodeFilter extends OncePerRequestFilter {
             }
 
             String kaptchaExpected = (String) redisTemplate.opsForValue().get(vCodeId);
+
+            System.out.println(kaptchaExpected);
+
             if (kaptchaExpected == null || vCode == null || !kaptchaExpected.toUpperCase().equals(vCode.toUpperCase())) {
                 response.getWriter().write(JSONObject.toJSONString(new AjaxMsg("-10","验证码错误")));
             }
