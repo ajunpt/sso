@@ -1,5 +1,6 @@
 package com.new4net.sso.server.gateway;
 
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
@@ -31,25 +32,24 @@ public class CorsConfig {
         return configuration;
 	}
 
-	@Bean
-	@Order(Ordered.HIGHEST_PRECEDENCE)
-	public CorsFilter corsFilter() {
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("/**", buildConfig());
-		return new CorsFilter(source);
-	}
 //	@Bean
-//	public FilterRegistrationBean corsFilter() {
-//	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//	    CorsConfiguration config = new CorsConfiguration();
-//	    config.setAllowCredentials(true);   
-//	    //config.addAllowedOrigin("http://localhost:9000");
-//	    config.addAllowedOrigin("null");
-//	    config.addAllowedHeader("*");
-//	    config.addAllowedMethod("*");
-//	    source.registerCorsConfiguration("/**", config); // CORS 配置对所有接口都有效
-//	    FilterRegistrationBean bean = newFilterRegistrationBean(new CorsFilter(source));
-//	    bean.setOrder(0);
-//	    return bean;
+//	@Order(Ordered.HIGHEST_PRECEDENCE)
+//	public CorsFilter corsFilter() {
+//		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//		source.registerCorsConfiguration("/**", buildConfig());
+//		return new CorsFilter(source);
 //	}
+	@Bean
+	public FilterRegistrationBean corsFilter() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(Arrays.asList("http://sso.new4net.com"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "HEAD", "OPTION"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
+        configuration.addExposedHeader("Authorization");
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+	    FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
+	    bean.setOrder(0);
+	    return bean;
+	}
 }
