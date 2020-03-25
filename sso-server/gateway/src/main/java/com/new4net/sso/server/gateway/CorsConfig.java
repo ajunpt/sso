@@ -25,7 +25,7 @@ public class CorsConfig {
 
 		corsConfiguration.setAllowCredentials(true);   
 	    //corsConfiguration.addAllowedOrigin("http://localhost:9000");
-		corsConfiguration.addAllowedOrigin("http://*.new4net.com");
+		corsConfiguration.addAllowedOrigin("*");
 		corsConfiguration.addAllowedHeader("*");
 		corsConfiguration.addAllowedMethod("*");
 		return corsConfiguration;
