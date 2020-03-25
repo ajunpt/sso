@@ -20,8 +20,12 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import javax.persistence.EntityManagerFactory;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,5 +42,4 @@ public class SsoCoreApplication {
 		SpringApplication.run(SsoCoreApplication.class, args);
 
 	}
-
 }
