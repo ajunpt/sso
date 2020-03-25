@@ -22,7 +22,7 @@ import java.util.Arrays;
 public class CorsConfig {
 	private CorsConfiguration buildConfig() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedOrigins(Arrays.asList("http://sso.new4net.com"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "HEAD", "OPTION"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.addExposedHeader("Authorization");
