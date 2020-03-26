@@ -590,5 +590,13 @@ function getRequestPrefix () {
     // 获取发布项目的名称
     // 获取路径
     var urlPrefix = protocol + "//" + domainPort + "/" ;
+
+    if(protocol.indexOf("file")!=-1){
+        return "http://localhost:7077"
+    }
+    if(domainPort.indexOf("localhost")!=-1||domainPort.indexOf("127.0.0.1")!=-1){
+        return "http://156797np69.imwork.net"
+    }
+
     return urlPrefix;
 }

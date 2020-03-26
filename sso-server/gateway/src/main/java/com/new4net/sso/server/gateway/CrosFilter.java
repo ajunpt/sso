@@ -1,6 +1,6 @@
 package com.new4net.sso.server.gateway;
 
-import org.springframework.http.HttpMethod;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -20,7 +20,13 @@ public class CrosFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if(!HttpMethod.OPTIONS.equals(request.getMethod())){
+        if(StringUtils.isEmpty(allowDomain)){
+            allowDomain="*";
+            response.setHeader("Access-Control-Allow-Origin", allowDomain);
+            response.setHeader("Access-Control-Allow-Methods", "*");
+            response.setHeader("Access-Control-Allow-Headers", "*");
+            response.setHeader("Access-Control-Allow-Credentials", "false");
+        }else {
             response.setHeader("Access-Control-Allow-Origin", allowDomain);
             response.setHeader("Access-Control-Allow-Methods", "*");
             response.setHeader("Access-Control-Allow-Headers", "*");
