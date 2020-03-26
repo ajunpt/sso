@@ -196,7 +196,7 @@ function logout() {
         contentType: "application/json",
         async: false,
         success: function (result) {   //后台执行成功的回调函数
-
+            window.location.href="/login.html"
 
         },
         error: function (msg) {
@@ -492,7 +492,7 @@ function failHandler(status, error) {
             break;
         case(401):
             new MsgModal("提示", "无权限执行此操作");
-            window.location.href = "/login"
+            window.location.href = "/login.html"
             break;
         case(403):
             new MsgModal("提示", "无权限执行此操作");
@@ -500,9 +500,13 @@ function failHandler(status, error) {
         case(408):
             new MsgModal("提示", "请求超时");
             break;
+        case(404):
+            new MsgModal("提示", "找不到页面");
+            break;
         default:
-            if (error == "error")
-                new MsgModal("提示", "未知错误");
+            if (error == "error"){
+                window.location.href="/login.html"
+            }
     }
 }
 
@@ -576,5 +580,5 @@ function MsgModal(title, text, callback) {
     return $(".msgModal");
 }
 
-var preffix="http://sso.new4net.com/api";
+var preffix="http://156797np69.imwork.net/api";
 //new MsgModal('提示','确定删除数据！');

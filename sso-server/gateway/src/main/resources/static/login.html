@@ -23,6 +23,10 @@
     <script src="page/js/jquery.min.js" type="text/javascript"></script>
     <script src="page/js/jquery.validate.min.js" type="text/javascript"></script>
     <script src="page/js/messages_zh.min.js" type="text/javascript"></script>
+    <script>
+        var preffix1="http://156797np69.imwork.net";
+        var preffix="http://156797np69.imwork.net/api";
+    </script>
 </head>
 
 <body class="login">
@@ -51,10 +55,11 @@
                         <div>
                             <img id="kaptchaImage" src="http://sso.new4net.com/kaptcha.jpg"/>
                             <script>
+                                $('#kaptchaImage').attr("src",preffix1+"/kaptcha.jpg")
                                 $('#kaptchaImage').click(
                                     function () {
                                         $(this).hide().attr('src',
-                                            'http://sso.new4net.com/kaptcha.jpg?' + Math.floor(Math.random() * 100))
+                                            preffix1+'/kaptcha.jpg?' + Math.floor(Math.random() * 100))
                                             .fadeIn();
                                     });
                             </script>
@@ -105,11 +110,11 @@
                         <div>
                             <img id="kaptchaImage1" src="http://sso.new4net.com/kaptcha.jpg"/>
                             <script>
-
+                                $('#kaptchaImage1').attr("src",preffix1+"/kaptcha.jpg")
                                 $('#kaptchaImage1').click(
                                     function () {
                                         $(this).hide().attr('src',
-                                            'http://sso.new4net.com/kaptcha.jpg?' + Math.floor(Math.random() * 100))
+                                            preffix1+ '/kaptcha.jpg?' + Math.floor(Math.random() * 100))
                                             .fadeIn();
                                     });
                             </script>
@@ -142,7 +147,8 @@
     </div>
 </div>
 <script>
-    var preffix="http://sso.new4net.com/api";
+
+
     $(".login_form form").validate({
         errorPlacement: function (error, element) {
             error.appendTo(element.parent());
@@ -159,7 +165,7 @@
             vCode: {
                 required: true,
                 remote: {
-                    url: "http://sso.new4net.com/checkVCode", //后台处理程序
+                    url: preffix1+"/checkVCode", //后台处理程序
                     type: "post", //数据发送方式
                     dataType: "json",
                     xhrFields: {
