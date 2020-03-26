@@ -35,6 +35,8 @@ public class CrosFilter extends OncePerRequestFilter {
         }
         if(HttpMethod.OPTIONS.equals(request.getMethod())){
             response.setStatus(200);
+            response.getWriter().write("");
+            response.getWriter().close();
             return;
         }
 
