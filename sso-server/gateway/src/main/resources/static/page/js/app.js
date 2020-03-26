@@ -580,5 +580,15 @@ function MsgModal(title, text, callback) {
     return $(".msgModal");
 }
 
-var preffix="http://156797np69.imwork.net/api";
+var preffix=getRequestPrefix()+"api";
 //new MsgModal('提示','确定删除数据！');
+function getRequestPrefix () {
+    // 获取网络协议
+    var protocol = window.location.protocol;
+    // 获取主机名+端口号
+    var domainPort = window.location.host;
+    // 获取发布项目的名称
+    // 获取路径
+    var urlPrefix = protocol + "//" + domainPort + "/" ;
+    return urlPrefix;
+}

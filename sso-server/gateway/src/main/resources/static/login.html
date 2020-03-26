@@ -24,8 +24,18 @@
     <script src="page/js/jquery.validate.min.js" type="text/javascript"></script>
     <script src="page/js/messages_zh.min.js" type="text/javascript"></script>
     <script>
-        var preffix1="http://156797np69.imwork.net";
-        var preffix="http://156797np69.imwork.net/api";
+        var preffix=getRequestPrefix()+"/api";
+        function getRequestPrefix () {
+            // 获取网络协议
+            var protocol = window.location.protocol;
+            // 获取主机名+端口号
+            var domainPort = window.location.host;
+            // 获取发布项目的名称
+            // 获取路径
+            var urlPrefix = protocol + "//" + domainPort + "/" ;
+            return urlPrefix;
+        }
+        var preffix1=getRequestPrefix();
     </script>
 </head>
 

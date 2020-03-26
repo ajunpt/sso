@@ -52,7 +52,7 @@ public class GatewayApplication {
         FilterRegistrationBean registration = new FilterRegistrationBean(new VCodeFilter(redisTemplate));
         registration.addUrlPatterns("/api/login","/api/user/regByAccount");
         registration.setName("vCodeFilter");
-        registration.setOrder(Integer.MIN_VALUE);
+        registration.setOrder(Integer.MIN_VALUE+1);
         return registration;
     }
     @Bean
