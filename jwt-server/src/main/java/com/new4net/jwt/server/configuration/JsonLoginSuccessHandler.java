@@ -5,6 +5,7 @@ import com.new4net.sso.api.dto.Auth;
 import com.new4net.sso.api.dto.UserInfo;
 import com.new4net.util.AjaxMsg;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
@@ -45,7 +46,8 @@ public class JsonLoginSuccessHandler implements AuthenticationSuccessHandler {
         response.setCharacterEncoding("utf-8");
         response.setContentType("application/json; charset=utf-8");
         PrintWriter writer = response.getWriter();
-        writer.write(JSON.toJSONString(new AjaxMsg("1","登陆成功")));
+
+        writer.write(JSON.toJSONString(new AjaxMsg("1","登陆成功",SecurityContextHolder.getContext().getAuthentication().getAuthorities())));
 	}
 	
 }

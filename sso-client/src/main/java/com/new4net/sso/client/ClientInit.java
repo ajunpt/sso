@@ -10,6 +10,7 @@ import com.new4net.util.AjaxMsg;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
@@ -36,6 +37,12 @@ public class ClientInit implements InitializingBean {
     private RedisTemplate redisTemplate;
     @Autowired
     private AuthService authService;
+    @Value("${init.max-retry:5}")
+    private int maxReTry=5;
+    @Value("${init.retry-wait-time:3000}")
+    private int retryWaitTime=3000;
+
+    private int retry;
 
     @Override
 
@@ -57,7 +64,19 @@ public class ClientInit implements InitializingBean {
 
             }
         } catch (HttpStatusCodeException e) {
-            throw new Exception(e);
+            if(retry>maxReTry){
+                throw new Exception(e);
+            }
+
+            retry++;
+
+            log.error("登陆失败!",e);
+
+            log.info("登陆失败"+(retry*retryWaitTime/1000)+"秒后重试");
+
+            Thread.sleep(retryWaitTime*retry);
+
+            afterPropertiesSet();
         }
 
         Set<AuthorityRelationInfo> authorityRelationInfos = new HashSet<>();

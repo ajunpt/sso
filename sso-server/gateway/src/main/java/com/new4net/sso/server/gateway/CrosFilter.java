@@ -21,28 +21,33 @@ public class CrosFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if(StringUtils.isEmpty(allowDomain)){
-            allowDomain="*";
-            response.setHeader("Access-Control-Allow-Origin", allowDomain);
-            response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "*");
-            response.setHeader("Access-Control-Allow-Credentials", "false");
-        }else {
-            response.setHeader("Access-Control-Allow-Origin", allowDomain);
-            response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "*");
-            response.setHeader("Access-Control-Allow-Credentials", "true");
-            response.setHeader("Access-Control-Expose-Headers", "Authorization");
 
-        }
-        if(HttpMethod.OPTIONS.equals(request.getMethod())){
+        if(HttpMethod.OPTIONS.toString().equals(request.getMethod())){
             response.setStatus(200);
+            response.setHeader("Access-Control-Allow-Origin", allowDomain);
+            response.setHeader("Access-Control-Allow-Methods", "*");
+            response.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+            response.setHeader("Access-Control-Allow-Credentials", "true");
+            response.setHeader("Access-Control-Allow-Credentials", "true");
             response.getWriter().write("");
             response.getWriter().close();
             return;
+        }else{
+            if(StringUtils.isEmpty(allowDomain)){
+                allowDomain="*";
+                response.setHeader("Access-Control-Allow-Origin", allowDomain);
+                response.setHeader("Access-Control-Allow-Methods", "*");
+                response.setHeader("Access-Control-Allow-Headers", "*");
+                response.setHeader("Access-Control-Allow-Credentials", "false");
+            }else {
+                response.setHeader("Access-Control-Allow-Origin", allowDomain);
+                response.setHeader("Access-Control-Allow-Methods", "*");
+                response.setHeader("Access-Control-Allow-Headers", "*");
+                response.setHeader("Access-Control-Allow-Credentials", "true");
+                response.setHeader("Access-Control-Expose-Headers", "Authorization");
+
+            }
         }
-
-
 
         filterChain.doFilter(request, response);
     }

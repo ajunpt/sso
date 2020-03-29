@@ -44,6 +44,10 @@ logging:
     root: DEBUG
 jwt:
   moduleName: SSO.CLIENT
+init:
+  max-retry: 5
+  retry-wait-time: 3000
+
 
 eureka:
   client:
