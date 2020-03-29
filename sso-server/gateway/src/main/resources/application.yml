@@ -43,8 +43,8 @@ ribbon:
   ReadTimeout: 5000
   ConnectTimeout: 5000
 cros:
-#  allowDomain: http://192.168.1.3:8080
-  allowDomain: http://www.new4net.com
+  allowDomain: http://localhost:7077
+#  allowDomain: http://www.new4net.com
 hystrix:
   command:
     default:

@@ -47,7 +47,7 @@ public class JsonLoginSuccessHandler implements AuthenticationSuccessHandler {
         response.setContentType("application/json; charset=utf-8");
         PrintWriter writer = response.getWriter();
 
-        writer.write(JSON.toJSONString(new AjaxMsg("1","登陆成功",SecurityContextHolder.getContext().getAuthentication().getAuthorities())));
+        writer.write(JSON.toJSONString(new AjaxMsg("1","登陆成功",((UserDetails) userInfo).getAuthorities())));
 	}
 	
 }
