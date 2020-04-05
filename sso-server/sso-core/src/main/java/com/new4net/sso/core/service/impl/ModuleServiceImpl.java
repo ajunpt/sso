@@ -18,6 +18,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.thymeleaf.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.*;
@@ -117,7 +118,13 @@ public class ModuleServiceImpl extends BaseServiceImpl<Module> {
             }
 
         }
+        if(!StringUtils.isEmpty(module.getSuperModuleName())&&!module.getModuleName().startsWith(module.getSuperModuleName())){
+            return new AjaxMsg("0","不能修改上级模块为"+module.getSuperModuleName());
+        }
         Module m = moduleReposity.findByModuleName(module.getModuleName());
+        if(m==null){
+            return new AjaxMsg("0","不能修改模块名称");
+        }
         m.setEnable(module.isEnable());
         m.setSuperModuleName(module.getSuperModuleName());
         m.setRemark(module.getRemark());

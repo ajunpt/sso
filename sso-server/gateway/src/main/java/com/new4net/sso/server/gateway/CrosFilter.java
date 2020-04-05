@@ -14,7 +14,7 @@ public class CrosFilter extends OncePerRequestFilter {
 
     private String allowDomain;
 
-    public CrosFilter(String allowDomain) {
+    public CrosFilter(String allowDomarrrrin) {
         this.allowDomain = allowDomain;
     }
 
