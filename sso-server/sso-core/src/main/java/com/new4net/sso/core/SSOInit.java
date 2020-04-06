@@ -9,6 +9,7 @@ import com.new4net.sso.core.entity.Authority;
 import com.new4net.sso.core.entity.User;
 import com.new4net.sso.core.repo.AuthorityReposity;
 import com.new4net.sso.core.repo.UserReposity;
+import com.new4net.sso.core.service.AuthorityService;
 import com.new4net.sso.core.service.impl.ModuleServiceImpl;
 import com.new4net.util.AjaxMsg;
 import lombok.extern.slf4j.Slf4j;
@@ -34,7 +35,7 @@ public class SSOInit implements InitializingBean {
     @Autowired
     private UserReposity userReposity;
     @Autowired
-    private AuthorityReposity authorityReposity;
+    private AuthorityService authorityService;
 
     @Autowired
     private RedisTemplate redisTemplate;
@@ -87,8 +88,8 @@ public class SSOInit implements InitializingBean {
 
         if(userReposity.findByUsername("sysadmin")==null){
             HashSet<Authority> set = new HashSet<>();
-            set.add(authorityReposity.findById("ROLE_SYSTEMADMIN").get());
-            set.add(authorityReposity.findById("ROLE_MODULEADMIN").get());
+            set.add(authorityService.findById("ROLE_SYSTEMADMIN"));
+            set.add(authorityService.findById("ROLE_MODULEADMIN"));
             String password = PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sysadmin");
             User user = User.builder().username("sysadmin").password(password).accountNonExpired(true)
                     .accountNonLocked(true).authorities(set).credentialsNonExpired(true).enable(true).validTime(new Date())

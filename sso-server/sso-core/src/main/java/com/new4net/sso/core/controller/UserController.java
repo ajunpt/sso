@@ -8,6 +8,7 @@ import com.new4net.sso.core.entity.Authority;
 import com.new4net.sso.core.entity.User;
 import com.new4net.sso.core.repo.AuthorityReposity;
 import com.new4net.sso.core.repo.UserReposity;
+import com.new4net.sso.core.service.AuthorityService;
 import com.new4net.sso.core.service.impl.UserService;
 import com.new4net.util.AjaxMsg;
 import com.new4net.util.Page;
@@ -38,6 +39,8 @@ public class UserController {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private RabbitTemplate rabbitTemplate;
+    @Autowired
+    private AuthorityService authorityService;
 
 
     @RequestMapping("/regByAccount")
@@ -60,7 +63,7 @@ public class UserController {
         user.setAccountNonLocked(true);
         user.setCredentialsNonExpired(true);
         user.setEnable(true);
-        Authority authority = authorityReposity.findById("ROLE_USER").get();
+        Authority authority = authorityService.findById("ROLE_USER");
         Set<Authority> set = new HashSet<>();
         set.add(authority);
         user.setAuthorities(set);
@@ -89,7 +92,7 @@ public class UserController {
             user.setAccountNonLocked(true);
             user.setCredentialsNonExpired(true);
             user.setEnable(true);
-            Authority authority = authorityReposity.findById("ROLE_USER").get();
+            Authority authority = authorityService.findById("ROLE_USER");
             Set<Authority> set = new HashSet<>();
             set.add(authority);
             user.setAuthorities(set);
