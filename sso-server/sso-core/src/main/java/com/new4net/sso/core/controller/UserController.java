@@ -60,7 +60,7 @@ public class UserController {
         user.setAccountNonLocked(true);
         user.setCredentialsNonExpired(true);
         user.setEnable(true);
-        Authority authority = authorityReposity.getOne("ROLE_USER");
+        Authority authority = authorityReposity.findById("ROLE_USER").get();
         Set<Authority> set = new HashSet<>();
         set.add(authority);
         user.setAuthorities(set);

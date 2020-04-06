@@ -65,7 +65,7 @@ public class AuthController implements AuthService {
         Authority authority = null;
         Module module = moduleReposity.findByModuleName(auth.getModuleName());
 
-        if((authority=authorityReposity.getOne(auth.getAuthority()))==null){
+        if((authority=authorityReposity.findById(auth.getAuthority()).get())==null){
             authority = new Authority();
             authority.setAuthorityCode(auth.getAuthority());
         }
@@ -155,7 +155,7 @@ public class AuthController implements AuthService {
                 authorityReposity.save(authority1);
             });
         }
-        Authority authority = authorityReposity.getOne(authorityCode);
+        Authority authority = authorityReposity.findById(authorityCode).get();
         List<AuthorityRelation> authorityRelations = authorityRelationReposity.findBySubAuthCode(authorityCode);
         if(authorityRelations!=null){
             authorityRelations.stream().forEach(authorityRelation -> {
