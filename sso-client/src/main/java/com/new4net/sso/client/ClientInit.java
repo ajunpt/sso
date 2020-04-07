@@ -16,11 +16,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.HttpStatusCodeException;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 @Slf4j
 @Component
@@ -119,7 +117,7 @@ public class ClientInit implements InitializingBean {
             authInfo = new HashSet<>();
         }
         authInfo.add(AuthorityRelationInfo.builder().superAuthCode(auth.getAuthority()).superAuthName(auth.getAuthorityName()).subAuthCode("ROLE_CLIENTUSER").subAuthName("客户端一般用户").build());
-        authService.saveAuth(auth);
+        authService.addAuth(auth);
 
         auth = authService.findByAuthorityCode("ROLE_VIP1");
         authInfo = auth.getAuthorityRelationInfos();
@@ -127,7 +125,7 @@ public class ClientInit implements InitializingBean {
             authInfo = new HashSet<>();
         }
         authInfo.add(AuthorityRelationInfo.builder().superAuthCode(auth.getAuthority()).superAuthName(auth.getAuthorityName()).subAuthCode("ROLE_CLIENTVIP").subAuthName("客户端VIP用户").build());
-        authService.saveAuth(auth);
+        authService.addAuth(auth);
 
     }
 }

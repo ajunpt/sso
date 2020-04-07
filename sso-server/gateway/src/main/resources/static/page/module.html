@@ -996,34 +996,63 @@
     });
     $("#authModuleForm").submit(function (e) {
         e.preventDefault();
-        $.ajax({
-            url: preffix+"/saveAuth",//这个就是请求地址对应sAjaxSource
-            data: JSON.stringify({
-                moduleName: $("#authModuleForm [name=moduleName]").val(),
-                authorityName: $("#authModuleForm [name=authorityName]").val(),
-                authority: $("#authModuleForm [name=authority]").val(),
-                remark: $("#authModuleForm [name=remark]").val()
-            }),//这个是把datatable的一些基本数据传给后台,比如起始位置,每页显示的行数
-            type: 'post',
-            dataType: 'json',
-            contentType: "application/json",
-            //async : false,
-            success: function (result) {   //后台执行成功的回调函数
-                if (result && result.code == '1') {
-                    new MsgModal("提示", "执行成功!", function () {
-                        $('#authModule').modal('hide');
-                        window.location.reload();
-                    });
+        if( $("#authModuleForm [name=mode]").val()=='ADD'){
+            $.ajax({
+                url: preffix+"/addAuth",//这个就是请求地址对应sAjaxSource
+                data: JSON.stringify({
+                    moduleName: $("#authModuleForm [name=moduleName]").val(),
+                    authorityName: $("#authModuleForm [name=authorityName]").val(),
+                    authority: $("#authModuleForm [name=authority]").val(),
+                    remark: $("#authModuleForm [name=remark]").val()
+                }),//这个是把datatable的一些基本数据传给后台,比如起始位置,每页显示的行数
+                type: 'post',
+                dataType: 'json',
+                contentType: "application/json",
+                //async : false,
+                success: function (result) {   //后台执行成功的回调函数
+                    if (result && result.code == '1') {
+                        new MsgModal("提示", "执行成功!", function () {
+                            $('#authModule').modal('hide');
+                            window.location.reload();
+                        });
 
-                } else {
-                    new MsgModal("提示", "执行失败!", function () {
-                        $('#authModule').modal('hide');
-                    });
+                    } else {
+                        new MsgModal("提示", "执行失败!", function () {
+                            $('#authModule').modal('hide');
+                        });
+                    }
+
                 }
+            });
+        }else{
+            $.ajax({
+                url: preffix+"/modifyAuth",//这个就是请求地址对应sAjaxSource
+                data: JSON.stringify({
+                    moduleName: $("#authModuleForm [name=moduleName]").val(),
+                    authorityName: $("#authModuleForm [name=authorityName]").val(),
+                    authority: $("#authModuleForm [name=authority]").val(),
+                    remark: $("#authModuleForm [name=remark]").val()
+                }),//这个是把datatable的一些基本数据传给后台,比如起始位置,每页显示的行数
+                type: 'post',
+                dataType: 'json',
+                contentType: "application/json",
+                //async : false,
+                success: function (result) {   //后台执行成功的回调函数
+                    if (result && result.code == '1') {
+                        new MsgModal("提示", "执行成功!", function () {
+                            $('#authModule').modal('hide');
+                            window.location.reload();
+                        });
 
-            }
-        });
+                    } else {
+                        new MsgModal("提示", "执行失败!", function () {
+                            $('#authModule').modal('hide');
+                        });
+                    }
 
+                }
+            });
+        }
     });
     $("#modifyModuleForm [name=superModuleName]").on('click', showMenu);
     $("#authModuleForm [name=moduleName]").on('click', showMenu1);

@@ -37,7 +37,9 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.context.WebApplicationContext;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -125,4 +127,23 @@ public class UserServiceTest {
         Page<UserInfo> userPage = userController.listUsers(map);
         System.out.println("xx:" + JSONObject.toJSONString(userPage));
     }
+
+    @Test
+    @WithMockUser(username="sysadmin",roles={"MODULEADMIN","SYSTEMADMIN"})
+    public void test3(){
+        List<String> userNames = new ArrayList<>();
+        userNames.add("test39267@test.com");
+        userNames.add("test15784@test.com");
+
+        userController.delUser(userNames);
+    }
+    @Test
+    @WithMockUser(username="sysadmin",roles={"MODULEADMIN","SYSTEMADMIN"})
+    public void test4(){
+        UserInfo userInfo = userService.findById("402881a17153d3c4017153d3d6b50000").buildUserInfo();
+        userInfo.setUsername("testadmin");
+        userController.addUser(userInfo);
+    }
+
+
 }

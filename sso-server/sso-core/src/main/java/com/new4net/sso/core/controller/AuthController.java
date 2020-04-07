@@ -13,6 +13,7 @@ import com.new4net.sso.core.repo.UserReposity;
 import com.new4net.sso.core.service.AuthorityService;
 import com.new4net.sso.core.service.impl.UserService;
 import com.new4net.util.AjaxMsg;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
@@ -61,13 +62,44 @@ public class AuthController implements AuthService {
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
 
-    public AjaxMsg saveAuth(@RequestBody Auth auth) {
+    public AjaxMsg addAuth(@RequestBody Auth auth) {
+        Authority authority = authority = new Authority();
+        if(StringUtils.isEmpty(auth.getAuthority())){
+            return new AjaxMsg("0","权限编码为空");
+        }
+        authority.setAuthorityCode(auth.getAuthority());
+        Module module = moduleReposity.findByModuleName(auth.getModuleName());
+
+
+        if(module!=null){
+            authority.setModule(module);
+        }
+        if(auth.getAuthorityName()!=null){
+            authority.setAuthorityName(auth.getAuthorityName());
+        }
+
+        if(auth.getRemark()!=null){
+            authority.setRemark(auth.getRemark());
+        }
+        if(auth.getAuthorityRelationInfos()!=null){
+            authority.setAuthorityRelations(auth.getAuthorityRelationInfos() == null ? authority.getAuthorityRelations() : auth.getAuthorityRelationInfos().stream().map(authorityRelationInfo -> {
+                return AuthorityRelation.builder().id(authorityRelationInfo.getSuperAuthCode() + authorityRelationInfo.getSubAuthCode()).subAuthName(authorityRelationInfo.getSubAuthName()).superAuthName(authorityRelationInfo.getSuperAuthName())
+                        .superAuthCode(authorityRelationInfo.getSuperAuthCode()).subAuthCode(authorityRelationInfo.getSubAuthCode()).build();
+            }).collect(Collectors.toSet()));
+        }
+
+        authorityReposity.save(authority);
+        return new AjaxMsg("1", "保存成功");
+    }
+    @Override
+    @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
+
+    public AjaxMsg modifyAuth(@RequestBody Auth auth) {
         Authority authority = null;
         Module module = moduleReposity.findByModuleName(auth.getModuleName());
 
         if((authority=authorityService.findById(auth.getAuthority()))==null){
-            authority = new Authority();
-            authority.setAuthorityCode(auth.getAuthority());
+            return new AjaxMsg("0","权限不存在!");
         }
         if(module!=null){
             authority.setModule(module);
@@ -90,7 +122,6 @@ public class AuthController implements AuthService {
         saveRelation(authority);
         return new AjaxMsg("1", "保存成功");
     }
-
     private void saveRelation(Authority authority) {
         List<Authority> authorities = authorityService.findByHQL("select a From Authority as a join a.authorityRelations r  where r.superAuthCode=?0",authority.getAuthorityCode());
 

@@ -12,8 +12,10 @@ public interface AuthService {
     public Auth findByAuthorityCode(@PathVariable("authorityCode")String authority);
     @RequestMapping(value = "/saveAuthorityRelations",method = RequestMethod.POST)
     public AjaxMsg saveAuthorityRelations(@RequestBody Auth auth);
-    @RequestMapping(value = "/saveAuth",method = RequestMethod.POST)
-    public AjaxMsg saveAuth(@RequestBody Auth auth);
+    @RequestMapping(value = "/addAuth",method = RequestMethod.POST)
+    public AjaxMsg addAuth(@RequestBody Auth auth);
+    @RequestMapping(value = "/modifyAuth",method = RequestMethod.POST)
+    public AjaxMsg modifyAuth(@RequestBody Auth auth);
     @RequestMapping(value = "/removeAuth", method = RequestMethod.GET)
     public AjaxMsg removeAuth(@RequestParam("authorityCode") String authorityCode);
 }

@@ -7,4 +7,6 @@ import java.util.Set;
 
 public interface UserReposity extends JpaRepository<User,String> {
     public User findByUsername(String userName);
+
+    User findByEmail(String email);
 }

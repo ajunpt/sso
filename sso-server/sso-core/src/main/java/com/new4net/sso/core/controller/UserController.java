@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -181,6 +182,7 @@ public class UserController {
             user1.setAuthorities(new HashSet<>(authorityList));
         }
         user1.setEnable(user.isEnable());
+        user1.setPassword(passwordEncoder.encode(user.getPassword()));
         user1.setCredentialsNonExpired(user.isCredentialsNonExpired());
         user1.setAccountNonLocked(user.isAccountNonLocked());
         user1.setAccountNonExpired(user.isAccountNonExpired());
@@ -188,6 +190,62 @@ public class UserController {
         user1.setMobile(user.getMobile());
         userReposity.save(user1);
         return new AjaxMsg("1", "执行成功");
+    }
+    @RequestMapping("/addUser")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_SYSTEMADMIN')")
+    public AjaxMsg addUser(@RequestBody UserInfo user) {
+        if(StringUtils.isEmpty(user.getUsername())){
+            return new AjaxMsg("0","用户名为空");
+        }
+        User user1 = userReposity.findByUsername(user.getUsername());
+        if(user1!=null){
+            return new AjaxMsg("0","用户名已存在");
+        }
+        if(!StringUtils.isEmpty(user.getEmail())){
+            user1 = userReposity.findByEmail(user.getEmail());
+        }
+        if(user1!=null){
+            return new AjaxMsg("0","邮箱已存在");
+        }
+        if(!StringUtils.isEmpty(user.getMobile())){
+            user1 = userReposity.findByEmail(user.getMobile());
+        }
+        if(user1!=null){
+            return new AjaxMsg("0","手机号码已存在");
+        }
+        user1 = new User();
+        if (user.getAuthorities() != null) {
+            List<Authority> authorityList = authorityReposity.findAllById(user.getAuthorities().stream().map(auth -> {
+                return auth.getAuthority();
+            }).collect(Collectors.toSet()));
+            user1.setAuthorities(new HashSet<>(authorityList));
+        }
+        user1.setUsername(user.getUsername());
+        user1.setPassword(passwordEncoder.encode(user.getPassword()));
+        user1.setEnable(user.isEnable());
+        user1.setCredentialsNonExpired(user.isCredentialsNonExpired());
+        user1.setAccountNonLocked(user.isAccountNonLocked());
+        user1.setAccountNonExpired(user.isAccountNonExpired());
+        user1.setEmail(user.getEmail());
+        user1.setMobile(user.getMobile());
+        userReposity.save(user1);
+        return new AjaxMsg("1", "执行成功");
+    }
+    @RequestMapping("/delUser")
+    @ResponseBody
+    @PreAuthorize("hasRole('ROLE_SYSTEMADMIN')")
+    public AjaxMsg delUser(@RequestBody List<String> usernames){
+        Map<String, Object> ps = new HashMap<>();
+
+        if (!CollectionUtils.isEmpty(usernames)) {
+            ps.put("username||in", usernames);
+
+        }
+        List<User> users=userService.findByParams(ps);
+
+        userReposity.deleteInBatch(users);
+        return new AjaxMsg("1","删除成功!");
     }
 
 }
