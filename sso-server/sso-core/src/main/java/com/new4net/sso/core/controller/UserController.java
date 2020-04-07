@@ -182,6 +182,7 @@ public class UserController {
             user1.setAuthorities(new HashSet<>(authorityList));
         }
         user1.setEnable(user.isEnable());
+        if(!StringUtils.isEmpty(user.getPassword()))
         user1.setPassword(passwordEncoder.encode(user.getPassword()));
         user1.setCredentialsNonExpired(user.isCredentialsNonExpired());
         user1.setAccountNonLocked(user.isAccountNonLocked());
@@ -222,7 +223,8 @@ public class UserController {
             user1.setAuthorities(new HashSet<>(authorityList));
         }
         user1.setUsername(user.getUsername());
-        user1.setPassword(passwordEncoder.encode(user.getPassword()));
+        if(!StringUtils.isEmpty(user.getPassword()))
+            user1.setPassword(passwordEncoder.encode(user.getPassword()));
         user1.setEnable(user.isEnable());
         user1.setCredentialsNonExpired(user.isCredentialsNonExpired());
         user1.setAccountNonLocked(user.isAccountNonLocked());
