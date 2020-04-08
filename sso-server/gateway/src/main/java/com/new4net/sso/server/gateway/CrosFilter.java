@@ -34,8 +34,7 @@ public class CrosFilter extends OncePerRequestFilter {
             return;
         }else{
             if(StringUtils.isEmpty(allowDomain)){
-                allowDomain="*";
-                response.setHeader("Access-Control-Allow-Origin", allowDomain);
+                response.setHeader("Access-Control-Allow-Origin", "*");
                 response.setHeader("Access-Control-Allow-Methods", "*");
                 response.setHeader("Access-Control-Allow-Headers", "*");
                 response.setHeader("Access-Control-Allow-Credentials", "false");
