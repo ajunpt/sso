@@ -26,8 +26,8 @@ public class CrosFilter extends OncePerRequestFilter {
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Expose-Headers", "Authorization");
 
-        String origin=request.getHeader("Origin");
-        String s1 = origin.startsWith("http://")?origin.substring(7).trim():origin.startsWith("https://")?origin.substring(8).trim():origin;
+        String origin=request.getHeader("Referer");
+
 
         if(StringUtils.isEmpty(origin)){
             if(StringUtils.isEmpty(allowDomain)){
@@ -36,6 +36,7 @@ public class CrosFilter extends OncePerRequestFilter {
                 response.setHeader("Access-Control-Allow-Origin", allowDomain);
             }
         }else{
+            String s1 = origin.startsWith("http://")?origin.substring(7).trim():origin.startsWith("https://")?origin.substring(8).trim():origin;
             if(StringUtils.isEmpty(allowDomain)){
                 response.setHeader("Access-Control-Allow-Origin", "*");
             }else {
