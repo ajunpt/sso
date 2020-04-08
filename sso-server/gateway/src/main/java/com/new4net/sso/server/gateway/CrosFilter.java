@@ -22,30 +22,18 @@ public class CrosFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
-        if(HttpMethod.OPTIONS.toString().equals(request.getMethod())){
-            response.setStatus(200);
+        if(StringUtils.isEmpty(allowDomain)){
+            response.setHeader("Access-Control-Allow-Origin", "*");
+            response.setHeader("Access-Control-Allow-Methods", "*");
+            response.setHeader("Access-Control-Allow-Headers", "*");
+            response.setHeader("Access-Control-Allow-Credentials", "false");
+        }else {
             response.setHeader("Access-Control-Allow-Origin", allowDomain);
             response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "Authorization,Origin, X-Requested-With, Content-Type, Accept");
+            response.setHeader("Access-Control-Allow-Headers", "*");
             response.setHeader("Access-Control-Allow-Credentials", "true");
             response.setHeader("Access-Control-Expose-Headers", "Authorization");
-            response.getWriter().write("");
-            response.getWriter().close();
-            return;
-        }else{
-            if(StringUtils.isEmpty(allowDomain)){
-                response.setHeader("Access-Control-Allow-Origin", "*");
-                response.setHeader("Access-Control-Allow-Methods", "*");
-                response.setHeader("Access-Control-Allow-Headers", "*");
-                response.setHeader("Access-Control-Allow-Credentials", "false");
-            }else {
-                response.setHeader("Access-Control-Allow-Origin", allowDomain);
-                response.setHeader("Access-Control-Allow-Methods", "*");
-                response.setHeader("Access-Control-Allow-Headers", "*");
-                response.setHeader("Access-Control-Allow-Credentials", "true");
-                response.setHeader("Access-Control-Expose-Headers", "Authorization");
 
-            }
         }
 
         filterChain.doFilter(request, response);
