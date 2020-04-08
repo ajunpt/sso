@@ -50,7 +50,7 @@ public class AuthController implements AuthService {
         Authority authority = authorityService.findById(auth.getAuthority());
 
         authority.setAuthorityRelations(auth.getAuthorityRelationInfos() == null ? authority.getAuthorityRelations() : auth.getAuthorityRelationInfos().stream().map(authorityRelationInfo -> {
-            return AuthorityRelation.builder().id(auth.getAuthority() + authorityRelationInfo.getSubAuthCode())
+            return AuthorityRelation.builder()
                     .subAuthName(authorityRelationInfo.getSubAuthName()).superAuthName(auth.getAuthorityName())
                     .superAuthCode(auth.getAuthority()).subAuthCode(authorityRelationInfo.getSubAuthCode()).build();
         }).collect(Collectors.toSet()));
@@ -83,7 +83,7 @@ public class AuthController implements AuthService {
         }
         if(auth.getAuthorityRelationInfos()!=null){
             authority.setAuthorityRelations(auth.getAuthorityRelationInfos() == null ? authority.getAuthorityRelations() : auth.getAuthorityRelationInfos().stream().map(authorityRelationInfo -> {
-                return AuthorityRelation.builder().id(authorityRelationInfo.getSuperAuthCode() + authorityRelationInfo.getSubAuthCode()).subAuthName(authorityRelationInfo.getSubAuthName()).superAuthName(authorityRelationInfo.getSuperAuthName())
+                return AuthorityRelation.builder().subAuthName(authorityRelationInfo.getSubAuthName()).superAuthName(authorityRelationInfo.getSuperAuthName())
                         .superAuthCode(authorityRelationInfo.getSuperAuthCode()).subAuthCode(authorityRelationInfo.getSubAuthCode()).build();
             }).collect(Collectors.toSet()));
         }
@@ -113,7 +113,7 @@ public class AuthController implements AuthService {
         }
         if(auth.getAuthorityRelationInfos()!=null){
             authority.setAuthorityRelations(auth.getAuthorityRelationInfos() == null ? authority.getAuthorityRelations() : auth.getAuthorityRelationInfos().stream().map(authorityRelationInfo -> {
-                return AuthorityRelation.builder().id(authorityRelationInfo.getSuperAuthCode() + authorityRelationInfo.getSubAuthCode()).subAuthName(authorityRelationInfo.getSubAuthName()).superAuthName(authorityRelationInfo.getSuperAuthName())
+                return AuthorityRelation.builder().subAuthName(authorityRelationInfo.getSubAuthName()).superAuthName(authorityRelationInfo.getSuperAuthName())
                         .superAuthCode(authorityRelationInfo.getSuperAuthCode()).subAuthCode(authorityRelationInfo.getSubAuthCode()).build();
             }).collect(Collectors.toSet()));
         }

@@ -63,12 +63,12 @@ public class ModuleServiceImpl extends BaseServiceImpl<Module> {
                     role.setRoleCode(auth.getAuthority());
                     role.setRoleName(auth.getAuthorityName());
                     role.setAuthorityRelations(auth.getAuthorityRelationInfos()==null?null:auth.getAuthorityRelationInfos().stream().map(authorityRelationInfo -> {
-                        return AuthorityRelation.builder().id(authorityRelationInfo.getSuperAuthCode()+authorityRelationInfo.getSubAuthCode()).superAuthCode(authorityRelationInfo.getSuperAuthCode()).superAuthName(authorityRelationInfo.getSuperAuthName()).subAuthName(authorityRelationInfo.getSubAuthName()).subAuthCode(authorityRelationInfo.getSubAuthCode()).build();}).collect(Collectors.toSet()));
+                        return AuthorityRelation.builder().superAuthCode(authorityRelationInfo.getSuperAuthCode()).superAuthName(authorityRelationInfo.getSuperAuthName()).subAuthName(authorityRelationInfo.getSubAuthName()).subAuthCode(authorityRelationInfo.getSubAuthCode()).build();}).collect(Collectors.toSet()));
                     roleReposity.save(role);
                 }else {
                     Authority authority = Authority.builder().authorityCode(auth.getAuthority()).module(m)
                             .authorityRelations(auth.getAuthorityRelationInfos()==null?null:auth.getAuthorityRelationInfos().stream().map(authorityRelationInfo -> {
-                                return AuthorityRelation.builder().id(authorityRelationInfo.getSuperAuthCode()+authorityRelationInfo.getSubAuthCode()).superAuthCode(authorityRelationInfo.getSuperAuthCode()).superAuthName(authorityRelationInfo.getSuperAuthName()).subAuthCode(authorityRelationInfo.getSubAuthCode()).subAuthName(authorityRelationInfo.getSubAuthName()).build();}).collect(Collectors.toSet()))
+                                return AuthorityRelation.builder().superAuthCode(authorityRelationInfo.getSuperAuthCode()).superAuthName(authorityRelationInfo.getSuperAuthName()).subAuthCode(authorityRelationInfo.getSubAuthCode()).subAuthName(authorityRelationInfo.getSubAuthName()).build();}).collect(Collectors.toSet()))
                             .remark(auth.getRemark()).build();
                     authorityReposity.save(authority);
                 }

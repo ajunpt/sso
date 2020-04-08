@@ -25,9 +25,8 @@ import java.util.stream.Collectors;
 
 public class User  implements UserDetails, Serializable {
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid")
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     @Column(unique = true)
     private String username;
     private String password;

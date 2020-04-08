@@ -24,9 +24,8 @@ import java.util.Set;
 @org.hibernate.annotations.Cache(region = "Module", usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Module implements Serializable {
     @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid")
-    private String moduleId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     @Column(unique = true)
     private String moduleName;
 
