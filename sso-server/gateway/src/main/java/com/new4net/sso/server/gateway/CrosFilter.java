@@ -26,8 +26,7 @@ public class CrosFilter extends OncePerRequestFilter {
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Expose-Headers", "Authorization");
 
-        String origin=request.getHeader("Referer");
-
+        String origin=request.getHeader("Origin");
 
         if(StringUtils.isEmpty(origin)){
             if(StringUtils.isEmpty(allowDomain)){
