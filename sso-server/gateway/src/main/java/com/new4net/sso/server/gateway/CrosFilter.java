@@ -21,19 +21,31 @@ public class CrosFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        response.setHeader("Access-Control-Allow-Methods", "*");
+        response.setHeader("Access-Control-Allow-Headers", "*");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Expose-Headers", "Authorization");
 
-        if(StringUtils.isEmpty(allowDomain)){
-            response.setHeader("Access-Control-Allow-Origin", "*");
-            response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "*");
-            response.setHeader("Access-Control-Allow-Credentials", "false");
-        }else {
-            response.setHeader("Access-Control-Allow-Origin", allowDomain);
-            response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "*");
-            response.setHeader("Access-Control-Allow-Credentials", "true");
-            response.setHeader("Access-Control-Expose-Headers", "Authorization");
+        String origin=request.getHeader("Origin");
+        String s1 = origin.startsWith("http://")?origin.substring(7).trim():origin.startsWith("https://")?origin.substring(8).trim():origin;
 
+        if(StringUtils.isEmpty(origin)){
+            if(StringUtils.isEmpty(allowDomain)){
+                response.setHeader("Access-Control-Allow-Origin", "*");
+            }else {
+                response.setHeader("Access-Control-Allow-Origin", allowDomain);
+            }
+        }else{
+            if(StringUtils.isEmpty(allowDomain)){
+                response.setHeader("Access-Control-Allow-Origin", "*");
+            }else {
+                String s2 = allowDomain.startsWith("http://")?allowDomain.substring(7).trim():allowDomain.startsWith("https://")?allowDomain.substring(8).trim():allowDomain;
+                if(s1.contains(s2)){
+                    response.setHeader("Access-Control-Allow-Origin", origin);
+                }else {
+                    response.setHeader("Access-Control-Allow-Origin", allowDomain);
+                }
+            }
         }
 
         filterChain.doFilter(request, response);
@@ -43,4 +55,5 @@ public class CrosFilter extends OncePerRequestFilter {
     public void destroy() {
 
     }
+
 }
