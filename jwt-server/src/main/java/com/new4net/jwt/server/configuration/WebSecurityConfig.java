@@ -149,19 +149,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
     }
 
     private ResourceLoader resourceLoader;
-//    @Bean
-//    public ServletRegistrationBean myServlet() {
-//        KaptchaServlet servlet = new KaptchaServlet();
-//        ServletRegistrationBean bean = new ServletRegistrationBean(servlet, "/kaptcha.jpg");
-//        Map<String, String> initParameters = new HashMap<>();
-//        initParameters.put("kaptcha.border", "no");
-//        initParameters.put("kaptcha.image.width", "112");
-//        initParameters.put("kaptcha.image.height", "50");
-//        initParameters.put("kaptcha.textproducer.char.length", "4");
-//        initParameters.put("kaptcha.textproducer.font.color", "red");
-//        bean.setInitParameters(initParameters);
-//        return bean;
-//    }
+
     @Override
     public void setResourceLoader(ResourceLoader resourceLoader) {
         this.resourceLoader = resourceLoader;

@@ -58,7 +58,7 @@ public class UserServiceTest {
         // 初始化构建
         mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
         session = new MockHttpSession();
-        User user = userService.findById("402881a170ddc52a0170ddc53ef00001");
+        User user = userService.findById(1);
         session.setAttribute("user", user); //拦截器那边会判断用户是否登录，所以这里注入一个用户
     }
 
@@ -140,7 +140,7 @@ public class UserServiceTest {
     @Test
     @WithMockUser(username="sysadmin",roles={"MODULEADMIN","SYSTEMADMIN"})
     public void test4(){
-        UserInfo userInfo = userService.findById("402881a17153d3c4017153d3d6b50000").buildUserInfo();
+        UserInfo userInfo = userService.findById(1).buildUserInfo();
         userInfo.setUsername("testadmin");
         userController.addUser(userInfo);
     }

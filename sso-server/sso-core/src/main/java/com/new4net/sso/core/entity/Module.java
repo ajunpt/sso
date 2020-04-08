@@ -15,7 +15,7 @@ import java.util.Set;
 
 @Setter
 @Getter
-@EqualsAndHashCode(of = {"moduleId"})
+@EqualsAndHashCode(of = {"id"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
