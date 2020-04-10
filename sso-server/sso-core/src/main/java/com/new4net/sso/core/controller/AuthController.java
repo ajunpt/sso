@@ -67,6 +67,9 @@ public class AuthController implements AuthService {
         if(StringUtils.isEmpty(auth.getAuthority())){
             return new AjaxMsg("0","权限编码为空");
         }
+        if((authority=authorityService.findById(auth.getAuthority()))==null){
+            return new AjaxMsg("0","权限编码已存在!");
+        }
         authority.setAuthorityCode(auth.getAuthority());
         Module module = moduleReposity.findByModuleName(auth.getModuleName());
 
