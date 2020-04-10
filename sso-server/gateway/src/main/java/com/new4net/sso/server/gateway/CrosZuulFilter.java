@@ -38,6 +38,8 @@ public class CrosZuulFilter  extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         HttpServletResponse response = ctx.getResponse();
+        log.info(request.getMethod());
+        log.info(request.getRequestURI());
         if(HttpMethod.OPTIONS.equals(request.getMethod())){
             response.setStatus(200);
             response.setHeader("Access-Control-Allow-Origin", "*");
