@@ -22,7 +22,7 @@ public class CrosZuulFilter  extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return FilterConstants.SEND_RESPONSE_FILTER_ORDER;
+        return Integer.MAX_VALUE;
     }
 
     @Override
