@@ -3,6 +3,7 @@ package com.new4net.sso.server.gateway;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
+@Slf4j
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
@@ -32,7 +34,7 @@ public class CrosZuulFilter  extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-
+        log.info("开始");
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         HttpServletResponse response = ctx.getResponse();
@@ -43,12 +45,14 @@ public class CrosZuulFilter  extends ZuulFilter {
             response.setHeader("Access-Control-Allow-Headers", "*");
             response.setHeader("Access-Control-Allow-Credentials", "true");
             response.setHeader("Access-Control-Expose-Headers", "Authorization");
+            log.info("开始1");
             try {
                 response.getWriter().write("");
                 response.getWriter().close();
             } catch (IOException e) {
                 throw new ZuulException(e,403,e.getMessage());
             }
+            log.info("开始2");
             throw new ZuulException("",200,"");
         }
         return null;
