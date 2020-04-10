@@ -17,12 +17,12 @@ import java.io.IOException;
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
-        return FilterConstants.POST_TYPE ;
+        return FilterConstants.PRE_TYPE ;
     }
 
     @Override
     public int filterOrder() {
-        return Integer.MAX_VALUE;
+        return Integer.MIN_VALUE+1;
     }
 
     @Override
