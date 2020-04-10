@@ -14,9 +14,6 @@ import java.io.IOException;
 
 @Component
 public class CrosZuulFilter  extends ZuulFilter {
-    @Value("${cros.allowDomain}")
-
-    private String allowDomain;
     @Override
     public String filterType() {
         return null;
