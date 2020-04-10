@@ -24,45 +24,38 @@ public class CrosFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if(HttpMethod.OPTIONS.toString().equals(request.getMethod())){
-            response.setStatus(200);
-            response.setHeader("Access-Control-Allow-Origin", "*");
-            response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "*");
-            response.setHeader("Access-Control-Allow-Credentials", "true");
-            response.setHeader("Access-Control-Expose-Headers", "Authorization");
-            return;
+
+        response.setHeader("Access-Control-Allow-Methods", "*");
+        response.setHeader("Access-Control-Allow-Headers", "Authorization,Origin, X-Requested-With, Content-Type, Accept");
+        response.setHeader("Access-Control-Allow-Credentials", "true");
+        response.setHeader("Access-Control-Expose-Headers", "Authorization");
+
+        String origin=request.getHeader("Origin");
+
+
+        if(StringUtils.isEmpty(origin)){
+            if(StringUtils.isEmpty(allowDomain)){
+                response.setHeader("Access-Control-Allow-Origin", "*");
+            }else {
+                response.setHeader("Access-Control-Allow-Origin", allowDomain);
+            }
         }else{
-            response.setHeader("Access-Control-Allow-Methods", "*");
-            response.setHeader("Access-Control-Allow-Headers", "Authorization,Origin, X-Requested-With, Content-Type, Accept");
-            response.setHeader("Access-Control-Allow-Credentials", "true");
-            response.setHeader("Access-Control-Expose-Headers", "Authorization");
-
-            String origin=request.getHeader("Origin");
-
-
-            if(StringUtils.isEmpty(origin)){
-                if(StringUtils.isEmpty(allowDomain)){
-                    response.setHeader("Access-Control-Allow-Origin", "*");
+            String s1 = origin.startsWith("http://")?origin.substring(7).trim():origin.startsWith("https://")?origin.substring(8).trim():origin;
+            if(StringUtils.isEmpty(allowDomain)){
+                response.setHeader("Access-Control-Allow-Origin", "*");
+            }else {
+                String s2 = allowDomain.startsWith("http://")?allowDomain.substring(7).trim():allowDomain.startsWith("https://")?allowDomain.substring(8).trim():allowDomain;
+                if(s1.contains(s2)){
+                    response.setHeader("Access-Control-Allow-Origin", origin);
                 }else {
                     response.setHeader("Access-Control-Allow-Origin", allowDomain);
                 }
-            }else{
-                String s1 = origin.startsWith("http://")?origin.substring(7).trim():origin.startsWith("https://")?origin.substring(8).trim():origin;
-                if(StringUtils.isEmpty(allowDomain)){
-                    response.setHeader("Access-Control-Allow-Origin", "*");
-                }else {
-                    String s2 = allowDomain.startsWith("http://")?allowDomain.substring(7).trim():allowDomain.startsWith("https://")?allowDomain.substring(8).trim():allowDomain;
-                    if(s1.contains(s2)){
-                        response.setHeader("Access-Control-Allow-Origin", origin);
-                    }else {
-                        response.setHeader("Access-Control-Allow-Origin", allowDomain);
-                    }
-                }
             }
-
         }
-
+        if(HttpMethod.OPTIONS.toString().equals(request.getMethod())){
+            response.setStatus(200);
+            return;
+        }
         filterChain.doFilter(request, response);
 
 
