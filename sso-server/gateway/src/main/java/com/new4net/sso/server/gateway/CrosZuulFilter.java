@@ -16,7 +16,7 @@ import java.io.IOException;
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
-        return "pre";
+        return "post";
     }
 
     @Override
