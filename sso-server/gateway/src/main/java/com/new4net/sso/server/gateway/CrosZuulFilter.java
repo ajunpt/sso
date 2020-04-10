@@ -49,7 +49,7 @@ public class CrosZuulFilter  extends ZuulFilter {
             } catch (IOException e) {
                 throw new ZuulException(e,403,e.getMessage());
             }
-            return null;
+            throw new ZuulException("",200,"");
         }
         return null;
     }
