@@ -16,7 +16,7 @@ import java.io.IOException;
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
-        return null;
+        return "pre";
     }
 
     @Override
@@ -47,7 +47,7 @@ public class CrosZuulFilter  extends ZuulFilter {
                 response.getWriter().write("");
                 response.getWriter().close();
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new ZuulException(e,403,e.getMessage());
             }
 
             return null;
