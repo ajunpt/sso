@@ -24,7 +24,7 @@ public class CrosFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if(HttpMethod.OPTIONS.equals(request.getMethod())){
+        if(HttpMethod.OPTIONS.toString().equals(request.getMethod())){
             response.setStatus(200);
             response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "*");
