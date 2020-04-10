@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0de4d60f-c4d3-42cb-b216-9b950553a46f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sso-server/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/gateway/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,6 +25,14 @@
     <ignored path="$PROJECT_DIR$/distributed-transaction/distributed-trans-api/target/" />
     <ignored path="$PROJECT_DIR$/distributed-transaction/distributed-transaction-api/target/" />
     <ignored path="$PROJECT_DIR$/eureka-server-master/target/" />
+    <ignored path="$PROJECT_DIR$/sso/sso-server/sso-api/target/" />
+    <ignored path="$PROJECT_DIR$/sso-server/gateway/target/" />
+    <ignored path="$PROJECT_DIR$/sso/sso-server/sso-core/target/" />
+    <ignored path="$PROJECT_DIR$/sso/jwt-server/target/" />
+    <ignored path="$PROJECT_DIR$/sso/sso-server/target/" />
+    <ignored path="$PROJECT_DIR$/sso/jwt-client/target/" />
+    <ignored path="$PROJECT_DIR$/sso/sso-server/gateway/target/" />
+    <ignored path="$PROJECT_DIR$/util-master/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +67,14 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@192.168.1.5" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="authority: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="sso: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@192.168.1.5" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sso: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -73,64 +82,95 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/application.yml">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+            <state relative-caret-position="675">
+              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoApplicationConfig.java">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="525">
+              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoCoreApplication.java">
+        <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="315">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/RedisConfig.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="930">
+              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ViewController.java">
+        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="102" selection-start-line="102" selection-end-line="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <element signature="e#599#600#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java">
+        <entry file="file://$PROJECT_DIR$/sso-server/gateway/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5941#5942#0" expanded="true" />
-                <element signature="e#5987#5988#0" expanded="true" />
-                <element signature="e#7115#7116#0" expanded="true" />
-                <element signature="e#7196#7197#0" expanded="true" />
-                <element signature="e#8151#8152#0" expanded="true" />
-                <element signature="e#8203#8204#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="393">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
@@ -149,36 +189,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Set</find>
-      <find>setAuthenticationSuccessHandler</find>
-      <find>enable</find>
-      <find>beforeClick</find>
-      <find>init</find>
-      <find>show</find>
-      <find>showMenu</find>
-      <find>onBodyDown</find>
-      <find>hideMenu</find>
-      <find>set</find>
-      <find>getData</find>
-      <find>logout</find>
-      <find>log</find>
       <find>alert</find>
-      <find>modifyAuth</find>
-      <find>msgConfirm</find>
-      <find>sessionFactory</find>
-      <find>BaseServiceImpl</find>
-      <find>EntityManager entityManager= entityManager();</find>
-      <find>scope</find>
-      <find>import</find>
-      <find>&lt;link</find>
-      <find>nprogress</find>
-      <find>stat</find>
-      <find>/static</find>
-      <find>build</find>
-      <find>module.js</find>
-      <find>HttpRequestMethodNotSupportedException</find>
-      <find>filter</find>
-      <find>remove</find>
+      <find>getOne</find>
+      <find>authorityReposity.findById</find>
+      <find>authorityService(</find>
+      <find>saveAuth</find>
+      <find>listA</find>
+      <find>authModuleForm</find>
+      <find>Access-Control-Allow-Origin</find>
+      <find>Expose</find>
+      <find>public HashMap(</find>
+      <find>threshold</find>
+      <find>HashMap</find>
+      <find>HashMap(</find>
+      <find>new Node[</find>
+      <find>entrySet</find>
+      <find>size</find>
+      <find>table</find>
+      <find>putVal</find>
+      <find>p</find>
+      <find>putV</find>
+      <find>17627090</find>
+      <find>bin</find>
+      <find>binCount</find>
+      <find>resize</find>
+      <find>treeifyBin</find>
+      <find>17646938</find>
+      <find>resize()</find>
+      <find>addA</find>
+      <find>new4net</find>
+      <find>kapatcha</find>
     </findStrings>
     <replaceStrings>
       <replace>static</replace>
@@ -198,11 +238,14 @@
       <replace>modifyModuleForm</replace>
       <replace>authModule</replace>
       <replace>&lt;link type=&quot;text/css&quot;</replace>
-      <replace />
       <replace>test</replace>
+      <replace>authorityService</replace>
+      <replace>authorityService.findById(</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page</dir>
+      <dir>$PROJECT_DIR$/sso-server</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -211,57 +254,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/JwtUserService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/LoginService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/dto/Auth.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/dto/ModuleOperateResult.java" />
-        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/ServerJwtAuthenticationProvider.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/JwtUserController.java" />
-        <option value="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtRefreshSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/ModuleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/repo/AuthorityRelationReposity.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/AuthService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SSOInit.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/entity/User.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/dto/UserInfo.java" />
-        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/JsonLoginSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/sso-client/src/main/java/com/new4net/sso/client/ClientInit.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/js/user.js" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/entity/Role.java" />
-        <option value="$PROJECT_DIR$/sso-client/src/main/resources/application.yml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/CustomUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ModuleController.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoCoreApplication.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao/ModuleDao.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao/AuthorityDao.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/AuthorityService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/ModuleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/UserService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/AuthorityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao/BaseDao.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/BaseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/BaseService.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao/BaseDaoImpl.java" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/PortalSsoCoreApplicationTests.java" />
-        <option value="$PROJECT_DIR$/sso-client/src/test/java/com/new4net/sso/client/SsoclientApplicationTests.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/jwt-server/pom.xml" />
-        <option value="$PROJECT_DIR$/jwt-client/pom.xml" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/user.html" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/pom.xml" />
-        <option value="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/js/app.js" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoApplicationConfig.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ViewController.java" />
+        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/ServerJwtAuthenticationProvider.java" />
+        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/filter/MyUsernamePasswordAuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/VCodeFilter.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/MyKaptchaServlet.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/CustomUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page/404.html" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page/js/jquery.validate.min.js" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/CorsConfigurationSource.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoCoreApplication.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CorsConfig.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page/js/jquery.min.js" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/PortalSsoCoreApplicationTests.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java" />
+        <option value="$PROJECT_DIR$/sso-client/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sso-client/src/main/java/com/new4net/sso/client/ClientInit.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/test/java/com/new4net/sso/server/gateway/GatewayApplicationTests.java" />
+        <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/JsonLoginSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SSOInit.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page/js/app.js" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/login.html" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/application.yml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/repo/UserReposity.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-api/src/main/java/com/new4net/sso/api/AuthService.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page/module.html" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/ModuleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/entity/User.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/entity/AuthorityRelation.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7cccf972-8b13-46a5-971b-8c1f58f300d3/console.sql" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/UserServiceTest.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/entity/Module.java" />
+        <option value="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/filter/OptionsRequestFilter.java" />
         <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/GatewayApplication.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/SessionHeaderFilter.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosFilter.java" />
+        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/pom.xml" />
       </list>
     </option>
   </component>
@@ -286,7 +329,26 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jwt-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jwt-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jwtclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="jwtclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -296,6 +358,7 @@
     <option name="width" value="1900" />
     <option name="height" value="796" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <autoscrollToSource ProjectPane="false" />
@@ -312,7 +375,53 @@
             </path>
             <path>
               <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
+              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gateway" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -331,41 +440,41 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577541384751" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586513386298" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tansport/springtest1/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/util-master/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.55977756" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.new4net.sso.core" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/jquery-treetable" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.new4net.sso.client" />
-      <recent name="com.new4net.jwt.server.configuration" />
-      <recent name="com.new4net.jwt.server.filter" />
-      <recent name="com.new4net.jwt.client.configuration" />
-      <recent name="com.new4net.jwt.client.service" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.new4net.sso.core" />
       <recent name="com.new4net.sso.core.dao" />
       <recent name="com.new4net.distributed_transaction.entity" />
       <recent name="com.new4net.jwt.server.configuration" />
       <recent name="com.new4net.sso.api" />
-      <recent name="com.new4net.sso.core.util" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.new4net.sso.core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.new4net.sso.server.gateway" />
+      <recent name="com.new4net.sso.core" />
+      <recent name="com.new4net.sso.client" />
+      <recent name="com.new4net.jwt.server.configuration" />
+      <recent name="com.new4net.jwt.server.filter" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -385,16 +494,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PortalSsoCoreApplication (1)">
-    <configuration name="WebSecurityConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.new4net.jwt.server.configuration.WebSecurityConfig" />
-      <module name="jwt-server" />
+  <component name="RunManager" selected="Application.CrosFilter">
+    <configuration name="CrosFilter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.server.gateway.CrosFilter" />
+      <module name="gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.new4net.jwt.server.configuration.*" />
+          <option name="PATTERN" value="com.new4net.sso.server.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.new4net.sso.server.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.new4net.sso.server.gateway" />
+      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.server.gateway.GatewayApplicationTests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -413,67 +536,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PortalSsoCoreApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sso-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.new4net.sso.core.repo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
-      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.PortalSsoCoreApplicationTests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortalSsoCoreApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sso-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.new4net.sso.core.repo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
-      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.PortalSsoCoreApplicationTests" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortalSsoCoreApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sso-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.new4net.sso.core.repo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
-      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.PortalSsoCoreApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortalSsoCoreApplicationTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sso-core" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.new4net.sso.core.repo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
-      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.PortalSsoCoreApplicationTests" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PortalSsoCoreApplicationTests.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sso-core" />
       <extension name="coverage">
         <pattern>
@@ -482,9 +545,51 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
-      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.PortalSsoCoreApplicationTests" />
-      <option name="METHOD_NAME" value="test2" />
+      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.UserServiceTest" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sso-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.new4net.sso.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
+      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.UserServiceTest" />
+      <option name="METHOD_NAME" value="test4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testGetUserId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sso-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.new4net.sso.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.new4net.sso.core" />
+      <option name="MAIN_CLASS_NAME" value="com.new4net.sso.core.UserServiceTest" />
+      <option name="METHOD_NAME" value="testGetUserId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.new4net.sso.server.gateway.GatewayApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -619,23 +724,25 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WebSecurityConfig" />
+      <item itemvalue="Application.CrosFilter" />
       <item itemvalue="JUnit.PortalSsoCoreApplicationTests" />
-      <item itemvalue="JUnit.PortalSsoCoreApplicationTests.contextLoads" />
-      <item itemvalue="JUnit.PortalSsoCoreApplicationTests.test" />
-      <item itemvalue="JUnit.PortalSsoCoreApplicationTests.test2" />
+      <item itemvalue="JUnit.GatewayApplicationTests" />
+      <item itemvalue="JUnit.UserServiceTest.test3" />
+      <item itemvalue="JUnit.UserServiceTest.test4" />
+      <item itemvalue="JUnit.UserServiceTest.testGetUserId" />
       <item itemvalue="Spring Boot.PortalSsoCoreApplication" />
       <item itemvalue="Spring Boot.PortalSsoCoreApplication (1)" />
       <item itemvalue="Spring Boot.SsoclientApplication" />
       <item itemvalue="Spring Boot.JwtclientApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PortalSsoCoreApplicationTests.test2" />
-        <item itemvalue="JUnit.PortalSsoCoreApplicationTests.test" />
-        <item itemvalue="JUnit.PortalSsoCoreApplicationTests" />
-        <item itemvalue="JUnit.PortalSsoCoreApplicationTests.contextLoads" />
-        <item itemvalue="Application.WebSecurityConfig" />
+        <item itemvalue="Application.CrosFilter" />
+        <item itemvalue="JUnit.UserServiceTest.testGetUserId" />
+        <item itemvalue="JUnit.UserServiceTest.test4" />
+        <item itemvalue="JUnit.UserServiceTest.test3" />
+        <item itemvalue="JUnit.GatewayApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -687,233 +794,403 @@
       <workItem from="1577434244485" duration="6363000" />
       <workItem from="1577447843305" duration="2625000" />
       <workItem from="1577450717222" duration="37613000" />
+      <workItem from="1585015248001" duration="14398000" />
+      <workItem from="1585033902721" duration="5861000" />
+      <workItem from="1585061481004" duration="1823000" />
+      <workItem from="1585106028898" duration="21919000" />
+      <workItem from="1585195794344" duration="14827000" />
+      <workItem from="1585281594125" duration="1840000" />
+      <workItem from="1585392728138" duration="2772000" />
+      <workItem from="1585467258678" duration="8265000" />
+      <workItem from="1585494893991" duration="7244000" />
+      <workItem from="1586082934465" duration="3739000" />
+      <workItem from="1586162507113" duration="6764000" />
+      <workItem from="1586238907129" duration="3154000" />
+      <workItem from="1586242675389" duration="14730000" />
+      <workItem from="1586312737790" duration="13663000" />
+      <workItem from="1586398661382" duration="17565000" />
+      <workItem from="1586486585983" duration="10049000" />
     </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1577191364465</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00053" summary="test">
+      <created>1585197530140</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
-      <updated>1577191364466</updated>
+      <updated>1585197530140</updated>
     </task>
-    <task id="LOCAL-00002" summary="test">
-      <created>1577253110236</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00054" summary="test">
+      <created>1585203118218</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
-      <updated>1577253110236</updated>
+      <updated>1585203118218</updated>
     </task>
-    <task id="LOCAL-00003" summary="test">
-      <created>1577271899242</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00055" summary="test">
+      <created>1585204177399</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
-      <updated>1577271899242</updated>
+      <updated>1585204177399</updated>
     </task>
-    <task id="LOCAL-00004" summary="test">
-      <created>1577271934069</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00056" summary="test">
+      <created>1585204551708</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
       <option name="project" value="LOCAL" />
-      <updated>1577271934069</updated>
+      <updated>1585204551708</updated>
     </task>
-    <task id="LOCAL-00005" summary="test">
-      <created>1577272784060</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00057" summary="test">
+      <created>1585205390904</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
       <option name="project" value="LOCAL" />
-      <updated>1577272784060</updated>
+      <updated>1585205390904</updated>
     </task>
-    <task id="LOCAL-00006" summary="test">
-      <created>1577278632289</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+    <task id="LOCAL-00058" summary="test">
+      <created>1585237099839</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
-      <updated>1577278632289</updated>
+      <updated>1585237099840</updated>
     </task>
-    <task id="LOCAL-00007" summary="test">
-      <created>1577278643639</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
+    <task id="LOCAL-00059" summary="test">
+      <created>1585467563573</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
-      <updated>1577278643639</updated>
+      <updated>1585467563574</updated>
     </task>
-    <task id="LOCAL-00008" summary="test">
-      <created>1577345179365</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
+    <task id="LOCAL-00060" summary="test">
+      <created>1585472814170</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
-      <updated>1577345179365</updated>
+      <updated>1585472814171</updated>
     </task>
-    <task id="LOCAL-00009" summary="test">
-      <created>1577431675694</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
+    <task id="LOCAL-00061" summary="test">
+      <created>1585473422622</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
-      <updated>1577431675694</updated>
+      <updated>1585473422622</updated>
     </task>
-    <task id="LOCAL-00010" summary="test">
-      <created>1577438140451</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
+    <task id="LOCAL-00062" summary="test">
+      <created>1586087161495</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1577438140451</updated>
+      <updated>1586087161496</updated>
     </task>
-    <task id="LOCAL-00011" summary="test">
-      <created>1577439849950</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
+    <task id="LOCAL-00063" summary="test">
+      <created>1586162951293</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
-      <updated>1577439849950</updated>
+      <updated>1586162951294</updated>
     </task>
-    <task id="LOCAL-00012" summary="test">
-      <created>1577453681784</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
+    <task id="LOCAL-00064" summary="test">
+      <created>1586163893521</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
       <option name="project" value="LOCAL" />
-      <updated>1577453681784</updated>
+      <updated>1586163893521</updated>
     </task>
-    <task id="LOCAL-00013" summary="test">
-      <created>1577459636372</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
+    <task id="LOCAL-00065" summary="test">
+      <created>1586269799423</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
       <option name="project" value="LOCAL" />
-      <updated>1577459636372</updated>
+      <updated>1586269799423</updated>
     </task>
-    <task id="LOCAL-00014" summary="test">
-      <created>1577467392965</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
+    <task id="LOCAL-00066" summary="test">
+      <created>1586317856180</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
       <option name="project" value="LOCAL" />
-      <updated>1577467392965</updated>
+      <updated>1586317856181</updated>
     </task>
-    <task id="LOCAL-00015" summary="test">
-      <created>1577468112278</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
+    <task id="LOCAL-00067" summary="test">
+      <created>1586341995732</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
       <option name="project" value="LOCAL" />
-      <updated>1577468112278</updated>
+      <updated>1586341995732</updated>
     </task>
-    <task id="LOCAL-00016" summary="test">
-      <created>1577471003803</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
+    <task id="LOCAL-00068" summary="test">
+      <created>1586344031467</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
       <option name="project" value="LOCAL" />
-      <updated>1577471003804</updated>
+      <updated>1586344031467</updated>
     </task>
-    <task id="LOCAL-00017" summary="test">
-      <created>1577474573051</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
+    <task id="LOCAL-00069" summary="test">
+      <created>1586344419862</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
       <option name="project" value="LOCAL" />
-      <updated>1577474573051</updated>
+      <updated>1586344419862</updated>
     </task>
-    <task id="LOCAL-00018" summary="test">
-      <created>1577507872196</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
+    <task id="LOCAL-00070" summary="test">
+      <created>1586344708509</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
       <option name="project" value="LOCAL" />
-      <updated>1577507872196</updated>
+      <updated>1586344708509</updated>
     </task>
-    <task id="LOCAL-00019" summary="test">
-      <created>1577508933994</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
+    <task id="LOCAL-00071" summary="test">
+      <created>1586344804300</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
-      <updated>1577508933994</updated>
+      <updated>1586344804300</updated>
     </task>
-    <task id="LOCAL-00020" summary="test">
-      <created>1577511128980</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
+    <task id="LOCAL-00072" summary="test">
+      <created>1586344988563</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
-      <updated>1577511128980</updated>
+      <updated>1586344988563</updated>
     </task>
-    <task id="LOCAL-00021" summary="test">
-      <created>1577512657969</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
+    <task id="LOCAL-00073" summary="test">
+      <created>1586346213175</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
-      <updated>1577512657969</updated>
+      <updated>1586346213175</updated>
     </task>
-    <task id="LOCAL-00022" summary="test">
-      <created>1577517293259</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
+    <task id="LOCAL-00074" summary="test">
+      <created>1586346602086</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
-      <updated>1577517293259</updated>
+      <updated>1586346602087</updated>
     </task>
-    <task id="LOCAL-00023" summary="test">
-      <created>1577518301062</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
+    <task id="LOCAL-00075" summary="test">
+      <created>1586346807168</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
-      <updated>1577518301062</updated>
+      <updated>1586346807168</updated>
     </task>
-    <task id="LOCAL-00024" summary="test">
-      <created>1577518621759</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
+    <task id="LOCAL-00076" summary="test">
+      <created>1586347571395</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
-      <updated>1577518621759</updated>
+      <updated>1586347571395</updated>
     </task>
-    <task id="LOCAL-00025" summary="test">
-      <created>1577526148772</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
+    <task id="LOCAL-00077" summary="test">
+      <created>1586348888792</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
-      <updated>1577526148772</updated>
+      <updated>1586348888792</updated>
     </task>
-    <task id="LOCAL-00026" summary="test">
-      <created>1577527718261</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
+    <task id="LOCAL-00078" summary="test">
+      <created>1586486685690</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
-      <updated>1577527718261</updated>
+      <updated>1586486685691</updated>
     </task>
-    <task id="LOCAL-00027" summary="test">
-      <created>1577539739541</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
+    <task id="LOCAL-00079" summary="test">
+      <created>1586486879047</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1577539739541</updated>
+      <updated>1586486879047</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00080" summary="test">
+      <created>1586487441824</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1586487441825</updated>
+    </task>
+    <task id="LOCAL-00081" summary="test">
+      <created>1586489469321</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1586489469321</updated>
+    </task>
+    <task id="LOCAL-00082" summary="test">
+      <created>1586489798158</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1586489798158</updated>
+    </task>
+    <task id="LOCAL-00083" summary="test">
+      <created>1586490232993</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1586490232993</updated>
+    </task>
+    <task id="LOCAL-00084" summary="test">
+      <created>1586491268819</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1586491268820</updated>
+    </task>
+    <task id="LOCAL-00085" summary="test">
+      <created>1586491301402</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1586491301402</updated>
+    </task>
+    <task id="LOCAL-00086" summary="test">
+      <created>1586491805740</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1586491805740</updated>
+    </task>
+    <task id="LOCAL-00087" summary="test">
+      <created>1586492114425</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1586492114426</updated>
+    </task>
+    <task id="LOCAL-00088" summary="test">
+      <created>1586492600017</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1586492600017</updated>
+    </task>
+    <task id="LOCAL-00089" summary="test">
+      <created>1586492610590</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1586492610590</updated>
+    </task>
+    <task id="LOCAL-00090" summary="test">
+      <created>1586493078762</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1586493078762</updated>
+    </task>
+    <task id="LOCAL-00091" summary="test">
+      <created>1586493238564</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1586493238564</updated>
+    </task>
+    <task id="LOCAL-00092" summary="test">
+      <created>1586493396956</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1586493396956</updated>
+    </task>
+    <task id="LOCAL-00093" summary="test">
+      <created>1586493575793</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1586493575793</updated>
+    </task>
+    <task id="LOCAL-00094" summary="test">
+      <created>1586493810853</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1586493810853</updated>
+    </task>
+    <task id="LOCAL-00095" summary="test">
+      <created>1586493981159</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1586493981159</updated>
+    </task>
+    <task id="LOCAL-00096" summary="test">
+      <created>1586494194822</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1586494194822</updated>
+    </task>
+    <task id="LOCAL-00097" summary="test">
+      <created>1586494546010</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1586494546010</updated>
+    </task>
+    <task id="LOCAL-00098" summary="test">
+      <created>1586494696009</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1586494696009</updated>
+    </task>
+    <task id="LOCAL-00099" summary="test">
+      <created>1586494940389</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1586494940389</updated>
+    </task>
+    <task id="LOCAL-00100" summary="test">
+      <created>1586495144411</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1586495144411</updated>
+    </task>
+    <task id="LOCAL-00101" summary="test">
+      <created>1586499630433</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1586499630433</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 31m 47s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 41m 24s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 44m 13s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 44m 54s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 45m 32s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 54m 22s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test - 2019.12.22 at 15h 58m 58s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PortalSsoCoreApplicationTests_test2 - 2019.12.23 at 13h 24m 21s.xml">
-      <configuration name="PortalSsoCoreApplicationTests.test2" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PortalSsoCoreApplicationTests_test2 - 2019.12.23 at 13h 27m 20s.xml">
       <configuration name="PortalSsoCoreApplicationTests.test2" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PortalSsoCoreApplicationTests_test2 - 2019.12.23 at 14h 06m 24s.xml">
       <configuration name="PortalSsoCoreApplicationTests.test2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="GatewayApplicationTests - 2020.03.26 at 23h 36m 09s.xml">
+      <configuration name="GatewayApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GatewayApplicationTests - 2020.03.26 at 23h 37m 02s.xml">
+      <configuration name="GatewayApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GatewayApplicationTests - 2020.03.28 at 19h 50m 14s.xml">
+      <configuration name="GatewayApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_test3 - 2020.04.07 at 21h 57m 30s.xml">
+      <configuration name="UserServiceTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_test4 - 2020.04.07 at 22h 02m 52s.xml">
+      <configuration name="UserServiceTest.test4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_test4 - 2020.04.07 at 22h 06m 24s.xml">
+      <configuration name="UserServiceTest.test4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_testGetUserId - 2020.04.08 at 18h 47m 01s.xml">
+      <configuration name="UserServiceTest.testGetUserId" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserServiceTest_testGetUserId - 2020.04.08 at 19h 20m 18s.xml">
+      <configuration name="UserServiceTest.testGetUserId" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="508376000" />
+    <option name="totallyTimeSpent" value="656989000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -927,7 +1204,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.25830653" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.1795284" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -938,33 +1215,34 @@
       <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32951945" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32837528" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.6132479" visible="true" weight="0.3272311" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.395881" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.5814577" weight="0.3272311" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.2528604" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32837528" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32837528" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32837528" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.43997857" side_tool="true" weight="0.34210527" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.41854233" side_tool="true" weight="0.3272311" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4994641" weight="0.21167047" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32837528" />
       <window_info anchor="bottom" id="Database Changes" order="14" weight="0.32837528" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.56002146" weight="0.3604119" />
-      <window_info anchor="bottom" id="Database Console" order="16" weight="0.32837528" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.56002146" weight="0.43249428" />
+      <window_info anchor="bottom" id="Database Console" order="16" weight="0.30320367" />
       <window_info anchor="bottom" id="REST Client" order="17" weight="0.53415453" />
       <window_info anchor="bottom" id="SVN Repositories" order="18" visible="true" weight="0.32922733" />
-      <window_info anchor="bottom" id="Version Control" order="19" weight="0.7322655" />
+      <window_info anchor="bottom" id="Version Control" order="19" weight="0.701373" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.12057878" />
+      <window_info anchor="right" id="Database" order="5" weight="0.26205787" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Maven" order="8" visible="true" weight="0.329582" />
+      <window_info anchor="right" id="Maven" order="8" visible="true" weight="0.19239014" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.329582" />
+      <window_info anchor="right" id="Redis Servers" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -981,6 +1259,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/sso" />
+    </ignored-roots>
     <MESSAGE value="test" />
     <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
@@ -1009,6 +1292,31 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>hashMap</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getMethod()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getInputStream()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((HttpServletRequest)req).getCookies()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>req.getSession().getId()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>new HashSet&lt;&gt;(authorityList)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1030,407 +1338,373 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>String.format(&quot;%s.%s.%s&quot;, this.parts[0], this.parts[1], this.parts[2])</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>PREFIX + this.idForEncode + SUFFIX + this.passwordEncoderForEncode.encode(rawPassword)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>PasswordEncoderFactories.createDelegatingPasswordEncoder().encode(params.get(&quot;password&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar!/javax/persistence/PersistenceContext.class">
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="36" />
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao/BaseDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/CsrfSecurityRequestMatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1748#1778#0" expanded="true" />
-            <element signature="e#2007#2037#0" expanded="true" />
-            <element signature="e#2459#2489#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/EnableJwtClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/HttpStatusLoginFailureHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtAuthenticationToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtClientProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtRefreshSuccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/ModuleServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/TokenAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="540">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ModuleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/PortalSsoCoreApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-client/src/main/java/com/new4net/sso/client/SsoclientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-client/src/test/java/com/new4net/sso/client/SsoclientApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/TokenClearLogoutHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service/impl/CustomUserDetailsService.java">
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/filter/OptionsRequestFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-server/pom.xml">
+    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtLoginConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="132" column="17" lean-forward="true" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16343">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/MODULE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/MODULE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/MODULE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/MODULE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="248" column="21" lean-forward="true" selection-start-line="248" selection-start-column="21" selection-end-line="248" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h6#0;n#form#0;n#section#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.2.1.RELEASE/spring-security-web-5.2.1.RELEASE.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="34" column="72" lean-forward="true" selection-start-line="34" selection-start-column="72" selection-end-line="34" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/RequestMappingInfoHandlerMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.27/tomcat-embed-websocket-9.0.27.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="439" selection-start-line="439" selection-end-line="439" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="437" selection-start-line="437" selection-end-line="437" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="328" column="28" selection-start-line="328" selection-start-column="28" selection-end-line="328" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractHandlerMethodMapping.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="202" column="28" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar!/org/springframework/web/HttpRequestMethodNotSupportedException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#2335#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/filter/MyUsernamePasswordAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="315">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/USER_AUTHORITY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/USER_AUTHORITY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/USER_AUTHORITY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/USER_AUTHORITY">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/sso/table/AUTHORITYRELATION">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="137" column="13" lean-forward="true" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/vendors/parsleyjs/bower_components/mocha/mocha.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="4993" column="15" selection-start-line="4993" selection-start-column="15" selection-end-line="4993" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7cccf972-8b13-46a5-971b-8c1f58f300d3/schema/authority/table/ROLE">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="e#497#504#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="53" column="33" lean-forward="true" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoCoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="161">
+          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="569">
+          <caret line="152" column="13" lean-forward="true" selection-start-line="152" selection-start-column="13" selection-end-line="152" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/ValidateCodeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/TokenClearLogoutHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/ServerJwtAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/MyHttpStatusReturningLogoutSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/JsonLoginSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/JsonLoginConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/EnableJwtServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/DaoUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/AdminLoginConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/UserServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="109" column="65" selection-start-line="109" selection-start-column="65" selection-end-line="109" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/PortalSsoCoreApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/HystrixCommandTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/CommandHelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.37/tomcat-embed-core-8.5.37.jar!/javax/servlet/http/HttpServletRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="4276" column="19" selection-start-line="4276" selection-start-column="19" selection-end-line="4276" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5941#5942#0" expanded="true" />
-            <element signature="e#5987#5988#0" expanded="true" />
-            <element signature="e#7115#7116#0" expanded="true" />
-            <element signature="e#7196#7197#0" expanded="true" />
-            <element signature="e#8151#8152#0" expanded="true" />
-            <element signature="e#8203#8204#0" expanded="true" />
+            <element signature="e#2786#2787#0" expanded="true" />
+            <element signature="e#2837#2838#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="910" column="18" selection-start-line="910" selection-start-column="18" selection-end-line="910" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/util/LinkedHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="296" column="9" selection-start-line="296" selection-start-column="9" selection-end-line="296" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/lang/Cloneable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="757" column="20" selection-start-line="757" selection-start-column="12" selection-end-line="757" selection-end-column="20" />
+          <folding>
+            <element signature="e#24331#24332#0" expanded="true" />
+            <element signature="e#24396#24397#0" expanded="true" />
+            <element signature="e#66928#66929#0" expanded="true" />
+            <element signature="e#66985#66986#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/java/jdk1.8.0_211-amd64/src.zip!/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="91" column="27" lean-forward="true" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/GatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1.jar!/com/netflix/zuul/exception/ZuulException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="67" selection-end-line="13" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1.jar!/com/netflix/zuul/ZuulFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-netflix-zuul/2.0.0.RC2/spring-cloud-netflix-zuul-2.0.0.RC2.jar!/org/springframework/cloud/netflix/zuul/filters/support/FilterConstants.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="50" lean-forward="true" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.12.RELEASE/spring-web-5.0.12.RELEASE.jar!/org/springframework/http/HttpMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>

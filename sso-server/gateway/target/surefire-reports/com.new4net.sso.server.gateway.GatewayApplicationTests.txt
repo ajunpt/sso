@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.new4net.sso.server.gateway.GatewayApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.359 s - in com.new4net.sso.server.gateway.GatewayApplicationTests

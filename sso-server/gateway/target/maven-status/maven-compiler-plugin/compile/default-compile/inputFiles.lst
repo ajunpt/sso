@@ -1,0 +1,6 @@
+/home/ajunpt/ssoparent/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/SessionHeaderFilter.java
+/home/ajunpt/ssoparent/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosFilter.java
+/home/ajunpt/ssoparent/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java
+/home/ajunpt/ssoparent/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java
+/home/ajunpt/ssoparent/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java
+/home/ajunpt/ssoparent/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/GatewayApplication.java

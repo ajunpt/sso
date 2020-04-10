@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/jwt-server/pom.xml" />
         <option value="$PROJECT_DIR$/jwt-client/pom.xml" />
         <option value="$PROJECT_DIR$/distributed-transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/util-master/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

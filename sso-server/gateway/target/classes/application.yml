@@ -1,0 +1,58 @@
+server:
+  port: 7077
+
+spring:
+  redis:
+    cluster:
+      nodes: 192.168.1.5:17000,192.168.1.5:17001,192.168.1.5:17002,192.168.1.5:18000,192.168.1.5:18001,192.168.1.5:18002,192.168.1.34:18000,192.168.1.34:18001,192.168.1.34:18002
+    database: 1
+    #    host: localhost
+    #    port: 6379
+    password: TjTaA124#
+  thymeleaf:
+    mode: HTML5
+    #编码 可不用配置
+    encoding: UTF-8
+    #内容类别,可不用配置
+    cache: false
+    #配置模板路径，默认是templates，可以不用配置
+    servlet:
+      content-type: text/html
+  application:
+    name: sso-server-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://sysadmin:Tj20jq7T@192.168.1.35:8502/eureka/,http://sysadmin:Tj20jq7T@192.168.1.34:8503/eureka/
+  instance:
+      instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+zuul:
+  sensitive-headers:
+  add-proxy-headers: true
+  routes:
+    sso-server:
+     path: /api/**
+     serviceId: sso-server
+  retryable: true
+
+ribbon:
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+cros:
+#  allowDomain: http://localhost:7077
+  allowDomain: http://new4net.com
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000
+
+
+
+

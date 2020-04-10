@@ -1,0 +1,12 @@
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/BaseDao.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/AbstractFactory.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/CustomApplicationContext.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/Page.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/Work.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/Container.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/Constants.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/util.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/BaseDaoImpl.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/CustomTransactionManager.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/MysqlUpperCaseStrategy.java
+/home/ajunpt/tansport/util/src/main/java/com/new4net/util/MySQL5DialectUTF8.java
