@@ -19,12 +19,12 @@ import java.io.IOException;
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
-        return FilterConstants.PRE_TYPE ;
+        return FilterConstants.POST_TYPE ;
     }
 
     @Override
     public int filterOrder() {
-        return Integer.MIN_VALUE+1;
+        return FilterConstants.SEND_RESPONSE_FILTER_ORDER;
     }
 
     @Override
@@ -34,28 +34,23 @@ public class CrosZuulFilter  extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
-        log.info("开始");
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         HttpServletResponse response = ctx.getResponse();
-        log.info(request.getMethod());
-        log.info(request.getRequestURI());
-        if(HttpMethod.OPTIONS.equals(request.getMethod())){
+        if(HttpMethod.OPTIONS.toString().equals(request.getMethod())){
             response.setStatus(200);
             response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "*");
             response.setHeader("Access-Control-Allow-Headers", "*");
             response.setHeader("Access-Control-Allow-Credentials", "true");
             response.setHeader("Access-Control-Expose-Headers", "Authorization");
-            log.info("开始1");
             try {
                 response.getWriter().write("");
                 response.getWriter().close();
             } catch (IOException e) {
                 throw new ZuulException(e,403,e.getMessage());
             }
-            log.info("开始2");
-            throw new ZuulException("",200,"");
+
         }
         return null;
     }
