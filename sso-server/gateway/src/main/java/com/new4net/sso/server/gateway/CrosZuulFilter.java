@@ -5,6 +5,7 @@ import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 
@@ -16,12 +17,12 @@ import java.io.IOException;
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
-        return "route" ;
+        return FilterConstants.POST_TYPE ;
     }
 
     @Override
     public int filterOrder() {
-        return 0;
+        return FilterConstants.SEND_RESPONSE_FILTER_ORDER;
     }
 
     @Override
