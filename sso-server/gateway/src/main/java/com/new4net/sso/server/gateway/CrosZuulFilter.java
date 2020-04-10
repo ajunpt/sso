@@ -16,7 +16,7 @@ import java.io.IOException;
 public class CrosZuulFilter  extends ZuulFilter {
     @Override
     public String filterType() {
-        return "post";
+        return "route" ;
     }
 
     @Override
@@ -37,7 +37,6 @@ public class CrosZuulFilter  extends ZuulFilter {
         HttpServletResponse response = ctx.getResponse();
         if(HttpMethod.OPTIONS.equals(request.getMethod())){
             response.setStatus(200);
-            System.out.println("近来了");
             response.setHeader("Access-Control-Allow-Origin", "*");
             response.setHeader("Access-Control-Allow-Methods", "*");
             response.setHeader("Access-Control-Allow-Headers", "*");
@@ -49,7 +48,6 @@ public class CrosZuulFilter  extends ZuulFilter {
             } catch (IOException e) {
                 throw new ZuulException(e,403,e.getMessage());
             }
-
             return null;
         }
         return null;
