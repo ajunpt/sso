@@ -12,21 +12,13 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class CustomTransactionManager {
-    private SessionFactory sessionFactory;
-    private TransactionTemplate transactionTemplate;
-
-    public CustomTransactionManager() {
-        sessionFactory = (SessionFactory) CustomApplicationContext.getContext().getAttr(Constants.SESSIONFACTORY);
-        transactionTemplate = (TransactionTemplate) CustomApplicationContext.getContext().getAttr(Constants.TRANSACTIONTEMPLATE);
-    }
 
     public Session getSession() {
-
-        return sessionFactory.getCurrentSession();
+        return ((SessionFactory) CustomApplicationContext.getContext().getAttr(Constants.SESSIONFACTORY)).getCurrentSession();
     }
 
     public Object doWorkInTransaction(Work work) {
-
+        TransactionTemplate transactionTemplate = (TransactionTemplate) CustomApplicationContext.getContext().getAttr(Constants.TRANSACTIONTEMPLATE);
         if (transactionTemplate != null) {
             return transactionTemplate.execute(new TransactionCallback() {
                 public Object doInTransaction(TransactionStatus status) {

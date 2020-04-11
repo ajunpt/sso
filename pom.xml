@@ -15,11 +15,13 @@
     <packaging>pom</packaging>
     <modules>
         <module>sso-server</module>
-        <!--<module>sso-server/sso-api</module>-->
-        <!--<module>sso-server/sso-core</module>-->
-        <!--<module>sso-client</module>-->
+        <module>sso-server/sso-api</module>
+        <module>sso-server/sso-core</module>
+        <module>sso-server/gateway</module>
+        <module>sso-client</module>
         <module>jwt-server</module>
         <module>jwt-client</module>
+        <module>util</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

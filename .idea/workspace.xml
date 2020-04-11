@@ -7,7 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0de4d60f-c4d3-42cb-b216-9b950553a46f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/com/new4net/util/AjaxMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/src/main/java/com/new4net/util/PageConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sso-server/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sso-server/src/test/java/com/new4net/sso/apigateway/ApiGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/sso-server/src/test/java/com/new4net/sso/apigateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/src/main/java/com/new4net/util/CustomTransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/util/src/main/java/com/new4net/util/CustomTransactionManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,6 +40,7 @@
     <ignored path="$PROJECT_DIR$/sso/jwt-client/target/" />
     <ignored path="$PROJECT_DIR$/sso/sso-server/gateway/target/" />
     <ignored path="$PROJECT_DIR$/util-master/target/" />
+    <ignored path="$PROJECT_DIR$/util/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,102 +88,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#638#639#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sso-server/gateway/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -189,8 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert</find>
-      <find>getOne</find>
       <find>authorityReposity.findById</find>
       <find>authorityService(</find>
       <find>saveAuth</find>
@@ -219,6 +130,8 @@
       <find>addA</find>
       <find>new4net</find>
       <find>kapatcha</find>
+      <find>kaptcha</find>
+      <find>util</find>
     </findStrings>
     <replaceStrings>
       <replace>static</replace>
@@ -254,9 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page/js/app.js" />
-        <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/SsoApplicationConfig.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/ViewController.java" />
         <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/ServerJwtAuthenticationProvider.java" />
         <option value="$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/filter/MyUsernamePasswordAuthenticationFilter.java" />
@@ -274,7 +184,6 @@
         <option value="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page/js/jquery.min.js" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/test/java/com/new4net/sso/core/PortalSsoCoreApplicationTests.java" />
         <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java" />
-        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java" />
         <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java" />
         <option value="$PROJECT_DIR$/sso-client/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/sso-client/src/main/java/com/new4net/sso/client/ClientInit.java" />
@@ -304,6 +213,10 @@
         <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java" />
         <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosFilter.java" />
         <option value="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java" />
+        <option value="$PROJECT_DIR$/util/pom.xml" />
+        <option value="$PROJECT_DIR$/sso-server/src/test/java/com/new4net/sso/apigateway/ApiGatewayApplicationTests.java" />
         <option value="$PROJECT_DIR$/sso-server/gateway/pom.xml" />
       </list>
     </option>
@@ -332,21 +245,7 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwt-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwt-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwtclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="jwtclient" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="gateway" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -362,7 +261,7 @@
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <autoscrollToSource ProjectPane="false" />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -373,62 +272,12 @@
               <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
               <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ssoparent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ssoparent" type="462c0819:PsiDirectoryNode" />
-              <item name="sso-server" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,7 +289,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586513386298" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586539170916" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/util-master/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -449,18 +298,18 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.55977756" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.new4net.sso.core" />
-      <recent name="com.new4net.sso.core.dao" />
-      <recent name="com.new4net.distributed_transaction.entity" />
-      <recent name="com.new4net.jwt.server.configuration" />
-      <recent name="com.new4net.sso.api" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.new4net.sso.core" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/util/src/main/java/com/new4net/util" />
+      <recent name="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao" />
+      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.new4net.sso.server.gateway" />
@@ -469,12 +318,12 @@
       <recent name="com.new4net.jwt.server.configuration" />
       <recent name="com.new4net.jwt.server.filter" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sso-server/gateway/src/main/resources/static/page" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/service" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/dao" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static" />
-      <recent name="$PROJECT_DIR$/sso-server/sso-core/src/main/resources/static/page" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.new4net.sso.core" />
+      <recent name="com.new4net.sso.core.dao" />
+      <recent name="com.new4net.distributed_transaction.entity" />
+      <recent name="com.new4net.jwt.server.configuration" />
+      <recent name="com.new4net.sso.api" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -809,7 +658,11 @@
       <workItem from="1586242675389" duration="14730000" />
       <workItem from="1586312737790" duration="13663000" />
       <workItem from="1586398661382" duration="17565000" />
-      <workItem from="1586486585983" duration="10049000" />
+      <workItem from="1586486585983" duration="11400000" />
+      <workItem from="1586519493938" duration="49000" />
+      <workItem from="1586519977434" duration="212000" />
+      <workItem from="1586520848014" duration="1879000" />
+      <workItem from="1586524482392" duration="3012000" />
     </task>
     <task id="LOCAL-00053" summary="test">
       <created>1585197530140</created>
@@ -1190,7 +1043,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="656989000" />
+    <option name="totallyTimeSpent" value="663492000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1204,7 +1057,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.1795284" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.1886388" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1243,6 +1096,7 @@
       <window_info anchor="right" id="Maven" order="8" visible="true" weight="0.19239014" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.329582" />
       <window_info anchor="right" id="Redis Servers" order="10" />
+      <window_info anchor="right" id="CDI" order="11" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1341,90 +1195,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/CsrfSecurityRequestMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/EnableJwtClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/HttpStatusLoginFailureHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtAuthenticationToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtClientProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtRefreshSuccessHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/TokenAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/TokenClearLogoutHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/filter/OptionsRequestFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/JwtLoginConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="65" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jwt-client/src/main/java/com/new4net/jwt/client/configuration/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jwt-server/src/main/java/com/new4net/jwt/server/configuration/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -1599,13 +1369,6 @@
     <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/GatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/zuul/zuul-core/1.3.1/zuul-core-1.3.1.jar!/com/netflix/zuul/exception/ZuulException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1634,21 +1397,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java">
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-          </folding>
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="779">
           <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1659,52 +1433,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/CrosZuulFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        <state relative-caret-position="135">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/GatewayApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="405">
+          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/ViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java">
+    <entry file="file://$PROJECT_DIR$/sso-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="330">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/MyKaptchaServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="134">
+          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/new4net/util/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/new4net/util/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/new4net/util/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/new4net/util/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/new4net/util/Work.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/com/new4net/util/AbstractFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/sso-core/src/main/java/com/new4net/sso/core/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="32" selection-start-line="12" selection-end-line="12" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sso-server/gateway/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="869">
+          <caret line="75" column="20" lean-forward="true" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/src/test/java/com/new4net/sso/apigateway/ApiGatewayApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sso-server/gateway/src/main/java/com/new4net/sso/server/gateway/VCodeFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding>
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1762,7 +1616,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>sso-server</last-edited>
+          <last-edited>util</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
