@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.Cookie;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -61,7 +62,7 @@ public class AuthController implements AuthService {
 
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-
+    @Transactional
     public AjaxMsg addAuth(@RequestBody Auth auth) {
         Authority authority = authority = new Authority();
         if(StringUtils.isEmpty(auth.getAuthority())){
@@ -96,7 +97,7 @@ public class AuthController implements AuthService {
     }
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-
+    @Transactional
     public AjaxMsg modifyAuth(@RequestBody Auth auth) {
         Authority authority = null;
         Module module = moduleReposity.findByModuleName(auth.getModuleName());
@@ -171,7 +172,7 @@ public class AuthController implements AuthService {
 
     @Override
     @PreAuthorize("hasRole('ROLE_MODULEADMIN')||hasRole('ROLE_SYSTEMADMIN')")
-
+    @Transactional
     public AjaxMsg removeAuth(@RequestParam("authorityCode") String authorityCode) {
         if("ROLE_SYSTEMADMIN".equals(authorityCode)){
             return new AjaxMsg("0", "不能删除系统管理员");

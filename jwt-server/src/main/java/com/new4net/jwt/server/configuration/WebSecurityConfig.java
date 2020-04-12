@@ -155,10 +155,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter implements R
         this.resourceLoader = resourceLoader;
     }
     public static void main(String[] args){
+        PasswordEncoder passwordEncoder =PasswordEncoderFactories.createDelegatingPasswordEncoder();
         String str = PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sysadmin");
-        System.out.println(str);
+        System.out.println(passwordEncoder.matches("sysadmin",str));
         String str1 = PasswordEncoderFactories.createDelegatingPasswordEncoder().encode("sysadmin");
-        System.out.println(str1);
+        System.out.println(passwordEncoder.matches("sysadmin",str1));
     }
 
 }

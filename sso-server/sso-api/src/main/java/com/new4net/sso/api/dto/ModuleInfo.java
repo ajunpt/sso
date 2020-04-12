@@ -1,16 +1,13 @@
 package com.new4net.sso.api.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Map;
 import java.util.Set;
 
 @Data
 @Builder
-
+@EqualsAndHashCode(of = {"moduleName"})
 public class ModuleInfo {
     private String moduleName;
     private boolean enable=true;

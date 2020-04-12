@@ -62,13 +62,17 @@ public  class AuthorityServiceImpl extends BaseServiceImpl<Authority> implements
     }
 
     private List<Authority> select( String[] m) {
-        List<Authority> authorities1 =findByHQL("From Authority a Where a.module.moduleName in (?0)",m);
+        if(m!=null&&m.length>0){
+            List<Authority> authorities1 =findByHQL("From Authority a Where a.module.moduleName in (?0)",m);
 
-       return authorities1;
+            return authorities1;
+        }
 
+        return null;
     }
 
     private List<Authority> getAuthorities(Authority[] superAuthoritys, List<Authority> list,String moduleName) {
+
         List<Authority> list1 =  get(superAuthoritys,list);
         if(list1!=null){
             return list1.stream().filter(authority -> {
@@ -94,16 +98,15 @@ public  class AuthorityServiceImpl extends BaseServiceImpl<Authority> implements
         }
 
 
-        List<Authority> authorities = new ArrayList<>();
-
-        for(Authority authority:list){
+        List<Authority> authorities  = list.stream().filter(authority -> {
             for(AuthorityRelation authorityRelation:set){
-                if(authorityRelation.getSubAuthCode().equals(authority.getAuthorityCode())){
-                    authorities.add(authority);
-                    break;
+                if(authorityRelation.getSubAuthCode()!=null
+                        &&authorityRelation.getSubAuthCode().equals(authority.getAuthorityCode())){
+                    return true;
                 }
             }
-        }
+            return false;
+        }).collect(Collectors.toList());
 
         return authorities;
     }

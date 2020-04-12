@@ -9,16 +9,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Random;
 
 public class CrosFilter extends OncePerRequestFilter {
 
-    private String allowDomain;
+    private String allowOrigin;
 
-    public CrosFilter(String allowDomain) {
-        this.allowDomain = allowDomain;
+    public CrosFilter(String allowOrigin) {
+        this.allowOrigin = allowOrigin;
     }
 
 
@@ -34,21 +31,21 @@ public class CrosFilter extends OncePerRequestFilter {
 
 
         if(StringUtils.isEmpty(origin)){
-            if(StringUtils.isEmpty(allowDomain)){
+            if(StringUtils.isEmpty(allowOrigin)){
                 response.setHeader("Access-Control-Allow-Origin", "*");
             }else {
-                response.setHeader("Access-Control-Allow-Origin", allowDomain);
+                response.setHeader("Access-Control-Allow-Origin", allowOrigin);
             }
         }else{
             String s1 = origin.startsWith("http://")?origin.substring(7).trim():origin.startsWith("https://")?origin.substring(8).trim():origin;
-            if(StringUtils.isEmpty(allowDomain)){
+            if(StringUtils.isEmpty(allowOrigin)){
                 response.setHeader("Access-Control-Allow-Origin", "*");
             }else {
-                String s2 = allowDomain.startsWith("http://")?allowDomain.substring(7).trim():allowDomain.startsWith("https://")?allowDomain.substring(8).trim():allowDomain;
+                String s2 = allowOrigin.startsWith("http://")? allowOrigin.substring(7).trim(): allowOrigin.startsWith("https://")? allowOrigin.substring(8).trim(): allowOrigin;
                 if(s1.contains(s2)){
                     response.setHeader("Access-Control-Allow-Origin", origin);
                 }else {
-                    response.setHeader("Access-Control-Allow-Origin", allowDomain);
+                    response.setHeader("Access-Control-Allow-Origin", allowOrigin);
                 }
             }
         }

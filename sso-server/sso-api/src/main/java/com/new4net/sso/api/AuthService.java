@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(value = "sso-server")
 public interface AuthService {
     @RequestMapping(value = "/findByAuthorityCode/{authorityCode}",method = RequestMethod.GET)
-
     public Auth findByAuthorityCode(@PathVariable("authorityCode")String authority);
     @RequestMapping(value = "/saveAuthorityRelations",method = RequestMethod.POST)
     public AjaxMsg saveAuthorityRelations(@RequestBody Auth auth);
